@@ -467,7 +467,6 @@ hr {
     width: 100%;
     float: left;
     padding: 0px 10% 0px 10%;
-    margin-top: 40px;
 }
 .news-herbs .herbs-left{
     width: 74%;
@@ -656,6 +655,8 @@ hr {
 .item-herbs span{
     font-size: 13px;
     color: #999;
+    float: left;
+    padding-left: 5px;
 }
 .item-herbs p{
     float: left;
@@ -674,4 +675,15 @@ hr {
 }
 .item-herbs .cover-media img{
     width:100%;
+}
+.unit-herbs{
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+}
+.unit-herbs-right{
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
