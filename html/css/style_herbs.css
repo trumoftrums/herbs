@@ -687,3 +687,101 @@ hr {
     margin-bottom: 30px;
     margin-top: 30px;
 }
+.image-top{
+    width: 100%;
+    float: left;
+    background: #f8f7f5;
+    margin-top: 40px;
+}
+.inner-image-top{
+    background: #fff;
+    float: left;
+    width: 98%;
+}
+.gioithieu-title {
+    font-size: 36px;
+    color: #667e00;
+}
+.gioithieu-title-group{
+    font-size: 26px;
+    color: #667e00;
+
+    display: inline-flex;
+
+}
+.gioithieu-title-group img{
+    padding: 0;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+.gioithieu-title-group h3{
+    margin: 0;
+    padding: 0;
+    float: left;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.gioithieu-content{
+    width: 100%;
+}
+#bigPic img{
+    width: 900px;
+}
+.gioithieu-content{
+    font-size: 16px;
+}
+.hr-text{
+    width: 160px;
+    text-align: left;
+    border: none;
+    border-top: 1px solid #667e00;
+}
+.hr-text2{
+    text-align: left;
+    border: none;
+    border-top: 1px solid #667e00;
+}
+.header .header-top .social-search .social .cover-social{
+    float: right;
+    text-align: center;
+    width: 230px;
+}
+.header .header-top .social-search .social .cover-social .p-follow{
+    float: left;
+    font-size: 16px;
+    width: 100%;
+    color: #006838;
+}
+.herbs-right .social .cover-social .cover-icon-social{
+    float: left;
+    width: 100%;
+}
+.herbs-right .social .cover-social .cover-icon-social .img-line{
+    margin-top: 5px;
+}
+.herbs-right .social .cover-social .cover-icon-social .line-left{
+    float: left;
+}
+.herbs-right .social .cover-social .cover-icon-social .line-right{
+    float: right;
+}
+.herbs-right .social .cover-social .cover-icon-social .social-a{
+    float: left;
+    margin-top: -10px;
+    border: 1px solid #006838;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.herbs-right .social .cover-social .cover-icon-social .social-a a{
+    border-right: 1px solid #006838;
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.herbs-right .social .cover-social .cover-icon-social .social-a a img:hover{
+    opacity: 0.8;
+}
