@@ -755,33 +755,44 @@ hr {
     width: 100%;
     color: #006838;
 }
-.herbs-right .social .cover-social .cover-icon-social{
+.social-right .cover-social .cover-icon-social{
     float: left;
     width: 100%;
 }
-.herbs-right .social .cover-social .cover-icon-social .img-line{
+.social-right .cover-social .cover-icon-social .img-line{
     margin-top: 5px;
 }
-.herbs-right .social .cover-social .cover-icon-social .line-left{
+.social-right .cover-social .cover-icon-social .line-left{
     float: left;
 }
-.herbs-right .social .cover-social .cover-icon-social .line-right{
+.social-right .cover-social .cover-icon-social .line-right{
     float: right;
 }
-.herbs-right .social .cover-social .cover-icon-social .social-a{
+.social-right .cover-social .cover-icon-social .social-a{
     float: left;
     margin-top: -10px;
     border: 1px solid #006838;
     margin-left: 10px;
     border-radius: 4px;
 }
-.herbs-right .social .cover-social .cover-icon-social .social-a a{
+.social-right .cover-social .cover-icon-social .social-a a{
     border-right: 1px solid #006838;
     float: left;
     width: 30px;
     height: 30px;
     line-height: 30px;
 }
-.herbs-right .social .cover-social .cover-icon-social .social-a a img:hover{
+.social-right .cover-social .cover-icon-social .social-a a img:hover{
     opacity: 0.8;
+}
+.social-right .cover-social .cover-icon-social{
+    text-align: center;
+}
+.social-right .cover-social p{
+    text-align: center;
+    width: 100%;
+}
+.social-right{
+    padding-top: 10px;
+    float: left;
 }
