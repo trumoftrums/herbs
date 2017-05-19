@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="css/phanphoi.css">
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </head>
 <body>
 <div class="container-fluid">
@@ -59,10 +65,7 @@
             </div>
             <a href="phanphoi.html">PHÂN PHỐI</a>
             <a href="tin-tuc.html">TIN TỨC</a>
-            <a href="#news">ĐỐI TÁC</a>
-            <a href="#news">BÁC SĨ</a>
-            <a href="#news">HỎI ĐÁP</a>
-            <a href="#news">LIÊN HỆ</a>
+            <a href="tu-dien-duoc-lieu.html">TỪ ĐIỂN DƯỢC LIỆU</a>
         </div>
     </div>
     <div class="image-top">
@@ -181,7 +184,12 @@
                 </div>
             </div>
 
-
+        <div class="doi-tac">
+            <img src="./images/nh1.jpg"/>
+            <img src="./images/nh2.jpg"/>
+            <img src="./images/nh3.jpg"/>
+            <img src="./images/nh4.jpg"/>
+        </div>
     </div>
 
     <div class="footer">
