@@ -7,7 +7,7 @@ input:focus {
 .header{
     float: left;
     width: 100%;
-    padding: 30px 10% 0px 10%;
+    padding: 30px 13% 0px 13%;
 }
 .header .header-top{
     float: left;
@@ -114,7 +114,7 @@ Menu top
     color: #6fa001;
     text-align: center;
     text-decoration: none;
-    padding: 14px 3.8%;
+    padding: 14px 3.4%;
     font-weight: bold;
 }
 
@@ -174,7 +174,7 @@ Menu top
     width: 100%;
     float: left;
     background: #6fa001;
-    padding: 0px 10% 0px 10%;
+    padding: 0px 13% 0px 13%;
     margin-top: 100px;
 }
 .slide-show .inner-slide-show{
@@ -220,7 +220,7 @@ Menu top
 }
 .bg-all{
     position: fixed;
-    opacity: 0.3;
+    opacity: 0.1;
     z-index: -1;
     left: 0;
     right: 0;
@@ -353,7 +353,7 @@ hr {
 .slider-top{
     width: 100%;
     float: left;
-    padding: 0px 10% 0px 10%;
+    padding: 0px 13% 0px 13%;
     margin-top: 20px;
 }
 .cover-title{
@@ -367,10 +367,10 @@ hr {
 }
 .title-herbs{
     float: left;
-    padding: 18px 70px 10px 15px;
+    padding: 17px 70px 12px 15px;
     color: #fff;
-    font-size: 18px;
-    background: url(../images/bg-title.png) no-repeat 100% 0%;
+    font-size: 16px;
+    background: url(../images/bg-title.png) no-repeat 102% 0%;
     font-weight: bold;
     border-top-left-radius: 10px;
     margin: 0px;
@@ -378,12 +378,12 @@ hr {
 .carousel-control.right{
     top: 40%;
     width: 10px;
-    right: -1.5%;
+    right: 10px;
 }
 .carousel-control.left{
     top: 40%;
     width: 10px;
-    left: -1.5%;
+    left: 10px;
 }
 .div-bt-view-more{
     float: left;
@@ -398,7 +398,7 @@ hr {
     background: #6fa001;
     float: left;
     width: 100%;
-    padding: 30px 10% 0px 10%;
+    padding: 30px 13% 0px 13%;
     margin-top: 40px;
 }
 .footer .menu-footer{
@@ -456,7 +456,7 @@ hr {
 .cover-footer{
     float: left;
     width: 100%;
-    padding: 15px 10% 0px 10%;
+    padding: 15px 13% 0px 13%;
 }
 .footer-bt{
     float: left;
@@ -486,7 +486,7 @@ hr {
 .news-herbs{
     width: 100%;
     float: left;
-    padding: 0px 10% 0px 10%;
+    padding: 0px 13% 0px 13%;
 }
 .news-herbs .herbs-left{
     width: 74%;
@@ -559,24 +559,22 @@ hr {
     padding-bottom: 10px;
 }
 .tab-content .list-item-news .item-news-tab img{
-    width: 22%;
+    width: 100px;
     float: left;
-}
-.tab-content .list-item-news .item-news-tab .cover-co-item{
-    width: 78%;
-    float: left;
-    padding-left: 8px;
+    margin-right: 8px;
 }
 .tab-content .list-item-news .item-news-tab .cover-co-item a{
     color: #006838;
     font-size: 14px;
-    width: 100%;
+    display: block;
 }
-.tab-content .list-item-news .item-news-tab .cover-co-item span{
+.tab-content .list-item-news .item-news-tab .cover-co-item span.date-sp{
     font-size: 13px;
-    float: left;
-    width: 100%;
     color: #999;
+    display: block;
+}
+.tab-content .list-item-news .item-news-tab .cover-co-item span.sum-av{
+    display: block;
 }
 .tab-content .list-item-news .item-final{
     border-bottom: transparent;
@@ -810,4 +808,297 @@ hr {
 .doi-tac img{
     width: 22%;
     margin-right: 2%;
+}
+.herbs-left .cover-menu-tab{
+    float: left;
+    width: 100%;
+    margin-top: 55px;
+ }
+.herbs-left .cover-menu-tab .title-news{
+    margin-top: -5px;
+}
+.herbs-left .cover-menu-tab .title-news .title-herbs{
+    margin-top: -46px;
+}
+.herbs-left .cover-menu-tab .cover-tab-cate{
+    float: left;
+    width: 100%;
+}
+.herbs-left .cover-menu-tab .cover-tab-cate ul{
+    float: right;
+    list-style: none;
+}
+.herbs-left .cover-menu-tab .cover-tab-cate ul li{
+    float: left;
+}
+.herbs-left .cover-menu-tab .cover-tab-cate ul li a{
+    color: #000;
+    padding: 3px 10px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+.herbs-left .cover-menu-tab .main-news{
+    float: left;
+    width: 100%;
+}
+.herbs-left .cover-menu-tab .main-news .img-main-news{
+    float: left;
+    width: 48%;
+}
+.herbs-left .cover-menu-tab .main-news .cv-main-news{
+    float: left;
+    width: 50%;
+    margin-left: 2%;
+}
+.herbs-left .cover-menu-tab .main-news .cv-main-news .h5-title{
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 23px;
+    color:#000;
+}
+.herbs-left .cover-menu-tab .main-news .cv-main-news .date-sp{
+    float: left;
+    width: 100%;
+    color: #999;
+}
+.herbs-left .cover-menu-tab .main-news .cv-main-news .sum-p{
+    text-align: justify;
+    float: left;
+    width: 100%;
+    line-height: 24px;
+}
+.herbs-left .cover-menu-tab .main-news .cv-main-news .a-view{
+    color: #000;
+    text-decoration: underline;
+    float: right;
+}
+.herbs-left .cover-menu-tab .list-news{
+    float: left;
+    width: 102%;
+    margin-top: 10px;
+}
+.herbs-left .cover-menu-tab .list-news .it-news{
+    float: left;
+    width: 31.33%;
+    margin-right: 2%;
+    background: #f3f3f3;
+    margin-top: 15px;
+}
+.herbs-left .cover-menu-tab .list-news .it-news .img-it{
+    width: 100%;
+}
+.herbs-left .cover-menu-tab .list-news .it-news .icon-more{
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.herbs-left .cover-menu-tab .list-news .it-news .p-it-news{
+    float: left;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+    margin: 0px;
+    color: #000;
+}
+.herbs-left .cover-menu-tab .list-news .it-news .date-sp{
+    float: left;
+    width: 100%;
+    color: #999;
+    padding: 0px 10px;
+}
+.herbs-left .cover-menu-tab .list-news .it-news .sum-p{
+    float: left;
+    width: 100%;
+    padding: 0px 10px;
+    text-align: justify;
+}
+.cover-page{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #6fa001;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.herbs-left .search{
+    float: left;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+.herbs-left .cov-line{
+    width:100%;
+    float: left;
+    text-align: center;
+    margin:20px 0px;
+}
+.herbs-left .search .inp-search{
+    height: 40px;
+    float: left;
+    width: 90%;
+    border: none;
+    padding-left: 15px;
+    border-radius: 20px;
+}
+.herbs-left .search .inp-bt{
+    float: right;
+    width: 10%;
+    background: url(../images/icon-zoom.png) no-repeat 50% 50% #dd7800;
+    height: 42px;
+    border: none;
+    border-top-right-radius: 20px;
+    margin-top: -1px;
+    margin-right: -2px;
+    border-bottom-right-radius: 20px;
+}
+.herbs-left .img-line-tddl{
+    width:70%;
+}
+.herbs-left .item-tddl{
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+}
+.herbs-left .item-tddl .img-it-tddl{
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    box-shadow: 1px 1px 5px #CCCCCC;
+    border: 1px solid #CCCCCC;
+}
+.herbs-left .item-tddl .name-it-tddl{
+    color: #6fa001;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 45px;;
+}
+.herbs-left .item-tddl .p-tddl{
+    margin: 0px;
+    line-height: 24px;
+    display: block;
+    overflow: auto;
+    font-size:15px;
+}
+.tddl-line{
+    overflow: auto;
+    display: block;
+    margin-right: 15px;
+}
+.herbs-left .item-tddl .name-t{
+    color: #6fa001;
+}
+.slider-cay{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.slider-cay .carousel-inner{
+    background: #2d4400;
+}
+.slider-cay .carousel-inner>.item{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.slider-cay .carousel-inner>.item img{
+    height: 400px;
+    display: inline;
+}
+.slider-cay .carousel-caption{
+    bottom: -10px;
+}
+.content-cay{
+    float: left;
+    width: 100%;
+}
+.content-cay .ten-cay{
+    margin-top: 0px;
+    color: #6fa001;
+    margin-bottom: 15px;
+}
+.content-cay .img-cay{
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+.content-cay .des-cay p{
+    font-size: 15px;
+    text-align: justify;
+}
+.content-cay .des-cay p b{
+    font-size: 16px;
+}
+.detail-nes{
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #999;
+}
+.detail-nes .title-news-detail{
+    margin-bottom: 2px;
+}
+.detail-nes .sp-date{
+    float: left;
+    width: 100%;
+}
+.detail-nes .img-detail{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.cover-list-related{
+    float: left;
+    width: 100%;
+}
+.cover-list-related .item-news-tab{
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+    padding-right: 15px;
+}
+.cover-list-related .item-news-tab img{
+    width: 90px;
+    float: left;
+    margin-right: 6px;
+}
+.cover-list-related .item-news-tab .cover-co-item a{
+    color: #000;
+    display: block;
+}
+.cover-list-related .item-news-tab .cover-co-item .date-sp{
+    display: block;
+    color: #999;
+    font-size: 13px;
+}
+.title-news-khac{
+    color: #6fa001;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+    margin-top: 25px;
 }
