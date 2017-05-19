@@ -1,0 +1,236 @@
+@media (max-width: 1199px) {
+
+}
+@media (max-width: 980px) {
+
+}
+@media (max-width: 600px){
+    .header-mobile{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        padding-bottom: 5px;
+        width: 100%;
+        background: url(../images/bg-caro.png);
+    }
+    .header-mobile .menu-header-mobile{
+        display: block;
+        width: 100%;
+    }
+    .header-mobile .logo-mobile{
+        text-align: center;
+        padding-top: 5px;
+        width: 95%;
+    }
+    .header-mobile .logo-mobile a img.logo-hsg{
+        width: 100px;
+    }
+    .header-mobile .menu-header-mobile .dropdown{
+        float: left;
+        margin-top: 23px;
+        margin-left: 4px;
+    }
+    .header-mobile .menu-header-mobile .dropdown .icon-menu img{
+        width: 40px;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu{
+        top: 22px;
+        left: 0;
+        background: #056839;
+        border: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        min-width: 200px;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile li ul{
+        display: none;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile{
+        padding: 0px;
+        list-style: none;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile li.parent a{
+        background: url(../images/icon-arrow-right.png) #fffbce no-repeat 95% 50%;
+        float: left;
+        width: 100%;
+        color: #000;
+        margin: 4px 0px;
+        padding: 10px 0px 10px 15px;
+        text-decoration: none;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile ul{
+        padding: 0px;
+        list-style: none;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile ul li.child{
+        width: 100%;
+        float: left;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile ul li.child a{
+        background: url(../images/arrow-child.png) no-repeat 5% 50%;
+        float: left;
+        width: 100%;
+        color: #fff;
+        margin: 4px 0px;
+        padding: 0px 0px 0px 40px;
+        text-decoration: none;
+    }
+    .header-mobile .menu-header-mobile .dropdown .dropdown-menu .private-page{
+        background: #ffde57;
+        float: left;
+        color: #056839;
+        padding: 14px 0px 7px 0px;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        margin: 3px 0px;
+        font-weight: bold;
+    }
+    .side-bar{
+        display: none;
+    }
+    .content-right {
+        width: 100%;
+        margin-top: 82px;
+    }
+    .item-service{
+        width: 100%;
+         margin-left: 0px;
+    }
+    .content-right .first-top .two .up{
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    .content-right .first-top .one{
+        width: 100%;
+    }
+    .content-right .first-top{
+        display: inline-block;
+    }
+    .content-right .first-top .two {
+        width: 100%;
+    }
+    .content-right .first-top .two .item-service {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 2%;
+    }
+    .content-right .first-top .two .bottom{
+        display: inline-block;
+    }
+    .content-right .first-top .one .slide-why-invest{
+        position: relative;
+    }
+    .content-right .second-bottom .item-thong-diep{
+        width: 100%;
+    }
+    .content-right .second-bottom{
+        width: 100%;
+    }
+    .footer{
+        text-align: center;
+    }
+    .footer .p-right {
+        margin-top: 0px;
+        width: 100%;
+    }
+    .content-right .about-up .item-about {
+        width: 100%;
+    }
+    .content-right .nhan-su img {
+        width: 99%;
+        margin-top: 15px;
+    }
+    .content-right .title-header .span-date-update{
+        margin-top: 0px;
+        width: 100%;
+    }
+    .content-right .title-header .title-root{
+        font-size: 22px;
+    }
+    .content-right .title-header .title-after{
+        font-size: 18px;
+    }
+    .content-right .about-up .item-about .title-item-about{
+        font-size: 14px;
+    }
+    .content-right .cong-bo-thong-tin .item-congbothongtin .item-congbothongtin-download{
+        width: 100%;
+        padding-left: 5px;
+    }
+    .content-right .cong-bo-thong-tin .item-congbothongtin .thumb-congbothongtin {
+        width: 100%;
+    }
+    .content-right .cong-bo-thong-tin .item-congbothongtin .cover-list-item-congbo {
+        width: 100%;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .detail-news-left{
+        width:100%;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .list-news-related-right {
+        width: 100%;
+        margin-top: 25px;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .kien-thuc-tai-chinh ul li .p-question{
+        padding: 0px 35px;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .kien-thuc-tai-chinh ul li .p-question img{
+        height: 42px;
+        float: left;
+        margin-left: -35px;
+    }
+    .content-right .quan-he-nha-dau-tu .item-news{
+        width: 98%;
+    }
+    .content-right .giai-phap .giai-phap-left {
+        width: 99%;
+    }
+    .content-right .giai-phap .final-li{
+        margin-left: 25%;
+    }
+    .content-right .giai-phap .giai-phap-right {
+        float: left;
+        width: 99%;
+    }
+    .content-right .cong-bo-thong-tin .ul-cover-tab li {
+        width: 49%;
+        height: 60px;
+        padding: 15px 0px;
+    }
+    .content-right .kien-thuc-tai-chinh .item-news{
+        width:99%;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .detail-news-left .header-news-detail h4{
+        font-size:15px;
+        margin-top: -45px;
+    }
+    .content-right .kien-thuc-tai-chinh .item-news .hover-item .cover-zoom{
+        width: 30%;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form .inp-td{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form .area-desc{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form .inp-file{
+        margin-top: 0px;
+    }
+    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form{
+        margin: 0px;
+    }
+    .cv-group {
+        width: 100%;
+    }
+    .nhan-su .item-ns .ava-ns {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .nhan-su .item-ns .cover-abc{
+        width:100%;
+    }
+}
+
