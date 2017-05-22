@@ -141,20 +141,18 @@ Menu top
 .dropdown-content {
     display: none;
     position: absolute;
-    background: url(../images/bg-hover-menu.png);
-    width: 100%;
+    background: #6fa001;
     z-index: 43;
-    float: left;
-    left: 0;
 }
 
 .dropdown-content a {
-    float: left;
+    float: none;
     text-decoration: none;
     display: block;
-    width: 25%;
     text-align: left;
-    padding: 15px 20px;
+    color: #fff;
+    font-size: 13px;
+    padding: 12px 50px 12px 16px;
 }
 .dropdown-content a img{
     width:100%;
@@ -375,12 +373,22 @@ hr {
     border-top-left-radius: 10px;
     margin: 0px;
 }
-.carousel-control.right{
+.slider-cay .carousel-control.right{
     top: 40%;
     width: 10px;
     right: 10px;
 }
+.carousel-control.right{
+    top: 40%;
+    width: 10px;
+    right: -5px;
+}
 .carousel-control.left{
+    top: 40%;
+    width: 10px;
+    left: -5px;
+}
+.slider-cay .carousel-control.left{
     top: 40%;
     width: 10px;
     left: 10px;
