@@ -108,7 +108,33 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <div class="cover-in">
                             <div class="cover-media">
-                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                                <img src="{{ url('assets/frontend/images/sl03.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl04.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl01.png')}}"/>
                             </div>
                             <a class="title-slide" href="#">mantra herbal từ herbs</a>
                             <hr class="hr-line">
@@ -134,33 +160,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <div class="cover-in">
                             <div class="cover-media">
-                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
-                            </div>
-                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
-                            <hr class="hr-line">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                            <a href="#" class="a-view">Xem</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item item-herbs">
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="cover-in">
-                            <div class="cover-media">
-                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
-                            </div>
-                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
-                            <hr class="hr-line">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                            <a href="#" class="a-view">Xem</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item item-herbs">
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="cover-in">
-                            <div class="cover-media">
-                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                                <img src="{{ url('assets/frontend/images/sl03.png')}}"/>
                             </div>
                             <a class="title-slide" href="#">mantra herbal từ herbs</a>
                             <hr class="hr-line">
