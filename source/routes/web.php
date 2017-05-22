@@ -8,50 +8,49 @@ Route::get('/', [
     'as' => 'frontend.home',
     'uses' => 'FrontEndController@index'
 ]);
-Route::get('/tuyen-dung', [
-    'as' => 'frontend.tuyendung',
-    'uses' => 'FrontEndController@tuyendung'
+Route::get('/tin-doanh-nghiep/{id_type}', [
+    'as' => 'frontend.tintuc',
+    'uses' => 'FrontEndController@tintuc'
 ]);
-Route::get('/lien-he', [
-    'as' => 'frontend.lienhe',
-    'uses' => 'FrontEndController@lienhe'
+Route::get('/tin-thi-truong/{id_type}', [
+    'as' => 'frontend.tintuc',
+    'uses' => 'FrontEndController@tintuc'
 ]);
-Route::get('/giai-phap-dau-tu', [
-    'as' => 'frontend.giaiphapdautu',
-    'uses' => 'FrontEndController@giaiphapdautu'
+Route::get('/tin-bai-thuoc/{id_type}', [
+    'as' => 'frontend.tintuc',
+    'uses' => 'FrontEndController@tintuc'
 ]);
-Route::get('/gioi-thieu/ho-so-cong-ty', [
-    'as' => 'frontend.hosocongty',
-    'uses' => 'FrontEndController@hosocongty'
+Route::get('/tin-tuc/{id}/{name_url}', [
+    'as' => 'frontend.tintuc.detail',
+    'uses' => 'FrontEndController@tintucDetail'
 ]);
-Route::get('/gioi-thieu/nhan-su', [
-    'as' => 'frontend.nhansu',
-    'uses' => 'FrontEndController@nhansu'
+Route::get('/phan-phoi', [
+    'as' => 'frontend.phanphoi',
+    'uses' => 'FrontEndController@phanphoi'
 ]);
-Route::get('/gioi-thieu/doi-tac-cua-hsg', [
-    'as' => 'frontend.doitac',
-    'uses' => 'FrontEndController@doitac'
+Route::get('/gioi-thieu', [
+    'as' => 'frontend.gioithieu',
+    'uses' => 'FrontEndController@gioithieu'
 ]);
-Route::get('/kien-thuc-tai-chinh/{id}/{name_url}', [
-    'as' => 'frontend.kienthuctaichinh.detail',
-    'uses' => 'FrontEndController@dautuDetail'
+Route::get('/tu-dien-duoc-lieu', [
+    'as' => 'frontend.tudienduoclieu',
+    'uses' => 'FrontEndController@tudienduoclieu'
 ]);
-Route::get('/kien-thuc-tai-chinh/dau-tu', [
-    'as' => 'frontend.dautu',
-    'uses' => 'FrontEndController@dautu'
+Route::get('/tu-dien-duoc-lieu/{id}/{name_url}', [
+    'as' => 'frontend.tudienduoclieu.detail',
+    'uses' => 'FrontEndController@tudienduoclieudetail'
 ]);
-Route::get('/kien-thuc-tai-chinh/quan-ly-tai-chinh-ca-nhan', [
-    'as' => 'frontend.quanlytaichinhcanhan',
-    'uses' => 'FrontEndController@quanlytaichinhcanhan'
+Route::get('du-an', [
+    'as' => 'frontend.duan',
+    'uses' => 'FrontEndController@duan'
 ]);
-Route::get('/quan-he-nha-dau-tu/bao-cao-tai-chinh', [
-    'as' => 'frontend.baocaotaichinh',
-    'uses' => 'FrontEndController@baocaotaichinh'
+Route::get('san-pham', [
+    'as' => 'frontend.sanpham',
+    'uses' => 'FrontEndController@sanpham'
 ]);
-Route::get('/quan-he-nha-dau-tu/hoi-dap', [
-    'as' => 'frontend.hoidap',
-    'uses' => 'FrontEndController@hoidap'
-]);
+
+
+
 
 
 

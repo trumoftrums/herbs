@@ -1,3 +1,89 @@
+<div class="slider-top">
+    <div class="cover-title">
+        <h3 class="title-herbs">VIDEO NỔI BẬT</h3>
+    </div>
+    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel2">
+        <div class="carousel-inner">
+            <div class="item active item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#fruitscarousel2" data-slide="prev"><img src="{{ url('assets/frontend/images/arrow-left.png')}}"/></a>
+        <a class="right carousel-control" href="#fruitscarousel2" data-slide="next"><img src="{{ url('assets/frontend/images/arrow-right.png')}}"/></a>
+    </div>
+    <div class="div-bt-view-more">
+        <a href="#"><img src="{{ url('assets/frontend/images/bt-more-vid.png')}}"/></a>
+    </div>
+    <div class="doi-tac">
+        <img src="{{ url('assets/frontend/images/nh1.jpg')}}"/>
+        <img src="{{ url('assets/frontend/images/nh2.jpg')}}"/>
+        <img src="{{ url('assets/frontend/images/nh3.jpg')}}"/>
+        <img src="{{ url('assets/frontend/images/nh4.jpg')}}"/>
+    </div>
+</div>
 <div class="footer">
     <div class="menu-footer">
         <ul class="item-footer">
@@ -51,10 +137,10 @@
         </ul>
         <ul class="item-footer">
             <div class="cover-social-footer">
-                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon01.png', '', array()) }}</a>
-                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon02.png', '', array()) }}</a>
-                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon03.png', '', array()) }}</a>
-                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon04.png', '', array()) }}</a>
+                <a href="#"><img src="{{ url('assets/frontend/images/footer-icon01.png')}}"/></a>
+                <a class="icon02" href="#"><img src="{{ url('assets/frontend/images/footer-icon02.png')}}"/></a>
+                <a class="icon03" href="#"><img src="{{ url('assets/frontend/images/footer-icon03.png')}}"/></a>
+                <a class="icon04" href="#"><img src="{{ url('assets/frontend/images/footer-icon04.png')}}"/></a>
             </div>
             <p class="hotline-footer">HOTLINE: 00000000000</p>
         </ul>
@@ -62,7 +148,7 @@
 </div>
 <div class="cover-footer">
     <div class="footer-bt">
-        <a class="logo-footer" href="#">{{ HTML::image('assets/frontend/images/logo.png', '', array()) }}</a>
+        <a class="logo-footer" href="#"><img src="{{ url('assets/frontend/images/logo.png')}}"/></a>
         <div class="cover-address-footer">
             <p class="p-right">HERBS.COM Bản quyền @2013 HoangSangGroup</p>
             <p>Địa chỉ: 02, Phạm Văn Đồng, P. Linh Đông, Q. Thủ Đức, Tp.HCM</p>
