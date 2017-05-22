@@ -375,12 +375,22 @@ hr {
     border-top-left-radius: 10px;
     margin: 0px;
 }
-.carousel-control.right{
+.slider-cay .carousel-control.right{
     top: 40%;
     width: 10px;
     right: 10px;
 }
+.carousel-control.right{
+    top: 40%;
+    width: 10px;
+    right: -5px;
+}
 .carousel-control.left{
+    top: 40%;
+    width: 10px;
+    left: -5px;
+}
+.slider-cay .carousel-control.left{
     top: 40%;
     width: 10px;
     left: 10px;
