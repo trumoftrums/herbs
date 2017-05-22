@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('page-title', 'HSG')
+@section('page-title', 'HERBS')
 
 @section('content')
 <div class="slide-show">
@@ -14,19 +14,20 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img class="img-responsive"  src="./images/slider/img01.png" alt="...">
+
+                            {{ HTML::image('assets/frontend/images/slider/img01.png', 'Image caption', array('class' => 'img-responsive')) }}
                             <div class="carousel-caption">
                                 <h4></h4>
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="./images/slider/img01.png" alt="...">
+                            {{ HTML::image('assets/frontend/images/slider/img01.png', 'Image caption', array('class' => 'img-responsive')) }}
                             <div class="carousel-caption">
                                 <h4></h4>
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="./images/slider/img01.png" alt="...">
+                            {{ HTML::image('assets/frontend/images/slider/img01.png', 'Image caption', array('class' => 'img-responsive')) }}
                             <div class="carousel-caption">
                                 <h4></h4>
                             </div>
@@ -38,7 +39,8 @@
         <div class="col-sm-6" style="width: 52%;">
             <div class="list-group slider-list">
                 <a href="#" class="list-group-item active" data-target="#home-slider" data-slide-to="0">
-                    <img class="img-item-slide" src="./images/slider/item-01.png"/>
+
+                    {{ HTML::image('assets/frontend/images/slider/item-01.png', '', array('class' => 'img-item-slide')) }}
                     <p>Tin bài thuốc</p>
                     <hr>
                     THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI<br>

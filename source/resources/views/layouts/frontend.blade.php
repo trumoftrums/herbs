@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HERBS</title>
+    <title>@yield('page-title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="./images/not-slogan.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style_herbs.css">
-    <link rel="stylesheet" href="css/media_screen.css">
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="/assets/frontend/images/not-slogan.png" />
+    {{ HTML::style('/assets/frontend/css/bootstrap.min.css') }}
+    {{ HTML::style('/assets/frontend/css/style_herbs.css') }}
+    {{ HTML::style('/assets/frontend/css/media_screen.css') }}
+    {{ HTML::script('/assets/frontend/js/jquery.min.js', array('type' => 'text/javascript')) }}
+    {{ HTML::script('/assets/frontend/js/bootstrap.min.js', array('type' => 'text/javascript')) }}
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -20,7 +20,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <img class="bg-all" src="./images/bg-all.png"/>
+    {{ HTML::image('assets/frontend/images/bg-all.png', '', array('class' => 'bg-all')) }}
     @include('frontend.header')
 
     @yield('content')

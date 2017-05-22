@@ -51,10 +51,10 @@
         </ul>
         <ul class="item-footer">
             <div class="cover-social-footer">
-                <a href="#"><img src="./images/footer-icon01.png"/></a>
-                <a class="icon02" href="#"><img src="./images/footer-icon02.png"/></a>
-                <a class="icon03" href="#"><img src="./images/footer-icon03.png"/></a>
-                <a class="icon04" href="#"><img src="./images/footer-icon04.png"/></a>
+                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon01.png', '', array()) }}</a>
+                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon02.png', '', array()) }}</a>
+                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon03.png', '', array()) }}</a>
+                <a href="#">{{ HTML::image('assets/frontend/images/footer-icon04.png', '', array()) }}</a>
             </div>
             <p class="hotline-footer">HOTLINE: 00000000000</p>
         </ul>
@@ -62,7 +62,7 @@
 </div>
 <div class="cover-footer">
     <div class="footer-bt">
-        <a class="logo-footer" href="#"><img src="./images/logo.png"/></a>
+        <a class="logo-footer" href="#">{{ HTML::image('assets/frontend/images/logo.png', '', array()) }}</a>
         <div class="cover-address-footer">
             <p class="p-right">HERBS.COM Bản quyền @2013 HoangSangGroup</p>
             <p>Địa chỉ: 02, Phạm Văn Đồng, P. Linh Đông, Q. Thủ Đức, Tp.HCM</p>

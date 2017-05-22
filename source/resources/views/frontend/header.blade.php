@@ -1,7 +1,8 @@
 <div class="header">
     <div class="header-top">
         <a class="logo" href="/">
-            <img src="./images/logo.png"/>
+
+            {{ HTML::image('assets/frontend/images/logo.png', '', array()) }}
         </a>
         <div class="social-search">
             <div class="social">
@@ -9,14 +10,17 @@
                 <div class="cover-social">
                     <p class="p-follow">follow us</p>
                     <div class="cover-icon-social">
-                        <img class="img-line line-left" src="./images/line.png"/>
+                        {{ HTML::image('assets/frontend/images/line.png', '', array('class'=>'img-line line-left')) }}
+
                         <div class="social-a">
-                            <a href="#"><img src="./images/icon-fb.png"/></a>
-                            <a href="#"><img src="./images/icon-twitter.png"/></a>
-                            <a href="#"><img src="./images/icon-p.png"/></a>
-                            <a href="#"><img src="./images/icon-in.png"/></a>
+
+                            <a href="#">{{HTML::image('assets/frontend/images/icon-fb.png', '', array())}}</a>
+                            <a href="#">{{HTML::image('assets/frontend/images/icon-twitter.png', '', array())}}</a>
+                            <a href="#">{{HTML::image('assets/frontend/images/icon-p.png', '', array())}}</a>
+                            <a href="#">{{HTML::image('assets/frontend/images/icon-in.png', '', array())}}</a>
                         </div>
-                        <img class="img-line line-right" src="./images/line.png"/>
+
+                        {{HTML::image('assets/frontend/images/line.png', '', array('class'=>'img-line line-right'))}}
                     </div>
                 </div>
             </div>
@@ -33,10 +37,10 @@
         <div class="dropdown">
             <button class="dropbtn">DỰ ÁN</button>
             <div class="dropdown-content">
-                <a href="#"><img src="./images/sub-menu-01.png"/></a>
-                <a href="#"><img src="./images/sub-menu-02.png"/></a>
-                <a href="#"><img src="./images/sub-menu-03.png"/></a>
-                <a href="#"><img src="./images/sub-menu-04.png"/></a>
+                <a href="#">{{HTML::image('assets/frontend/images/sub-menu-01.png', '', array())}}/></a>
+                <a href="#">{{HTML::image('assets/frontend/images/sub-menu-02.png', '', array())}}/></a>
+                <a href="#">{{HTML::image('assets/frontend/images/sub-menu-03.png', '', array())}}/></a>
+                <a href="#">{{HTML::image('assets/frontend/images/sub-menu-04.png', '', array())}}/></a>
             </div>
         </div>
         <a href="phanphoi.html">PHÂN PHỐI</a>
