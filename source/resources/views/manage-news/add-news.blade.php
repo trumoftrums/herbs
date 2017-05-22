@@ -1,6 +1,11 @@
 @extends('layouts.app')
-
-@section('page-title', trans('app.add_user'))
+<?php
+$title = "Thêm tin tức";
+if($edit){
+    $title = "Sửa tin tức";
+}
+?>
+@section('page-title',$title)
 
 @section('content')
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -32,10 +37,17 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Loại tin đăng</label>
-                        <select class="form-control" name="typeNews">
+                        <select class="form-control" name="typeNews" id="typeNews">
+                            <option value="" >Click chọn loại tin</option>
                             @foreach($listTypeNews as $item)
-                                <option value="{{$item->idType}}" @if($edit) @if($news->type == $item->idType)  selected @endif @endif>{{$item->nameType}}</option>
+                                <option value="{{$item->idType}}" @if($edit) @if($news->idType == $item->idType)  selected @endif @endif>{{$item->nameType}}</option>
                             @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Category</label>
+                        <select class="form-control" name="category" id ="category">
+                            <option value="" >Click chọn category</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -54,7 +66,69 @@
             </div>
         </div>
     </div>
+    <script type="application/javascript" >
 
+        $( document ).ready(function() {
+            getCategory(true);
+        });
+        $("#typeNews").change(function () {
+            getCategory(false);
+
+        });
+        function  getCategory(isFirst) {
+            var type = $("#typeNews").val();
+            if(type!= ""){
+                $.ajax({
+                    url: '/quan-ly-tin-tuc/getNewCategory',
+                    dataType: "json",
+                    cache: false,
+                    type: 'post',
+                    data: {
+                        type: type
+                    },
+                    beforeSend: function(xhr){
+
+//                        xhr.setRequestHeader('X-CSRF-TOKEN', token);
+                    },
+                    success: function (data) {
+                        $('#category').html("");
+                        $('#category').append($('<option>', {
+                            value: "",
+                            text: "Click chọn category"
+                        }));
+                        if(data.result){
+
+
+                            for(var i=0;i<data.data.length;i++){
+
+                                $('#category').append($('<option>', {
+                                    value: data.data[i].id,
+                                    text: data.data[i].nameCategory
+                                }));
+                            }
+                            <?php if(isset($news['category']) && !empty($news['category'])){?>
+                            if(isFirst){
+                                $("#category").val("{{$news['category']}}");
+                            }
+                            <?php }?>
+
+
+                        }
+
+                    },
+                    error: function () {
+
+                    }
+                });
+            }else{
+
+            }
+
+
+        }
+
+
+    </script>
     <div class="row">
         <div class="col-md-2">
             <button type="submit" class="btn btn-primary btn-block bt-hsg">

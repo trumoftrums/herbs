@@ -17,7 +17,7 @@ class EloquentNews implements NewsRepository
         $bd->summary = $data['summary'];
         $bd->description = $data['description'];
         $bd->thumb = $data['thumb'];
-        $bd->type = $data['typeNews'];
+        $bd->category = $data['typeNews'];
         $bd->status = News::STATUS_ACTIVED;
 
         $bd->save();
@@ -30,7 +30,7 @@ class EloquentNews implements NewsRepository
         $bd->title = $data['title'];
         $bd->summary = $data['summary'];
         $bd->description = $data['description'];
-        $bd->type = $data['typeNews'];
+        $bd->category = $data['category'];
         if($data['thumb'] != null){
             $bd->thumb = $data['thumb'];
         }else{
@@ -51,7 +51,9 @@ class EloquentNews implements NewsRepository
 
     public function paginate($perPage, $search = null, $status = null)
     {
-        $query = News::join('type_news', 'type_news.idType', '=', 'news.type');
+        $query = News::join('category_new', 'category_new.id', '=', 'news.category')
+            ->join('type_news', 'type_news.idType', '=', 'category_new.type')
+            ->select("news.*","category_new.id as idCategory","category_new.nameCategory","type_news.nameType");
 
         if ($status && $status != "All") {
             $query->where('news.status', $status);

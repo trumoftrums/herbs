@@ -434,6 +434,10 @@ Route::get('quan-ly-tin-tuc', [
     'as' => 'newsadmin.list',
     'uses' => 'ManageNewsController@listNews'
 ]);
+Route::post('quan-ly-tin-tuc/getNewCategory', [
+    'as' => 'newsadmin.getNewCategory',
+    'uses' => 'ManageNewsController@getNewCategory'
+]);
 Route::get('quan-ly-tin-tuc/create', [
     'as' => 'newsadmin.create',
     'uses' => 'ManageNewsController@createNews'
@@ -453,6 +457,32 @@ Route::put('quan-ly-tin-tuc/{idNews}/update', [
 Route::delete('quan-ly-tin-tuc/{idNews}/delete', [
     'as' => 'newsadmin.delete',
     'uses' => 'ManageNewsController@deleteNews'
+]);
+// new category
+
+Route::get('quan-ly-category', [
+    'as' => 'catnewadmin.list',
+    'uses' => 'ManageNewsController@listTypeNews'
+]);
+Route::get('quan-ly-category/create', [
+    'as' => 'catnewadmin.create',
+    'uses' => 'ManageNewsController@createCat'
+]);
+Route::post('quan-ly-category/add', [
+    'as' => 'catnewadmin.add',
+    'uses' => 'ManageNewsController@addCat'
+]);
+Route::get('quan-ly-category/{idNews}/edit', [
+    'as' => 'catnewadmin.edit',
+    'uses' => 'ManageNewsController@editCat'
+]);
+Route::put('quan-ly-category/{idNews}/update', [
+    'as' => 'catnewadmin.update',
+    'uses' => 'ManageNewsController@updateCat'
+]);
+Route::delete('quan-ly-category/{idNews}/delete', [
+    'as' => 'catnewadmin.delete',
+    'uses' => 'ManageNewsController@deleteCat'
 ]);
 
 /**

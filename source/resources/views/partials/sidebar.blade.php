@@ -99,11 +99,25 @@
             @endpermission
 
 
-            @permission('users.manage')
+            @permission('newsAdmin.manage')
             <li class="{{ Request::is('quan-ly-tin-tuc*') ? 'active open' : ''  }}">
-                <a href="{{ route('newsadmin.list') }}" class="{{ Request::is('quan-ly-tin-tuc*') ? 'active' : ''  }}">
-                    <i class="fa fa-newspaper-o fa-fw"></i> Quản lý tin tức
+                <a href="#">
+                    <i class="fa fa-gear fa-fw"></i> Quản lý tin tức
+                    <span class="fa arrow"></span>
                 </a>
+                <ul class="nav nav-second-level collapse">
+                    <li>
+                        <a href="{{ route('newsadmin.list') }}" class="{{ Request::is('quan-ly-tin-tuc*') ? 'active' : ''  }}">
+                            <i class="fa fa-newspaper-o fa-fw"></i> Quản lý tin tức
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('catnewadmin.list') }}" class="{{ Request::is('quan-ly-category*') ? 'active' : ''  }}">
+                            <i class="fa fa-newspaper-o fa-fw"></i> Quản lý category
+                        </a>
+                    </li>
+
+                </ul>
             </li>
             @endpermission
 
