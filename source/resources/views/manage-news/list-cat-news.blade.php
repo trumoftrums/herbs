@@ -1,6 +1,6 @@
 \@extends('layouts.app')
 
-@section('page-title', "Danh sách tin tức")
+@section('page-title', 'Danh sách loại tin')
 
 @section('content')
 <style>
@@ -16,7 +16,7 @@
         <h1 class="page-header">
             QUẢN LÝ TIN TỨC
             <img class="icon-bread" src="{{ url('assets/img/icon-next.png') }}"/>
-            <span class="sp-bread">DANH SÁCH TIN TỨC</span>
+            <span class="sp-bread">DANH SÁCH CATEGORY</span>
         </h1>
     </div>
 </div>
@@ -25,9 +25,9 @@
 
 <div class="row tab-search">
     <div class="col-md-2">
-        <a href="{{ route('newsadmin.create') }}" class="btn btn-success" id="add-user">
+        <a href="{{ route('catnewadmin.create') }}" class="btn btn-success" id="add-user">
             <i class="glyphicon glyphicon-plus"></i>
-            Thêm tin tức mới
+            Thêm Category mới
         </a>
     </div>
     <div class="col-md-5"></div>
@@ -47,34 +47,36 @@
 <div class="table-responsive top-border-table" id="users-table-wrapper">
     <table class="table">
         <thead>
-            <th>TIÊU ĐỀ</th>
-            <th>LOẠi TIN</th>
-            <th>Category</th>
+            <th>STT</th>
+            <th>TÊN CATEGORY</th>
+            <th>LOẠI TIN</th>
+
             <th>NGÀY ĐĂNG</th>
-            <th>HÌNH ẢNH</th>
             <th>TRẠNG THÁI</th>
             <th class="text-center">ACTION</th>
         </thead>
         <tbody>
-            @if (count($listNews))
-                @foreach ($listNews as $bd)
+            @if (count($listCats))
+                <?php $i =1;?>
+                @foreach ($listCats as $bd)
                     <tr>
-                        <td>{{ $bd->title }}</td>
-                        <td>{{$bd->nameType}}</td>
+                        <td>{{ $i++ }}</td>
                         <td>{{$bd->nameCategory}}</td>
+                        <td>{{$bd->nameType}}</td>
+
                         <td>{{date_format(date_create($bd->created_at),"d/m/Y")}}</td>
-                        <td><img style="height: 60px" src="{{ url($bd->thumb)}}"/></td>
+
                         <td>
                             @if($bd->status == 'AC') <button type="button" class="btn btn-success btnOwn">Active</button>
                             @elseif($bd->status == 'IA') <button type="button" class="btn btn-warning btnOwn">Inactive</button>
                             @elseif($bd->status == 'DE') <button type="button" class="btn btn-danger btnOwn">Delete</button> @endif
                         </td>
                         <td class="text-center">
-                            <a href="{{ route('newsadmin.edit', $bd->id) }}" class="btn btn-primary btn-circle edit" title="Edit"
+                            <a href="{{ route('catnewadmin.edit', $bd->id) }}" class="btn btn-primary btn-circle edit" title="Edit"
                                     data-toggle="tooltip" data-placement="top">
                                 <i class="glyphicon glyphicon-edit"></i>
                             </a>
-                            <a href="{{ route('newsadmin.delete', $bd->id) }}" class="btn btn-danger btn-circle" title="Delete"
+                            <a href="{{ route('catnewadmin.delete', $bd->id) }}" class="btn btn-danger btn-circle" title="Delete"
                                     data-toggle="tooltip"
                                     data-placement="top"
                                     data-method="DELETE"
@@ -93,7 +95,7 @@
             @endif
         </tbody>
     </table>
-    {!! $listNews->render() !!}
+    {!! $listCats->render() !!}
 </div>
 
 @stop
