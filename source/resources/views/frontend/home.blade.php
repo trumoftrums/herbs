@@ -15,20 +15,29 @@
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
                                 <img class="img-responsive"  src="{{ url('assets/frontend/images/slider/img01.png')}}" alt="...">
-                                <div class="carousel-caption">
-                                    <h4></h4>
+                                <div class="carousel-caption caption-slide-home">
+                                    <p>Tin bài thuốc</p>
+                                    <hr>
+                                    <h4>THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI</h4>
+                                    <a href="#"><img src="{{ url('assets/frontend/images/see-more.png')}}"/></a>
                                 </div>
                             </div>
                             <div class="item">
                                 <img class="img-responsive" src="{{ url('assets/frontend/images/slider/img01.png')}}" alt="...">
-                                <div class="carousel-caption">
-                                    <h4></h4>
+                                <div class="carousel-caption caption-slide-home">
+                                    <p>Tin bài thuốc</p>
+                                    <hr>
+                                    <h4>THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI</h4>
+                                    <a href="#"><img src="{{ url('assets/frontend/images/see-more.png')}}"/></a>
                                 </div>
                             </div>
                             <div class="item">
                                 <img class="img-responsive" src="{{ url('assets/frontend/images/slider/img01.png')}}" alt="...">
-                                <div class="carousel-caption">
-                                    <h4></h4>
+                                <div class="carousel-caption caption-slide-home">
+                                    <p>Tin bài thuốc</p>
+                                    <hr>
+                                    <h4>THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI</h4>
+                                    <a href="#"><img src="{{ url('assets/frontend/images/see-more.png')}}"/></a>
                                 </div>
                             </div>
                         </div>

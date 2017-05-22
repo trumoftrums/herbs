@@ -1046,6 +1046,41 @@ hr {
     float: left;
     width: 100%;
 }
+.caption-slide-home{
+    float: left;
+    left: 15px;
+    bottom: 0;
+    text-align: left;
+    right: 5px;
+}
+.caption-slide-home hr{
+    border-top: 1.5px solid #fff;
+    width: 50%;
+    float: left;
+}
+.caption-slide-home a{
+    float: left;
+    width: 135px;
+    height: 30px;
+    margin-top: 15px;
+}
+.caption-slide-home a img{
+    width: 143px;
+    height: 34px !important;
+}
+.caption-slide-home a img:hover{
+    opacity:0.7;
+}
+.caption-slide-home p{
+    font-size: 17px;
+}
+.caption-slide-home h4{
+    line-height: 28px;
+    font-size: 22px;
+    float: left;
+    margin-top: 0px;
+    width: 100%;
+}
 .content-cay .ten-cay{
     margin-top: 0px;
     color: #6fa001;

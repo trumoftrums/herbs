@@ -7,7 +7,7 @@
             <div class="item active item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="//www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -15,7 +15,61 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                 </div>
             </div>
-
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
+            <div class="item item-herbs">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="cover-media">
+                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <span>30/04/2017</span>
+                    <hr class="hr-line">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                </div>
+            </div>
         </div>
         <a class="left carousel-control" href="#fruitscarousel2" data-slide="prev"><img src="{{ url('assets/frontend/images/arrow-left.png')}}"/></a>
         <a class="right carousel-control" href="#fruitscarousel2" data-slide="next"><img src="{{ url('assets/frontend/images/arrow-right.png')}}"/></a>
