@@ -47,90 +47,50 @@ class FrontEndController extends Controller
     {
         return view('frontend.home', array());
     }
-
-    public function tuyendung()
+    public function tudienduoclieu()
     {
-        $listNewsTuyendung = News::where('status', News::STATUS_ACTIVED)
-            ->where('type', News::TYPE_TD)
-            ->orderBy('created_at', 'desc')
-            ->limit(4)
-            ->get();
-        return view('frontend.tuyen-dung', compact('listNewsTuyendung'));
+        return view('frontend.tu-dien-duoc-lieu', []);
     }
-    public function lienhe()
+    public function tudienduoclieuDetail($id)
     {
-        return view('frontend.lien-he', array());
+        return view('frontend.tu-dien-duoc-lieu-detail', []);
     }
-    public function giaiphapdautu()
+    public function sanpham()
     {
-        return view('frontend.giai-phap-dau-tu', array());
+        return view('frontend.san-pham', []);
     }
-    public function hosocongty()
+    public function duan()
     {
-        return view('frontend.ho-so-cong-ty', array());
+        return view('frontend.du-an', []);
     }
-    public function nhansu()
+    public function gioithieu()
     {
-        return view('frontend.nhan-su', array());
+        return view('frontend.gioi-thieu', []);
     }
-    public function doitac()
+    public function phanphoi()
     {
-        return view('frontend.doi-tac', array());
+        return view('frontend.phan-phoi', []);
     }
-    public function baocaotaichinh()
+    public function tintuc($id_type)
     {
-        $listBranch = Branch::where('status', Branch::STATUS_ACTIVED)->get();
-        foreach ($listBranch as &$item){
-            $item->listProject = Project::where('idBranch', $item->id)
-                ->where('status', Project::STATUS_ACTIVED)
-                ->get();
+        switch ($id_type){
+            case 1:
+                $title = "TIN DOANH NGHIỆP";
+                break;
+            case 2:
+                $title = "TIN THỊ TRƯỜNG";
+                break;
+            case 3:
+                $title = "TIN BÀI THUỐC";
+                break;
+            default:
+                break;
         }
-
-        return view('frontend.bao-cao-tai-chinh', compact('listBranch'));
+        return view('frontend.tin-tuc', compact('title'));
     }
-    public function hoidap()
+    public function tintucDetail($id)
     {
-        $listQA = QA::where('status', QA::STATUS_ACTIVED)->get();
-        $listNewsRelated = News::where('status', News::STATUS_ACTIVED)
-            ->orderBy('created_at', 'desc')
-            ->limit(5)
-            ->get();
-
-        return view('frontend.hoi-dap', compact('listNewsRelated', 'listQA'));
-    }
-    public function dautu()
-    {
-        $title = "TIN DOANH NGHIỆP";
-        $listNews = News::where('status', News::STATUS_ACTIVED)
-            ->where('type', News::TYPE_DAUTU)
-            ->orderBy('created_at', 'desc')
-            ->paginate(self::perpage);
-        /*echo "<pre>";
-        print_r($listNews);die;*/
-
-        return view('frontend.dau-tu', compact('listNews', 'title'));
-    }
-    public function quanlytaichinhcanhan()
-    {
-        $title = "TIN THỊ TRƯỜNG";
-        $listNews = News::where('status', News::STATUS_ACTIVED)
-            ->where('type', News::TYPE_TCCN)
-            ->orderBy('created_at', 'desc')
-            ->paginate(self::perpage);
-
-        return view('frontend.dau-tu', compact('listNews', 'title'));
-    }
-    public function dautuDetail($id)
-    {
-        $news = News::find($id);
-        $listNewsRelated = News::where('status', News::STATUS_ACTIVED)
-            ->where('type', $news->type)
-            ->orderBy('created_at', 'desc')
-            ->whereNotIn('id', [$news->id])
-            ->limit(5)
-            ->get();
-
-        return view('frontend.dau-tu-detail', compact('news', 'listNewsRelated'));
+        return view('frontend.tin-tuc-detail', []);
     }
 
 }

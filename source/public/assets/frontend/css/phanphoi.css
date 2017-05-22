@@ -1,0 +1,51 @@
+.phanphoi-title{
+    font-size: 36px;
+    color: #667e00;
+}
+.hr-phanphoi{
+    width: 306px;
+    text-align: left;
+    border: none;
+    border-top: 1px solid #667e00;
+
+}
+.div-left-map{
+    width: 50%;
+    float: left;
+}
+.div-right-form{
+    width: 50%;
+    float: right;
+}
+.phanphoi-content-top{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.phanphoi-content-diachi{
+    float: left;
+    width: 100%;
+}
+.phanphoi-chinhanh-content{
+    min-height: 250px;
+    width: 100%;
+}
+.phanphoi-khuvuc-content{
+    width: 100%;
+    margin-top: 10px;
+    min-height: 70px;
+}
+.chinhanh-detail{
+    width: 100%;
+}
+.chinhanh-detail-diachi{
+    width: 100%;
+}
+.chinhanh-detail-diachi-col{
+    width: 33%;
+    float: left;
+}
+.phanphoi-khuvuc-content h3{
+    font-size: 15px;
+    text-decoration: underline;
+}

@@ -3,262 +3,417 @@
 @section('page-title', 'HSG')
 
 @section('content')
-<div class="first-top">
-    <div class="one">
-        <div class="why-invest">
-            <img class="img-header" src="{{ url('assets/frontend/images/bg-header.jpg') }}"/>
-            <img class="icon-why-invest" src="{{ url('assets/frontend/images/icon-vi-sao-dau-tu.png') }}"/>
-            <p class="date-author">08/03/2017 | Được viết bởi: ông Lê Hoàng Thái Sang(CEO)</p>
+    <div class="slide-show">
+        <div class="cover-news">
+            <p class="newsest">Tin mới nhất <span class="sp-date">Ngày 30/04/2017 - bởi Trung Tran</span></p>
         </div>
-        <div class="slide-why-invest">
-            <div class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="{{ url('assets/frontend/images/slides/img1.png') }}"/>
+        <div class="inner-slide-show">
+            <div class="col-sm-6" style="margin-left: -2%;">
+                <div class="slider">
+                    <div id="home-slider" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="img-responsive"  src="{{ url('assets/frontend/images/slider/img01.png')}}" alt="...">
+                                <div class="carousel-caption">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="{{ url('assets/frontend/images/slider/img01.png')}}" alt="...">
+                                <div class="carousel-caption">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="{{ url('assets/frontend/images/slider/img01.png')}}" alt="...">
+                                <div class="carousel-caption">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="{{ url('assets/frontend/images/slides/img2.png') }}"/>
+                </div>
+            </div>
+            <div class="col-sm-6" style="width: 52%;">
+                <div class="list-group slider-list">
+                    <a href="#" class="list-group-item active" data-target="#home-slider" data-slide-to="0">
+                        <img class="img-item-slide" src="{{ url('assets/frontend/images/slider/item-01.png')}}"/>
+                        <p>Tin bài thuốc</p>
+                        <hr>
+                        THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI<br>
+                        <span class="sum-sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .</span>
+                    </a>
+                    <a href="#" class="list-group-item" data-target="#home-slider" data-slide-to="1">
+                        <img class="img-item-slide" src="{{ url('assets/frontend/images/slider/item-02.png')}}"/>
+                        <p>Tin bài thuốc</p>
+                        <hr>
+                        THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI<br>
+                        <span class="sum-sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
+                    </a>
+                    <a href="#" class="list-group-item" data-target="#home-slider" data-slide-to="2">
+                        <img class="img-item-slide" src="{{ url('assets/frontend/images/slider/item-03.png')}}"/>
+                        <p>Tin bài thuốc</p>
+                        <hr>
+                        THÀNH PHẦN THẢO DƯỢC PHƯƠNG THỨC TRỊ NHỨC MỎI<br>
+                        <span class="sum-sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .</span>
+                    </a>
+                </div>
+                <a class="a-view-more" href="#">XEM NHIỀU HƠN &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="slider-top">
+        <div class="cover-title">
+            <h3 class="title-herbs">SẢN PHẨM MỚI CỦA HERBS</h3>
+        </div>
+        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel1">
+            <div class="carousel-inner">
+                <div class="item active item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl01.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="{{ url('assets/frontend/images/slides/img3.png') }}"/>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="{{ url('assets/frontend/images/slides/img4.png') }}"/>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
                     </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#fruitscarousel1" data-slide="prev"><img src="{{ url('assets/frontend/images/arrow-left.png')}}"/></a>
+            <a class="right carousel-control" href="#fruitscarousel1" data-slide="next"><img src="{{ url('assets/frontend/images/arrow-right.png')}}"/></a>
+        </div>
+    </div>
+    <div class="news-herbs">
+        <div class="herbs-left">
+            <div class="unit-herbs">
+                <ul class="nav nav-tabs">
+                    <li><a data-toggle="tab" href="#menu3">CHUẨN ĐOÁN</a></li>
+                    <li><a data-toggle="tab" href="#menu2">CÂY THUỐC</a></li>
+                    <li><a data-toggle="tab" href="#menu1">BÀI THUỐC</a></li>
+                    <li class="active"><a data-toggle="tab" href="#home">TẤT CẢ</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="cover-title cover-title-tab">
+                        <h3 class="title-herbs">TIN CỦA HERBS</h3>
+                    </div>
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="main-item-news">
+                            <img src="{{ url('assets/frontend/images/img-item.png')}}"/>
+                            <a class="title-first" href="#">7 LOẠI THẢO DƯỢC THÔNG THƯỜNG TỐT CHO NÃO BỘ</a>
+                            <span>08:00 - ngày 30/04/2017</span>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a class="a-view-more-item" href="#">XEM CHI TIẾT &raquo;</a>
+                        </div>
+                        <div class="list-item-news">
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab item-final">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unit-herbs">
+                <ul class="nav nav-tabs">
+                    <li><a data-toggle="tab" href="#menub3">CHUẨN ĐOÁN</a></li>
+                    <li><a data-toggle="tab" href="#menub2">CÂY THUỐC</a></li>
+                    <li><a data-toggle="tab" href="#menub1">BÀI THUỐC</a></li>
+                    <li class="active"><a data-toggle="tab" href="#homeb">TẤT CẢ</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="cover-title cover-title-tab">
+                        <h3 class="title-herbs">TIN THỊ TRƯỜNG</h3>
+                    </div>
+                    <div id="homeb" class="tab-pane fade in active">
+                        <div class="main-item-news">
+                            <img src="{{ url('assets/frontend/images/img-item.png')}}"/>
+                            <a class="title-first" href="#">7 LOẠI THẢO DƯỢC THÔNG THƯỜNG TỐT CHO NÃO BỘ</a>
+                            <span>08:00 - ngày 30/04/2017</span>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a class="a-view-more-item" href="#">XEM CHI TIẾT &raquo;</a>
+                        </div>
+                        <div class="list-item-news">
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab item-final">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menub1" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                    <div id="menub2" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                    <div id="menub3" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unit-herbs">
+                <ul class="nav nav-tabs">
+                    <li><a data-toggle="tab" href="#menuc3">CHUẨN ĐOÁN</a></li>
+                    <li><a data-toggle="tab" href="#menuc2">CÂY THUỐC</a></li>
+                    <li><a data-toggle="tab" href="#menuc1">BÀI THUỐC</a></li>
+                    <li class="active"><a data-toggle="tab" href="#homec">TẤT CẢ</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="cover-title cover-title-tab">
+                        <h3 class="title-herbs">TIN BÀI THUỐC</h3>
+                    </div>
+                    <div id="homec" class="tab-pane fade in active">
+                        <div class="main-item-news">
+                            <img src="{{ url('assets/frontend/images/img-item.png')}}"/>
+                            <a class="title-first" href="#">7 LOẠI THẢO DƯỢC THÔNG THƯỜNG TỐT CHO NÃO BỘ</a>
+                            <span>08:00 - ngày 30/04/2017</span>
+                            <hr class="hr-line">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a class="a-view-more-item" href="#">XEM CHI TIẾT &raquo;</a>
+                        </div>
+                        <div class="list-item-news">
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                            <div class="item-news-tab item-final">
+                                <img src="{{ url('assets/frontend/images/img-item-small.png')}}"/>
+                                <div class="cover-co-item">
+                                    <a href="#">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
+                                    <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                                    <span class="sum-av">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menuc1" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                    <div id="menuc2" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                    <div id="menuc3" class="tab-pane fade">
+                        <p>Đang cập nhật.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="herbs-right">
+            <div class="unit-herbs-right">
+                <h4 class="h4-title-right">HOẠT ĐỘNG XÃ HỘI</h4>
+                <div class="item-bs">
+                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
+                    <div class="cover-right">
+                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
+                        <span class="sp-chucvu">30/04/2017</span>
+                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
+                    </div>
+                </div>
+                <div class="item-bs">
+                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
+                    <div class="cover-right">
+                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
+                        <span class="sp-chucvu">30/04/2017</span>
+                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
+                    </div>
+                </div>
+                <div class="item-bs">
+                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
+                    <div class="cover-right">
+                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
+                        <span class="sp-chucvu">30/04/2017</span>
+                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
+                    </div>
+                </div>
+                <div class="item-bs">
+                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
+                    <div class="cover-right">
+                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
+                        <span class="sp-chucvu">30/04/2017</span>
+                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unit-herbs-right">
+                <h4 class="h4-title-right">FANPAGE</h4>
+                <div class="item-qa">
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook/">Facebook</a></blockquote></div>
+                </div>
+                <div class="item-qa">
+                    <a href="#"><img src="{{ url('assets/frontend/images/qa-item.png')}}"/></a>
+                </div>
+                <div class="item-qa">
+                    <a href="#"><img src="{{ url('assets/frontend/images/qa-item2.png')}}"/></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="two">
-        <div class="up">
-            <div class="item-service">
-                <img class="img-service" src="{{ url('assets/frontend/images/giai-phap-dau-tu.png')}}"/>
-                <div class="cover-title">
-                    <a href="{{ route('frontend.giaiphapdautu') }}"><img class="img-title-01" src="{{ url('assets/frontend/images/title-service-01.png')}}"/></a>
-                    <p class="date-author right-p">Được viết bởi: ông Lê Hoàng Thái Sang (CEO)</p>
-                </div>
-                <div class="cover-content-item">
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-bds.png')}}"/>
-                        <p>Bất Động Sản</p>
-                    </div>
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-ipo.png')}}"/>
-                        <p>Thị Trường IPO</p>
-                    </div>
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-tmdt.png')}}"/>
-                        <p>Thương Mại Điện Tử</p>
-                    </div>
-                    <div class="icon-item" style="margin-left: 17%;">
-                        <img src="{{ url('assets/frontend/images/icon-chan-nuoi.png')}}"/>
-                        <p>Công Nghiệp SX</p>
-                    </div>
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-dau-tu-khoi-nghiep.png')}}"/>
-                        <p>Quỹ Đầu Tư Khởi Nghiệp</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item-service">
-                <img class="img-service" src="{{ url('assets/frontend/images/nha-dau-tu.png')}}"/>
-                <div class="cover-title">
-                    <a href="{{ route('frontend.baocaotaichinh') }}"><img class="img-title-02" src="{{ url('assets/frontend/images/title-service-02.png')}}"/></a>
-                    <p class="date-author right-p">Được viết bởi: ông Lê Hoàng Thái Sang (CEO)</p>
-                </div>
-                <div class="cover-content-item">
-                    <ul>
-                        <li>
-                            <input type="checkbox" checked/><span>Công bố thông tin</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Lịch hoạt động của quỹ</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Hỏi và đáp</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Hỗ trợ tư vấn tài chính</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Báo cáo tài chính</span>
-                        </li>
-                    </ul>
-                    <a class="view-more" href="{{ route('frontend.baocaotaichinh') }}">Tìm hiểu thêm</a>
-                </div>
-            </div>
-            {{--<div class="item-service">
-                <img class="img-service" src="{{ url('assets/frontend/images/giai-phap-dau-tu.png')}}"/>
-                <div class="cover-title">
-                    <a href="{{ route('frontend.giaiphapdautu') }}"><img class="img-title-01" src="{{ url('assets/frontend/images/title-service-01.png')}}"/></a>
-                    <p class="date-author right-p">Được viết bởi: ông Lê Hoàng Thái Sang (CEO)</p>
-                </div>
-                <div class="cover-content-item">
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-bds.png')}}"/>
-                        <p>Bất Động Sản</p>
-                    </div>
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-ipo.png')}}"/>
-                        <p>Thị Trường IPO</p>
-                    </div>
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-tmdt.png')}}"/>
-                        <p>Thương Mại Điện Tử</p>
-                    </div>
-                    <div class="icon-item" style="margin-left: 17%;">
-                        <img src="{{ url('assets/frontend/images/icon-chan-nuoi.png')}}"/>
-                        <p>Chăn Nuôi</p>
-                    </div>
-                    <div class="icon-item">
-                        <img src="{{ url('assets/frontend/images/icon-dau-tu-khoi-nghiep.png')}}"/>
-                        <p>Quỹ Đầu Tư Khởi Nghiệp</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item-service">
-                <img class="img-service" src="{{ url('assets/frontend/images/nha-dau-tu.png')}}"/>
-                <div class="cover-title">
-                    <a href="{{ route('frontend.baocaotaichinh') }}"><img class="img-title-02" src="{{ url('assets/frontend/images/title-service-02.png')}}"/></a>
-                    <p class="date-author right-p">Được viết bởi: ông Lê Hoàng Thái Sang (CEO)</p>
-                </div>
-                <div class="cover-content-item">
-                    <ul>
-                        <li>
-                            <input type="checkbox" checked/><span>Công bố thông tin</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Lịch hoạt động của quỹ</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Hỏi và đáp</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Hỗ trợ tư vấn tài chính</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked/><span>Báo cáo tài chính</span>
-                        </li>
-                    </ul>
-                    <a class="view-more" href="{{ route('frontend.baocaotaichinh') }}">Tìm hiểu thêm</a>
-                </div>
-            </div>--}}
-        </div>
-        <div class="bottom">
-            <div class="carousel slide slide-right" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="{{ url('assets/frontend/images/slide-right/slide03.jpg') }}"/>
-                    </div>
-                    <div class="item">
-                        <img src="{{ url('assets/frontend/images/slide-right/slide02.jpg') }}"/>
-                    </div>
-                    <div class="item">
-                        <img src="{{ url('assets/frontend/images/slide-right/slide01.jpg') }}"/>
-                    </div>
-                </div>
-            </div>
-
-            {{--<div class="item-service">
-                <img class="img-service" src="{{ url('assets/frontend/images/kien-thuc-tai-chinh.png')}}"/>
-                <div class="cover-title">
-                    <a href="{{ route('frontend.dautu') }}"><img class="img-title-03" src="{{ url('assets/frontend/images/title-service-03.png')}}"/></a>
-                    <p class="date-author right-p">Được viết bởi: ông Lê Hoàng Thái Sang (CEO)</p>
-                </div>
-                <div class="cover-content-item">
-                    <h4><img src="{{ url('assets/frontend/images/icon-mo-khoa-kien-thuc.png')}}"/>CÙNG HSG MỞ KHÓA KIẾN THỨC QLTC</h4>
-                    <p class="p-service">Chúng ta thảo luận rất nhiều về kinh tế nhưng đôi khi lại bỏ qua những điều cơ bản. Những gì <b>HOÀNG SANG GROUP</b> chia sẻ hy vọng sẽ giúp bạn cấu trúc lại kiến thức kinh tế của mình.</p>
-                    <a class="view-more" href="{{ route('frontend.dautu') }}">Tìm hiểu thêm</a>
-                </div>
-            </div>
-            <div class="item-service">
-                <img class="img-service" src="{{ url('assets/frontend/images/tuyen-dung.png')}}"/>
-                <div class="cover-title">
-                    <a href="{{ route('frontend.tuyendung') }}"><img class="img-title-04" src="{{ url('assets/frontend/images/title-service-04.png')}}"/></a>
-                    <p class="date-author right-p">Được viết bởi: ông Lê Hoàng Thái Sang (CEO)</p>
-                </div>
-                <div class="cover-content-item">
-                    <h4><img src="{{ url('assets/frontend/images/icon-khoi-nghiep-dam-me.png')}}"/>CÙNG HSG KHỞI NGHIỆP ĐAM MÊ</h4>
-                    <p class="p-service">Hiện tại HOÀNG SANG GROUP đang tìm kiếm những ứng viên có niềm đam mê với lĩnh vực tài chính. Chúng tôi sẽ rất hạnh phúc khi có được sự hợp tác của các bạn.</p>
-                    <a class="view-more" href="{{ route('frontend.tuyendung') }}">Tìm hiểu thêm</a>
-                </div>
-            </div>--}}
-        </div>
-    </div>
-</div>
-<div class="second-bottom">
-    <img class="img-slogan" src="{{ url('assets/frontend/images/bg-title.png')}}"/>
-    <div class="item-thong-diep">
-        <div class="left">
-            <img src="{{ url('assets/frontend/images/td01.jpg')}}">
-        </div>
-        <div class="right">
-            <div class="cover-p-thong-diep">
-                <img class="phay-left" src="{{ url('assets/frontend/images/phay-left.png')}}"/>
-                <p>TẦM NHÌN CỦA HSG</p>
-                <img class="phay-right" src="{{ url('assets/frontend/images/phay-right.png')}}"/>
-            </div>
-            <p class="p-content-thong-diep">
-                Hội tụ niềm đam mê và nuôi dưỡng khát vọng, tài năng để tìm kiếm sự đột phá nhằm nâng cao lợi ích, sự trường tồn cho khách hàng..
-                <br>
-                Chính vì vậy, khách hàng sẽ tưởng thưởng chúng ta bằng doanh số, lợi nhuận dẫn đầu và sự tăng trưởng bền vững
-            </p>
-        </div>
-    </div>
-    <div class="item-thong-diep">
-        <div class="left">
-            <img src="{{ url('assets/frontend/images/td02.jpg')}}">
-        </div>
-        <div class="right">
-            <div class="cover-p-thong-diep">
-                <img class="phay-left" src="{{ url('assets/frontend/images/phay-left.png')}}"/>
-                <p>SỨ MỆNH CỦA HSG</p>
-                <img class="phay-right" src="{{ url('assets/frontend/images/phay-right.png')}}"/>
-            </div>
-            <p class="p-content-thong-diep">
-                HSG là một hệ thống tích hợp và đồng bộ gồm các công ty hoạt động trong các lĩnh vực bất động sản, thương mại điện tử, sản xuất kinh doanh và tài chính nhằm tạo dựng một cuộc sống tốt đẹp hơn cho mọi người đồng thời không ngừng gia tăng giá trị cho cổ đông.
-            </p>
-        </div>
-    </div>
-    <div class="item-thong-diep">
-        <div class="left">
-            <img src="{{ url('assets/frontend/images/td03.jpg')}}">
-        </div>
-        <div class="right">
-            <div class="cover-p-thong-diep">
-                <img class="phay-left" src="{{ url('assets/frontend/images/phay-left.png')}}"/>
-                <p>GIÁ TRỊ CỐT LÕI</p>
-                <img class="phay-right" src="{{ url('assets/frontend/images/phay-right.png')}}"/>
-            </div>
-            <p class="p-content-thong-diep">
-                “Đoàn kết và Hợp tác”<br>
-                “Tận tâm và Uy tín”<br>
-                “Sáng tạo và Đổi mới”<br>
-                “Lợi nhuận và hiệu quả”<br>
-                “Chuyên nghiệp và tiêu chuẩn hoá”<br>
-                Là những giá trị cốt lỗi làm nền tảng góp phần đưa HSG trở thành một tập đoàn đa quốc gia.
-
-            </p>
-        </div>
-    </div>
-    <div class="item-thong-diep">
-        <div class="left">
-            <img src="{{ url('assets/frontend/images/td04.jpg')}}">
-        </div>
-        <div class="right">
-            <div class="cover-p-thong-diep">
-                <img class="phay-left" src="{{ url('assets/frontend/images/phay-left.png')}}"/>
-                <p>ĐỊNH HƯỚNG CHIẾN LƯỢC</p>
-                <img class="phay-right" src="{{ url('assets/frontend/images/phay-right.png')}}"/>
-            </div>
-            <p class="p-content-thong-diep">
-                Trở thành Tập đoàn đa ngành, lớn mạnh ổn định bền vững<br>
-                “Lấy đầu tư để tăng tốc phát triển ”<br>
-                “Lấy nhân tố con người làm hạt nhân“<br>
-                “Lấy công nghệ thông tin là công cụ quan trọng”<br>
-                “Lấy lợi ích của khách hàng là cốt lõi”<br>
-            </p>
-        </div>
-    </div>
-</div>
 @stop
