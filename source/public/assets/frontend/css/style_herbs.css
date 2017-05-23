@@ -241,6 +241,7 @@ Menu top
     height: 125px;
     border: none;
     padding: 0px 15px 0px 0px;
+    color: #6fa001;
     text-transform: uppercase;
 }
 .slider-list .list-group-item:hover{
@@ -257,14 +258,14 @@ Menu top
     opacity: 0.6;
     background-color: transparent;
     border-color: #ccc;
-    color: #333;
+    color: #6fa001;
 }
 .slider-list .active:hover,
 .slider-list .active:focus {
     opacity: 0.6;
     background-color: transparent;
     border-color: #ccc;
-    color: #333;
+    color: #6fa001;
 }
 .slider-list .img-item-slide{
     float: left;
@@ -294,6 +295,7 @@ hr {
 .list-group-item .sum-sp{
     font-size: 13px;
     text-transform: initial;
+    color: #000;
 }
 
 .carousel-control.left, .carousel-control.right {
