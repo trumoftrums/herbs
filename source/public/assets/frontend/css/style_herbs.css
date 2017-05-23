@@ -151,7 +151,7 @@ Menu top
     display: block;
     text-align: left;
     color: #fff;
-    font-size: 13px;
+    font-size: 0.9vw;
     padding: 12px 50px 12px 16px;
 }
 .dropdown-content a img{
@@ -161,7 +161,6 @@ Menu top
     color: #006838;
     background:none;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
