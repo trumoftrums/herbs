@@ -241,6 +241,7 @@ Menu top
     height: 125px;
     border: none;
     padding: 0px 15px 0px 0px;
+    text-transform: uppercase;
 }
 .slider-list .list-group-item:hover{
     background-color: transparent;
@@ -250,6 +251,7 @@ Menu top
     margin-bottom: 5px;
     font-size: 15px;
     color: #000;
+    text-transform: initial;
 }
 .slider-list .active {
     opacity: 0.6;
@@ -271,6 +273,7 @@ Menu top
 .img-item-slide{
     max-height: 125px;
     max-width: 150px;
+    min-height: 115px;
 }
 hr {
     margin-top: -5px;
@@ -290,6 +293,7 @@ hr {
 }
 .list-group-item .sum-sp{
     font-size: 13px;
+    text-transform: initial;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -544,6 +548,7 @@ hr {
     line-height: 23px;
     margin: 8px 0px 0px 0px;
     color: #006838;
+    font-weight: bold;
 }
 .tab-content .main-item-news span{
     float: left;
@@ -574,11 +579,14 @@ hr {
     width: 100px;
     float: left;
     margin-right: 8px;
+    height: 90px;
 }
 .tab-content .list-item-news .item-news-tab .cover-co-item a{
     color: #006838;
     font-size: 14px;
     display: block;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 .tab-content .list-item-news .item-news-tab .cover-co-item span.date-sp{
     font-size: 13px;
