@@ -18,4 +18,5 @@ interface NewsRepository
     public function delete($id);
 
     public function paginate($perPage, $search = null, $status = null);
+    public function getLastest($num =3,$type =null,$cat = null);
 }

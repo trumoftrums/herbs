@@ -5,14 +5,17 @@ namespace Vanguard\Http\Controllers;
 use Intervention\Image\Gd\Commands\InvertCommand;
 use Vanguard\Branch;
 use Vanguard\Invest;
+use Vanguard\Models\CategoryNews;
 use Vanguard\News;
 use Vanguard\Project;
 use Vanguard\QA;
 use Vanguard\Repositories\Activity\ActivityRepository;
+use Vanguard\Repositories\News\NewsRepository;
 use Vanguard\Repositories\User\UserRepository;
 use Vanguard\Support\Enum\UserStatus;
 use Auth;
 use Carbon\Carbon;
+use Vanguard\TypeNews;
 
 class FrontEndController extends Controller
 {
@@ -43,9 +46,36 @@ class FrontEndController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
+    public function index(NewsRepository $newsRepository)
     {
-        return view('frontend.home', array());
+        $listSlideShow = $newsRepository->getLastest(3);
+        $listTintuc = array();
+        $listType = TypeNews::where("status",TypeNews::STATUS_ACTIVED)->limit(3)->orderBy('created_at','desc')->get()->toArray();
+        foreach ($listType as $type){
+            $cats= CategoryNews::where('status',CategoryNews::STATUS_ACTIVED)->where('type',$type['idType'])
+                ->limit(3)->orderBy('created_at','desc')->get()->toArray();
+            $listTintuc[$type['idType']]['info'] = $type;
+            $listTintuc[$type['idType']]['data'] = array();
+            if(!empty($cats)){
+
+
+                foreach ($cats as $v){
+                    $listTintuc[$type['idType']]['data'][$v['id']]['info'] = $v;
+                    $listTintuc[$type['idType']]['data'][$v['id']]['data'] = array();
+                    $tt = $newsRepository->getLastest(5,null,$v['id']);
+                    if(!empty($tt)){
+                        $listTintuc[$type['idType']]['data'][$v['id']]['data'] = $tt;
+                    }
+
+                }
+                $all = $newsRepository->getLastest(5,$type['idType']);
+                $listTintuc[$type['idType']]['all'] = $all;
+            }
+        }
+//        var_dump($listTintuc[1]['data']);exit();
+
+
+        return view('frontend.home', array('listSlideShow'=>$listSlideShow,'listTintuc'=>$listTintuc));
     }
     public function tudienduoclieu()
     {

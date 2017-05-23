@@ -269,6 +269,10 @@ Menu top
     float: left;
     margin-right: 15px;
 }
+.img-item-slide{
+    max-height: 125px;
+    max-width: 150px;
+}
 hr {
     margin-top: -5px;
     margin-bottom: 10px;
