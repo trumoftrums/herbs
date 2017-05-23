@@ -53,7 +53,8 @@ class EloquentNews implements NewsRepository
     {
         $query = News::join('category_new', 'category_new.id', '=', 'news.category')
             ->join('type_news', 'type_news.idType', '=', 'category_new.type')
-            ->select("news.*","category_new.id as idCategory","category_new.nameCategory","type_news.nameType");
+            ->join('users', 'users.id', '=', 'news.created_by')
+            ->select("news.*","category_new.id as idCategory","category_new.nameCategory","type_news.nameType","users.username","users.first_name","users.last_name");
 
         if ($status && $status != "All") {
             $query->where('news.status', $status);
@@ -63,5 +64,24 @@ class EloquentNews implements NewsRepository
 
         return $result;
     }
+    public function getLastest($num = 3,$type = null,$cat =null)
+    {
+
+        $query = News::join('category_new', 'category_new.id', '=', 'news.category')
+            ->join('type_news', 'type_news.idType', '=', 'category_new.type')
+            ->join('users', 'users.id', '=', 'news.created_by')
+            ->where('news.status', News::STATUS_ACTIVED)
+            ->select("news.*","category_new.id as idCategory","category_new.nameCategory","type_news.nameType","users.username","users.first_name","users.last_name");
+        if(!empty($type)){
+            $query  = $query->where('type_news.idType', $type);
+        }
+        if(!empty($cat)){
+            $query  = $query->where('news.category', $cat);
+        }
+        $result = $query->orderBy('news.created_at', 'desc')->limit($num)->get()->toArray();
+
+        return $result;
+    }
+
 
 }
