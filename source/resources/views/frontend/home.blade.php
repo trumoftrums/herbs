@@ -50,7 +50,7 @@
                         <p>{{$vl['nameType']}}</p>
                         <hr>
                         {{$vl['title']}}<br>
-                        <span class="sum-sp"><?php if(strlen($vl['summary']) >170 ) echo substr($vl['summary'],0,170); else echo $vl['summary']; ?></span>
+                        <span class="sum-sp"><?php echo implode(' ', array_slice(explode(' ', $vl['summary']), 0, 20)) ?>...</span>
                     </a>
                     <?php $i++;}}?>
 
@@ -202,7 +202,7 @@
                                     <div class="cover-co-item">
                                         <a href="#">{{$type['all'][$i]['title']}}</a>
                                         <span class="date-sp">{{$type['all'][$i]['created_at']}}</span>
-                                        <span class="sum-av">{{$type['all'][$i]['summary']}}</span>
+                                        <span class="sum-av"><?php echo implode(' ', array_slice(explode(' ', $type['all'][$i]['summary']), 0, 15)) ?>...</span>
                                     </div>
                                 </div>
                                 <?php }?>
@@ -235,7 +235,9 @@
                                 <div class="cover-co-item">
                                     <a href="#">{{$cat['data'][$i]['title']}}</a>
                                     <span class="date-sp">{{$cat['data'][$i]['created_at']}}</span>
-                                    <span class="sum-av">{{$cat['data'][$i]['summary']}}</span>
+                                    <span class="sum-av">
+                                        <?php echo implode(' ', array_slice(explode(' ', $cat['data'][$i]['summary']), 0, 15)) ?>...
+                                    </span>
                                 </div>
                             </div>
                             <?php }?>
