@@ -24,11 +24,10 @@
 </head>
 <body>
 <div class="container-fluid">
+    @include('frontend.header-mobile')
     @include('frontend.header')
-    <div class="content-right">
-        @yield('content')
-        @include('frontend.footer')
-    </div>
+    @yield('content')
+    @include('frontend.footer')
 </div>
 <script type="text/javascript">
     $('#home-slider').on('slide.bs.carousel', function (e) {
@@ -40,14 +39,12 @@
 </script>
 <script>
     jQuery(document).ready(function () {
-
         jQuery('.carousel[data-type="multi"] .item').each(function () {
             var next = jQuery(this).next();
             if (!next.length) {
                 next = jQuery(this).siblings(':first');
             }
             next.children(':first-child').clone().appendTo(jQuery(this));
-
             for (var i = 0; i < 2; i++) {
                 next = next.next();
                 if (!next.length) {
@@ -56,6 +53,19 @@
                 next.children(':first-child').clone().appendTo($(this));
             }
         });
+        $("#nav-mobile .has-child").click(
+            function () {
+                $(this).next('li').children('ul').toggle('fast');
+                if (!$(this).children('a').hasClass('act')) {
+                    $(this).children('a').addClass('act');
+                    $(this).children('a').css("background", "url({{ url('assets/frontend/images/icon-arrow-down.png')}}) #fffbce no-repeat 95% 50%")
+                } else {
+                    $(this).next('li').children('ul').hide();
+                    $(this).children('a').removeClass('act');
+                    $(this).children('a').css("background", "url({{ url('assets/frontend/images/icon-arrow-right.png')}}) #fffbce no-repeat 95% 50%")
+                }
+                return false;
+            });
 
     });
 </script>

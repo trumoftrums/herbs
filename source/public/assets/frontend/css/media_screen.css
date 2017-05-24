@@ -23,7 +23,7 @@
         width: 95%;
     }
     .header-mobile .logo-mobile a img.logo-hsg{
-        width: 100px;
+        height: 70px;
     }
     .header-mobile .menu-header-mobile .dropdown{
         float: left;
@@ -34,14 +34,15 @@
         width: 40px;
     }
     .header-mobile .menu-header-mobile .dropdown .dropdown-menu{
-        top: 22px;
-        left: 0;
-        background: #056839;
+        top: 45px;
+        left: 4px;
+        background: #6fa001;
         border: none;
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
         border-radius: 0px;
         min-width: 200px;
+        width:220px;
     }
     .header-mobile .menu-header-mobile .dropdown .dropdown-menu #nav-mobile li ul{
         display: none;
@@ -76,151 +77,156 @@
         padding: 0px 0px 0px 40px;
         text-decoration: none;
     }
-    .header-mobile .menu-header-mobile .dropdown .dropdown-menu .private-page{
-        background: #ffde57;
-        float: left;
-        color: #056839;
-        padding: 14px 0px 7px 0px;
-        text-align: center;
-        width: 100%;
-        font-size: 16px;
-        margin: 3px 0px;
-        font-weight: bold;
-    }
-    .side-bar{
+    .header{
         display: none;
     }
-    .content-right {
+    .slide-show {
         width: 100%;
-        margin-top: 82px;
+        padding: 0px;
+        margin-top: 150px;
     }
-    .item-service{
-        width: 100%;
-         margin-left: 0px;
-    }
-    .content-right .first-top .two .up{
-        display: inline-block;
-        margin-bottom: 0px;
-    }
-    .content-right .first-top .one{
-        width: 100%;
-    }
-    .content-right .first-top{
-        display: inline-block;
-    }
-    .content-right .first-top .two {
-        width: 100%;
-    }
-    .content-right .first-top .two .item-service {
-        width: 100%;
+    .slide-show .inner-slide-show {
+        width: 102%;
         margin-left: 0px;
-        margin-top: 2%;
     }
-    .content-right .first-top .two .bottom{
-        display: inline-block;
+    .slider {
+        height: 290px;
     }
-    .content-right .first-top .one .slide-why-invest{
-        position: relative;
-    }
-    .content-right .second-bottom .item-thong-diep{
+    .slider .item img {
+        height: 280px;
         width: 100%;
     }
-    .content-right .second-bottom{
-        width: 100%;
+    .mainabc{
+        margin-left: 0%;
     }
-    .footer{
+    .listabc{
+        display: none;
+    }
+    .a-view-more{
+        width: 100%;
         text-align: center;
+        margin-top: 30px;
     }
-    .footer .p-right {
-        margin-top: 0px;
+    .herbs-right{
+        display: none;
+    }
+    .cover-footer, .news-herbs, .slider-top{
+        padding:0px 5px;
+    }
+    .footer {
+        padding: 30px 0px 0px 0px;
+    }
+    .footer .menu-footer .item-footer {
+        width: 50%;
+    }
+    .footer .menu-footer .last-item-footer {
+        width: 100%;
+        padding-left: 18%;
+    }
+    .news-herbs .herbs-left {
         width: 100%;
     }
-    .content-right .about-up .item-about {
+
+    .tab-content .list-item-news {
         width: 100%;
+        margin-top: 30px;
     }
-    .content-right .nhan-su img {
-        width: 99%;
+    .tab-content .main-item-news {
+        width: 100%;
         margin-top: 15px;
     }
-    .content-right .title-header .span-date-update{
-        margin-top: 0px;
-        width: 100%;
+    .nav>li>a {
+        padding: 2px 5px 2px 5px;
+        font-size:12px;
     }
-    .content-right .title-header .title-root{
-        font-size: 22px;
+    .cover-title-tab {
+        margin-top: -75px;
     }
-    .content-right .title-header .title-after{
-        font-size: 18px;
+    #bigPic img {
+        width: 97%;
+        height: 235px;
     }
-    .content-right .about-up .item-about .title-item-about{
-        font-size: 14px;
+    .gioithieu-content p{
+        text-align: justify;
+        padding: 0px 5px;
     }
-    .content-right .cong-bo-thong-tin .item-congbothongtin .item-congbothongtin-download{
-        width: 100%;
-        padding-left: 5px;
-    }
-    .content-right .cong-bo-thong-tin .item-congbothongtin .thumb-congbothongtin {
-        width: 100%;
-    }
-    .content-right .cong-bo-thong-tin .item-congbothongtin .cover-list-item-congbo {
-        width: 100%;
-    }
-    .content-right .kien-thuc-tai-chinh-detail .detail-news-left{
-        width:100%;
-    }
-    .content-right .kien-thuc-tai-chinh-detail .list-news-related-right {
-        width: 100%;
-        margin-top: 25px;
-    }
-    .content-right .kien-thuc-tai-chinh-detail .kien-thuc-tai-chinh ul li .p-question{
-        padding: 0px 35px;
-    }
-    .content-right .kien-thuc-tai-chinh-detail .kien-thuc-tai-chinh ul li .p-question img{
-        height: 42px;
-        float: left;
-        margin-left: -35px;
-    }
-    .content-right .quan-he-nha-dau-tu .item-news{
+    .footer-bt .logo-footer {
+        text-align: center;
+        padding: 10px;
+        border: none;
         width: 98%;
     }
-    .content-right .giai-phap .giai-phap-left {
-        width: 99%;
+    .footer-bt .logo-footer img {
+        width: 50%;
     }
-    .content-right .giai-phap .final-li{
-        margin-left: 25%;
+    .div-right-form, .div-left-map {
+        width: 100% !important;
+        margin-bottom: 10px;
     }
-    .content-right .giai-phap .giai-phap-right {
+    .slider-list .list-group-item{
+        position: initial;
+    }
+    .unit-herbs{
+        margin-top: 80px;
+    }
+    .nav-tabs {
         float: left;
-        width: 99%;
     }
-    .content-right .cong-bo-thong-tin .ul-cover-tab li {
-        width: 49%;
-        height: 60px;
-        padding: 15px 0px;
+
+
+
+
+
+    .banner-page {
+        margin-top: 80px;
     }
-    .content-right .kien-thuc-tai-chinh .item-news{
-        width:99%;
-    }
-    .content-right .kien-thuc-tai-chinh-detail .detail-news-left .header-news-detail h4{
-        font-size:15px;
-        margin-top: -45px;
-    }
-    .content-right .kien-thuc-tai-chinh .item-news .hover-item .cover-zoom{
-        width: 30%;
-    }
-    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form .inp-td{
+    .herbs-left .cover-menu-tab .list-news .it-news {
         width: 100%;
-        margin-bottom: 10px;
     }
-    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form .area-desc{
+    .herbs-left .cover-menu-tab .main-news .img-main-news {
         width: 100%;
-        margin-bottom: 10px;
     }
-    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form .inp-file{
-        margin-top: 0px;
+    .herbs-left .cover-menu-tab .main-news .cv-main-news {
+        width: 100%;
+        margin-left: 0%;
     }
-    .content-right .kien-thuc-tai-chinh-detail .hoi-dap .form-tuyen-dung .item-form{
-        margin: 0px;
+    .herbs-left .cover-menu-tab .cover-tab-cate ul li a {
+        padding: 3px 3px;
+        margin-left: 3px;
+        font-size: 11px;
+    }
+    .herbs-left .cover-menu-tab .cover-tab-cate ul {
+        width: 100%;
+    }
+    .herbs-left .cover-menu-tab {
+        margin-top: 75px;
+    }
+    .herbs-left .cover-menu-tab .title-news {
+        margin-top: -40px;
+    }
+    .herbs-left .img-line-tddl {
+        width: 96%;
+    }
+    .herbs-left .search .inp-bt {
+        width: 20%;
+    }
+    .herbs-left .search .inp-search {
+        width: 80%;
+    }
+    .herbs-left .item-tddl .img-it-tddl {
+        width: 100%;
+    }
+    .cover-list-related .item-news-tab {
+        width: 100%;
+    }
+    .bg-all{
+        top:40%;
+    }
+    .tab-content .list-item-news .item-news-tab .cover-co-item a {
+        white-space: nowrap;
+        text-transform: capitalize;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 

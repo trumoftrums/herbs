@@ -8,7 +8,7 @@
             <p class="newsest">Tin mới nhất <span class="sp-date">{{$listSlideShow[0]['created_at']}} - bởi {{$listSlideShow[0]['first_name'].''.$listSlideShow[0]['last_name']}}</span></p>
         </div>
         <div class="inner-slide-show">
-            <div class="col-sm-6" style="margin-left: -2%;">
+            <div class="col-sm-6 mainabc">
                 <div class="slider">
                     <div id="home-slider" class="carousel slide" data-ride="carousel">
                         <!-- Wrapper for slides -->
@@ -27,7 +27,7 @@
                                     <p>{{$vl['nameType']}}</p>
                                     <hr>
                                     <h4>{{$vl['title']}}</h4>
-                                    <a href="#"><img src="{{ url($vl['thumb'])}}"/></a>
+                                    <a href="#"><img src="{{ url('assets/frontend/images/see-more.png')}}"/></a>
                                 </div>
                             </div>
                             <?php }}?>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6" style="width: 52%;">
+            <div class="col-sm-6 listabc">
                 <div class="list-group slider-list">
                     <?php
                     if(isset($listSlideShow) && !empty($listSlideShow)){
