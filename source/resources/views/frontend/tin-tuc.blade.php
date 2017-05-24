@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('page-title', 'HSG')
+@section('page-title', 'HERBS')
 
 @section('content')
     <img class="banner-page" src="{{ url('assets/frontend/images/banner-news.jpg')}}"/>
@@ -9,134 +9,44 @@
             <div class="cover-menu-tab">
                 <div class="cover-tab-cate">
                     <ul>
-                        <li><a href="#">TẤT CẢ</a> </li>
-                        <li><a href="#">CÂY THUỐC</a> </li>
-                        <li><a href="#">BÀI THUỐC</a> </li>
-                        <li><a href="#">CHUẨN ĐOÁN</a> </li>
+                        <li><a href="{{ route('frontend.tintuc',$id_type).'?category=all'}}">TẤT CẢ</a> </li>
+                        <?php if(!empty($listCat)){foreach ($listCat as $cat) { ?>
+                        <li><a href="{{ route('frontend.tintuc',$id_type).'?category='.$cat['slug']}}">{{$cat['nameCategory']}}</a> </li>
+                        <?php }}?>
                     </ul>
                 </div>
                 <div class="cover-title title-news">
                     <h3 class="title-herbs">{{$title}}</h3>
                 </div>
                 <div class="main-news">
-                    <img class="img-main-news" src="{{ url('assets/frontend/images/img-item.png')}}"/>
+                    <?php if(!empty($listPost)){ ?>
+                    <img class="img-main-news" src="{{ url($listPost[0]['thumb'])}}"/>
                     <div class="cv-main-news">
-                        <a href="{{ route('frontend.tintuc.detail', [1,'abc']) }}"><h5 class="h5-title">7 loại thảo dược thông thường tốt cho não bộ</h5></a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                        <a href="{{ route('frontend.tintuc.detail', [1,'abc']) }}"><h5 class="h5-title">{{$listPost[0]['title']}}</h5></a>
+                        <span class="date-sp">{{$listPost[0]['created_at']}}</span>
                         <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="sum-p">{{$listPost[0]['summary']}}</p>
                         <a class="a-view" href="{{ route('frontend.tintuc.detail', [1,'abc']) }}">XEM CHI TIẾT &raquo;</a>
                     </div>
+                    <?php }?>
                 </div>
                 <div class="list-news">
+                    <?php if(!empty($listPost)){for($i=1;$i<count($listPost);$i++){ $news = $listPost[$i];?>
                     <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
+                        <img class="img-it" src="{{ url($news['thumb'])}}"/>
+                        <a href="tin-tuc-detail.html" class="p-it-news">{{$news['title']}}</a>
+                        <span class="date-sp">{{$news['created_at']}}</span>
                         <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        <p class="sum-p">{{$news['summary']}}</p>
                         <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
                     </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
-                    <div class="it-news">
-                        <img class="img-it" src="{{ url('assets/frontend/images/img-item-sm.png')}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">TÁC DỤNG ÍT BIẾT CỦA CÂY TRỨNG CÁ KHÔNG PHẢI AI CŨNG BIẾT</a>
-                        <span class="date-sp">08:00 - ngày 30/04/2017</span>
-                        <hr class="hr-line">
-                        <p class="sum-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
-                    </div>
+                    <?php }}?>
                 </div>
+
             </div>
             <div class="cover-page">
                 <div class="pagination">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a href="#" class="active">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
+                    <?php if(!empty($listPost)) echo $listPost->links() ?>
                 </div>
             </div>
         </div>

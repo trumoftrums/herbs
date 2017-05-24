@@ -16,6 +16,7 @@ use Vanguard\Support\Enum\UserStatus;
 use Auth;
 use Carbon\Carbon;
 use Vanguard\TypeNews;
+use Request;
 
 class FrontEndController extends Controller
 {
@@ -106,6 +107,7 @@ class FrontEndController extends Controller
         switch ($id_type){
             case 1:
                 $title = "TIN DOANH NGHIỆP";
+
                 break;
             case 2:
                 $title = "TIN THỊ TRƯỜNG";
@@ -116,7 +118,26 @@ class FrontEndController extends Controller
             default:
                 break;
         }
-        return view('frontend.tin-tuc', compact('title'));
+        $params = Request::all();
+        $urlParams = '?category=all';
+
+        $query= News::join('category_new', 'category_new.id', '=', 'news.category')
+            ->join('type_news', 'type_news.idType', '=', 'category_new.type')
+            ->join('users', 'users.id', '=', 'news.created_by')
+            ->where('news.status', News::STATUS_ACTIVED)
+            ->where('category_new.type',$id_type)
+            ->orderBy('news.created_at','desc')
+            ->select("news.*","category_new.id as idCategory","category_new.nameCategory",
+                "type_news.nameType","users.username","users.first_name","users.last_name");
+        if(isset($params['category']) && !empty($params['category']) && strtolower($params['category']) !='all'){
+            $urlParams = '?category='.$params['category'];
+            $query = $query->where('category_new.slug',$params['category']);
+        }
+        $listCat= CategoryNews::where('status',CategoryNews::STATUS_ACTIVED)->where('type',$id_type)
+            ->limit(3)->orderBy('created_at','desc')->get()->toArray();
+        $listPost= $query->paginate(12)->setPath($urlParams);
+        if($listPost->total()==0) $listPost =array();
+        return view('frontend.tin-tuc', compact('title','listPost','listCat','id_type'));
     }
     public function tintucDetail($id)
     {
