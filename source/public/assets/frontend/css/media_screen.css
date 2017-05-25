@@ -52,6 +52,14 @@
 }
 
 @media (max-width: 600px){
+    .detail-nes img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .title-detail-news{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
     .header-mobile{
         display: block;
         position: fixed;

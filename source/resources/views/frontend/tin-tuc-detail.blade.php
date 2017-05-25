@@ -16,7 +16,7 @@
                         {{--<li><a href="#">CHUẨN ĐOÁN</a> </li>--}}
                     {{--</ul>--}}
                 {{--</div>--}}
-                <div class="cover-title title-news">
+                <div class="cover-title title-news title-detail-news">
                     <h3 class="title-herbs">{{$news['nameType']}}</h3>
                 </div>
             </div>

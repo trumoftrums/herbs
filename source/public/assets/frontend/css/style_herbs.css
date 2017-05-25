@@ -1153,8 +1153,13 @@ hr {
 }
 .cover-list-related .item-news-tab img{
     width: 90px;
+    height: 65px;
     float: left;
     margin-right: 6px;
+}
+.title-detail-news{
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
 }
 .cover-list-related .item-news-tab .cover-co-item a{
     color: #000;
