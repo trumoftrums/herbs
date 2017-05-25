@@ -2,7 +2,7 @@
     <div class="cover-title">
         <h3 class="title-herbs">VIDEO NỔI BẬT</h3>
     </div>
-    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel2">
+    {{--<div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel2">
         <div class="carousel-inner">
             <div class="item active item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
@@ -73,7 +73,7 @@
         </div>
         <a class="left carousel-control" href="#fruitscarousel2" data-slide="prev"><img src="{{ url('assets/frontend/images/arrow-left.png')}}"/></a>
         <a class="right carousel-control" href="#fruitscarousel2" data-slide="next"><img src="{{ url('assets/frontend/images/arrow-right.png')}}"/></a>
-    </div>
+    </div>--}}
     <div class="div-bt-view-more">
         <a href="#"><img src="{{ url('assets/frontend/images/bt-more-vid.png')}}"/></a>
     </div>
@@ -115,13 +115,6 @@
             <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
         </ul>
         <ul class="item-footer">
-            <p class="p-title-ul">BÁC SĨ</p>
-            <li><a href="#"> > Lịch sử hình thành</a> </li>
-            <li><a href="#"> > Đội ngũ nhân viên</a> </li>
-            <li><a href="#"> > Cơ sở vật chất</a> </li>
-            <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
-        </ul>
-        <ul class="item-footer">
             <p class="p-title-ul">HỎI ĐÁP</p>
             <li><a href="#"> > Lịch sử hình thành</a> </li>
             <li><a href="#"> > Đội ngũ nhân viên</a> </li>
@@ -135,7 +128,7 @@
             <li><a href="#"> > Cơ sở vật chất</a> </li>
             <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
         </ul>
-        <ul class="item-footer">
+        <ul class="item-footer last-item-footer">
             <div class="cover-social-footer">
                 <a href="#"><img src="{{ url('assets/frontend/images/footer-icon01.png')}}"/></a>
                 <a class="icon02" href="#"><img src="{{ url('assets/frontend/images/footer-icon02.png')}}"/></a>

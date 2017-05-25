@@ -329,13 +329,13 @@ hr {
     .carousel-inner .prev {
         left: -33.3%;
     }
-    .active > div:first-child {
+    .slider-top .carousel-inner .active > div:first-child {
         display:block;
     }
-    .active > div:first-child + div {
+    .slider-top .carousel-inner .active > div:first-child + div {
         display:block;
     }
-    .active > div:last-child {
+    .slider-top .carousel-inner .active > div:last-child {
         display:none;
     }
 }
@@ -350,10 +350,10 @@ hr {
     .carousel-inner .prev {
         left: -100%;
     }
-    .active > div {
+    .slider-top .carousel-inner .active > div {
         display:none;
     }
-    .active > div:first-child {
+    .slider-top .carousel-inner .active > div:first-child {
         display:block;
     }
 }
@@ -1160,4 +1160,13 @@ hr {
     font-weight: bold;
     float: left;
     margin-top: 25px;
+}
+.header-mobile{
+    display: none;
+}
+.mainabc{
+    margin-left: -2%;
+}
+.listabc{
+    width: 52%;
 }
