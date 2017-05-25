@@ -8,6 +8,10 @@ Route::get('/', [
     'as' => 'frontend.home',
     'uses' => 'FrontEndController@index'
 ]);
+Route::get('/{idSlug}', [
+    'as' => 'frontend.detailNews',
+    'uses' => 'FrontEndController@detailNews'
+]);
 Route::get('/tin-doanh-nghiep/{id_type}', [
     'as' => 'frontend.tintuc',
     'uses' => 'FrontEndController@tintuc'
@@ -255,39 +259,6 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     Route::post('user/{user}/two-factor/disable', [
         'as' => 'user.two-factor.disable',
         'uses' => 'UsersController@disableTwoFactorAuth'
-    ]);
-
-    /**
-     * Invest
-     */
-
-    Route::get('dau-tu/create', [
-        'as' => 'invest.tao_moi',
-        'uses' => 'InvestController@create'
-    ]);
-    Route::post('dau-tu/create', [
-        'as' => 'invest.store',
-        'uses' => 'InvestController@store'
-    ]);
-
-    Route::get('hop-dong/contract', [
-        'as' => 'invest.hop_dong',
-        'uses' => 'InvestController@contract'
-    ]);
-
-    Route::get('hop-dong/documents/{investID}', [
-        'as' => 'invest.documents',
-        'uses' => 'InvestController@documents'
-    ]);
-
-    Route::get('hoan-von/refund-invest', [
-        'as' => 'invest.hoan_von',
-        'uses' => 'InvestController@refundInvest'
-    ]);
-
-    Route::post('hoan-von/refund-invest', [
-        'as' => 'invest.yeuCauHoanVon',
-        'uses' => 'InvestController@submitRefundInvest'
     ]);
 
 
