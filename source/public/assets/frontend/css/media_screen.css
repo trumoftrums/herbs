@@ -45,6 +45,11 @@
         font-size:12px;
     }
 }
+@media (max-width: 670px) {
+    .menu-top a{
+        padding: 14px 1.1%;
+    }
+}
 
 @media (max-width: 600px){
     .header-mobile{

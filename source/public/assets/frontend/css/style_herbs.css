@@ -163,6 +163,7 @@ Menu top
 }
 .dropdown:hover .dropdown-content {
     display: block;
+    width: 210px;
 }
 
 /*slide show*/

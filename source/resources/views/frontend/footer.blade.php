@@ -145,7 +145,7 @@
         <div class="cover-address-footer">
             <p class="p-right">HERBS.COM Bản quyền @2013 HoangSangGroup</p>
             <p>Địa chỉ: 02, Phạm Văn Đồng, P. Linh Đông, Q. Thủ Đức, Tp.HCM</p>
-            <p>Hotline: 098 815 5444 - Email: cskh@herbs.com</p>
+            <p>Hotline: 098 815 5444 - Email: cskh@herbsjsc.com</p>
         </div>
     </div>
 </div>
