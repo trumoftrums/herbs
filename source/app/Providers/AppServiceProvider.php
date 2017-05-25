@@ -25,6 +25,8 @@ use Vanguard\Repositories\Role\EloquentRole;
 use Vanguard\Repositories\Role\RoleRepository;
 use Vanguard\Repositories\Session\DbSession;
 use Vanguard\Repositories\Session\SessionRepository;
+use Vanguard\Repositories\TuDien\EloquentTuDien;
+use Vanguard\Repositories\TuDien\TuDienRepository;
 use Vanguard\Repositories\User\EloquentUser;
 use Vanguard\Repositories\User\UserRepository;
 use Illuminate\Support\ServiceProvider;
@@ -56,6 +58,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(SessionRepository::class, DbSession::class);
         $this->app->singleton(CountryRepository::class, EloquentCountry::class);
         $this->app->singleton(CatNewsRepository::class, EloquentCatNews::class);
+        $this->app->singleton(TuDienRepository::class, EloquentTuDien::class);
 
         $this->app->singleton(InvestTypeRepository::class, EloquentInvestType::class);
         $this->app->singleton(BienDongRepository::class, EloquentBienDong::class);

@@ -8,7 +8,7 @@ Route::get('/', [
     'as' => 'frontend.home',
     'uses' => 'FrontEndController@index'
 ]);
-Route::get('/{idSlug}', [
+Route::get('/tin-tuc/{idSlug}', [
     'as' => 'frontend.detailNews',
     'uses' => 'FrontEndController@detailNews'
 ]);
@@ -455,6 +455,36 @@ Route::delete('quan-ly-category/{idNews}/delete', [
     'as' => 'catnewadmin.delete',
     'uses' => 'ManageNewsController@deleteCat'
 ]);
+
+
+/**
+ * Manage dict
+ */
+Route::get('quan-ly-tu-dien', [
+    'as' => 'dictadmin.list',
+    'uses' => 'ManageTuDienController@listDict'
+]);
+Route::get('quan-ly-tu-dien/create', [
+    'as' => 'dictadmin.create',
+    'uses' => 'ManageTuDienController@createDict'
+]);
+Route::post('quan-ly-tu-dien/add', [
+    'as' => 'dictadmin.add',
+    'uses' => 'ManageTuDienController@addDict'
+]);
+Route::get('quan-ly-tu-dien/{idNews}/edit', [
+    'as' => 'dictadmin.edit',
+    'uses' => 'ManageTuDienController@editDict'
+]);
+Route::put('quan-ly-tu-dien/{idNews}/update', [
+    'as' => 'dictadmin.update',
+    'uses' => 'ManageTuDienController@updateDict'
+]);
+Route::delete('quan-ly-tu-dien/{idNews}/delete', [
+    'as' => 'dictadmin.delete',
+    'uses' => 'ManageTuDienController@deleteDict'
+]);
+
 
 /**
  * Manage QA

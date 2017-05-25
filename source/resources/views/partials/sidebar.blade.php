@@ -120,6 +120,13 @@
                 </ul>
             </li>
             @endpermission
+            @permission('dictadmin.manage')
+            <li class="{{ Request::is('quan-ly-tu-dien*') ? 'active open' : ''  }}">
+                <a href="{{ route('dictadmin.list') }}" class="{{ Request::is('quan-ly-tu-dien*') ? 'active' : ''  }}">
+                    <i class="fa fa-newspaper-o fa-fw"></i> Quản lý từ điển dược liệu
+                </a>
+            </li>
+            @endpermission
 
         </ul>
     </div>

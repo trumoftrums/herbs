@@ -1,6 +1,6 @@
 \@extends('layouts.app')
 
-@section('page-title', "Danh sách tin tức")
+@section('page-title', "Danh sách từ điển dược liệu")
 
 @section('content')
 <style>
@@ -14,9 +14,9 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            QUẢN LÝ TIN TỨC
+            QUẢN LÝ TỪ ĐIỂN DƯỢC LIỆU
             <img class="icon-bread" src="{{ url('assets/img/icon-next.png') }}"/>
-            <span class="sp-bread">DANH SÁCH TIN TỨC</span>
+            <span class="sp-bread">DANH SÁCH</span>
         </h1>
     </div>
 </div>
@@ -27,7 +27,7 @@
     <div class="col-md-2">
         <a href="{{ route('newsadmin.create') }}" class="btn btn-success" id="add-user">
             <i class="glyphicon glyphicon-plus"></i>
-            Thêm tin tức mới
+            Thêm dược liệu mới
         </a>
     </div>
     <div class="col-md-5"></div>
@@ -47,11 +47,13 @@
 <div class="table-responsive top-border-table" id="users-table-wrapper">
     <table class="table">
         <thead>
-            <th>TIÊU ĐỀ</th>
-            <th>LOẠi TIN</th>
-            <th>Category</th>
-            <th>NGÀY ĐĂNG</th>
-            <th>HÌNH ẢNH</th>
+            <th>Tên Dược Liệu </th>
+            <th>Bộ phận sử dụng</th>
+            <th>Tác dụng</th>
+            <th>Bài thuốc</th>
+            <th>Hình ảnh</th>
+            <th>Ngày tạo</th>
+            <th>Người tạo</th>
             <th>TRẠNG THÁI</th>
             <th class="text-center">ACTION</th>
         </thead>
@@ -59,11 +61,13 @@
             @if (count($listNews))
                 @foreach ($listNews as $bd)
                     <tr>
-                        <td>{{ $bd->title }}</td>
-                        <td>{{$bd->nameType}}</td>
-                        <td>{{$bd->nameCategory}}</td>
-                        <td>{{date_format(date_create($bd->created_at),"d/m/Y")}}</td>
-                        <td><img style="height: 60px" src="{{ url($bd->thumb)}}"/></td>
+                        <td>{{ $bd->tenDuocLieu }}</td>
+                        <td>{{$bd->boPhanSuDung}}</td>
+                        <td>{{$bd->tacDung}}</td>
+                        <td>{{$bd->baiThuoc}}</td>
+                        <td>{{$bd->slideIMGs}}</td>
+                        <td>{{$bd->created_at}}</td>
+                        <td>{{$bd->first_name.' '.$bd->last_name}}</td>
                         <td>
                             @if($bd->status == 'AC') <button type="button" class="btn btn-success btnOwn">Active</button>
                             @elseif($bd->status == 'IA') <button type="button" class="btn btn-warning btnOwn">Inactive</button>
