@@ -27,7 +27,7 @@
                                     <p>{{$vl['nameType']}}</p>
                                     <hr>
                                     <h4>{{$vl['title']}}</h4>
-                                    <a href="#"><img src="{{ url($vl['thumb'])}}"/></a>
+                                    <a href="{{route('frontend.detailNews', str_slug($vl['title'],'-').'-'.$vl['id'])}}">Xem chi tiết</a>
                                 </div>
                             </div>
                             <?php }}?>
@@ -187,11 +187,11 @@
                         <?php if(!empty($type['all'])){?>
                             <div class="main-item-news">
                                 <img src="{{$type['all'][0]['thumb']}}"/>
-                                <a class="title-first" href="#">{{$type['all'][0]['title']}}</a>
+                                <a class="title-first" href="{{route('frontend.detailNews', str_slug($type['all'][0]['title'],'-').'-'.$type['all'][0]['id'])}}">{{$type['all'][0]['title']}}</a>
                                 <span>{{$type['all'][0]['created_at']}}</span>
                                 <hr class="hr-line">
                                 <p>{{$type['all'][0]['summary']}}</p>
-                                <a class="a-view-more-item" href="#">XEM CHI TIẾT &raquo;</a>
+                                <a class="a-view-more-item" href="{{route('frontend.detailNews', str_slug($type['all'][0]['title'],'-').'-'.$type['all'][0]['id'])}}">XEM CHI TIẾT &raquo;</a>
                             </div>
                             <div class="list-item-news">
                                 <?php
@@ -200,7 +200,7 @@
                                 <div class="item-news-tab">
                                     <img src="{{$type['all'][$i]['thumb']}}"/>
                                     <div class="cover-co-item">
-                                        <a href="#">{{$type['all'][$i]['title']}}</a>
+                                        <a href="{{route('frontend.detailNews', str_slug($type['all'][$i]['title'],'-').'-'.$type['all'][$i]['id'])}}">{{$type['all'][$i]['title']}}</a>
                                         <span class="date-sp">{{$type['all'][$i]['created_at']}}</span>
                                         <span class="sum-av"><?php echo implode(' ', array_slice(explode(' ', $type['all'][$i]['summary']), 0, 15)) ?>...</span>
                                     </div>

@@ -22,11 +22,11 @@
                     <?php if(!empty($listPost)){ ?>
                     <img class="img-main-news" src="{{ url($listPost[0]['thumb'])}}"/>
                     <div class="cv-main-news">
-                        <a href="{{ route('frontend.tintuc.detail', [1,'abc']) }}"><h5 class="h5-title">{{$listPost[0]['title']}}</h5></a>
+                        <a href="{{route('frontend.detailNews', str_slug($listPost[0]['title'],'-').'-'.$listPost[0]['id'])}}"><h5 class="h5-title">{{$listPost[0]['title']}}</h5></a>
                         <span class="date-sp">{{$listPost[0]['created_at']}}</span>
                         <hr class="hr-line">
                         <p class="sum-p">{{$listPost[0]['summary']}}</p>
-                        <a class="a-view" href="{{ route('frontend.tintuc.detail', [1,'abc']) }}">XEM CHI TIẾT &raquo;</a>
+                        <a class="a-view" href="{{route('frontend.detailNews', str_slug($listPost[0]['title'],'-').'-'.$listPost[0]['id'])}}">XEM CHI TIẾT &raquo;</a>
                     </div>
                     <?php }?>
                 </div>
@@ -34,11 +34,11 @@
                     <?php if(!empty($listPost)){for($i=1;$i<count($listPost);$i++){ $news = $listPost[$i];?>
                     <div class="it-news">
                         <img class="img-it" src="{{ url($news['thumb'])}}"/>
-                        <a href="tin-tuc-detail.html" class="p-it-news">{{$news['title']}}</a>
+                        <a href="{{route('frontend.detailNews', str_slug($news['title'],'-').'-'.$news['id'])}}" class="p-it-news">{{$news['title']}}</a>
                         <span class="date-sp">{{$news['created_at']}}</span>
                         <hr class="hr-line">
                         <p class="sum-p">{{$news['summary']}}</p>
-                        <a class="icon-more" href="tin-tuc-detail.html"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
+                        <a class="icon-more" href="{{route('frontend.detailNews', str_slug($news['title'],'-').'-'.$news['id'])}}"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
                     </div>
                     <?php }}?>
                 </div>

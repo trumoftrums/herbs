@@ -139,9 +139,36 @@ class FrontEndController extends Controller
         if($listPost->total()==0) $listPost =array();
         return view('frontend.tin-tuc', compact('title','listPost','listCat','id_type'));
     }
-    public function tintucDetail($id)
+    public function detailNews($idSlug)
     {
-        return view('frontend.tin-tuc-detail', []);
+        $news = array();
+        $listRelated = array();
+        $arr = explode("-",$idSlug);
+        if(!empty($arr)){
+            $id = $arr[count($arr)-1];
+            $news = News::join('category_new', 'category_new.id', '=', 'news.category')
+                ->join('type_news', 'type_news.idType', '=', 'category_new.type')
+                ->join('users', 'users.id', '=', 'news.created_by')
+                ->where('news.status', News::STATUS_ACTIVED)
+                ->where('news.id', $id)
+                ->select("news.*","category_new.id as idCategory","category_new.nameCategory",
+                    "type_news.nameType","users.username","users.first_name","users.last_name",'type_news.idType')
+            ->get()->toArray();
+            if(!empty($news)){
+                $news = $news[0];
+                $listRelated = News::join('category_new', 'category_new.id', '=', 'news.category')
+                    ->join('type_news', 'type_news.idType', '=', 'category_new.type')
+                    ->join('users', 'users.id', '=', 'news.created_by')
+                    ->where('news.status', News::STATUS_ACTIVED)
+                    ->where('type_news.idType', $news['idType'])
+                    ->where('news.id','<>', $news['id'])
+                    ->select("news.*","category_new.id as idCategory","category_new.nameCategory",
+                        "type_news.nameType","users.username","users.first_name","users.last_name")
+                    ->orderBy('news.created_at','desc')
+                    ->limit(6)->get()->toArray();
+            }
+        }
+        return view('frontend.tin-tuc-detail', ['news'=>$news,'listRelated'=>$listRelated]);
     }
 
 }
