@@ -50,7 +50,7 @@
                         <p>{{$vl['nameType']}}</p>
                         <hr>
                         {{$vl['title']}}<br>
-                        <span class="sum-sp"><?php echo implode(' ', array_slice(explode(' ', $vl['summary']), 0, 20)) ?>...</span>
+                        <span class="sum-sp"><?php echo implode(' ', array_slice(explode(' ', $vl['summary']), 0, 15)) ?>...</span>
                     </a>
                     <?php $i++;}}?>
 

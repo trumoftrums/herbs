@@ -45,8 +45,21 @@
         font-size:12px;
     }
 }
+@media (max-width: 670px) {
+    .menu-top a{
+        padding: 14px 1.1%;
+    }
+}
 
 @media (max-width: 600px){
+    .detail-nes img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .title-detail-news{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
     .header-mobile{
         display: block;
         position: fixed;
