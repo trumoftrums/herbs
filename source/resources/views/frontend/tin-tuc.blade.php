@@ -34,10 +34,10 @@
                     <?php if(!empty($listPost)){for($i=1;$i<count($listPost);$i++){ $news = $listPost[$i];?>
                     <div class="it-news">
                         <img class="img-it" src="{{ url($news['thumb'])}}"/>
-                        <a href="{{route('frontend.detailNews', str_slug($news['title'],'-').'-'.$news['id'])}}" class="p-it-news">{{$news['title']}}</a>
+                        <a href="{{route('frontend.detailNews', str_slug($news['title'],'-').'-'.$news['id'])}}" class="p-it-news"><?php echo implode(' ', array_slice(explode(' ', $news['title']), 0, 12)) ?>...</a>
                         <span class="date-sp">{{$news['created_at']}}</span>
                         <hr class="hr-line">
-                        <p class="sum-p">{{$news['summary']}}</p>
+                        <p class="sum-p"><?php echo implode(' ', array_slice(explode(' ', $news['summary']), 0, 20)) ?>...</p>
                         <a class="icon-more" href="{{route('frontend.detailNews', str_slug($news['title'],'-').'-'.$news['id'])}}"><img src="{{ url('assets/frontend/images/icon-more.png')}}"/></a>
                     </div>
                     <?php }}?>

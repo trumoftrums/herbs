@@ -135,7 +135,7 @@ class FrontEndController extends Controller
         }
         $listCat= CategoryNews::where('status',CategoryNews::STATUS_ACTIVED)->where('type',$id_type)
             ->limit(3)->orderBy('created_at','desc')->get()->toArray();
-        $listPost= $query->paginate(12)->setPath($urlParams);
+        $listPost= $query->paginate(13)->setPath($urlParams);
         if($listPost->total()==0) $listPost =array();
         return view('frontend.tin-tuc', compact('title','listPost','listCat','id_type'));
     }
