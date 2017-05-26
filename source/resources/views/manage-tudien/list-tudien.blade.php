@@ -25,7 +25,7 @@
 
 <div class="row tab-search">
     <div class="col-md-2">
-        <a href="{{ route('newsadmin.create') }}" class="btn btn-success" id="add-user">
+        <a href="{{ route('dictadmin.create') }}" class="btn btn-success" id="add-user">
             <i class="glyphicon glyphicon-plus"></i>
             Thêm dược liệu mới
         </a>
@@ -48,9 +48,7 @@
     <table class="table">
         <thead>
             <th>Tên Dược Liệu </th>
-            <th>Bộ phận sử dụng</th>
-            <th>Tác dụng</th>
-            <th>Bài thuốc</th>
+
             <th>Hình ảnh</th>
             <th>Ngày tạo</th>
             <th>Người tạo</th>
@@ -62,10 +60,21 @@
                 @foreach ($listNews as $bd)
                     <tr>
                         <td>{{ $bd->tenDuocLieu }}</td>
-                        <td>{{$bd->boPhanSuDung}}</td>
-                        <td>{{$bd->tacDung}}</td>
-                        <td>{{$bd->baiThuoc}}</td>
-                        <td>{{$bd->slideIMGs}}</td>
+
+                        <td>
+                        <?php
+                            if(!empty($bd->slideIMGs)){
+                                $IMGs = json_decode($bd->slideIMGs,true);
+                                $IMGs = json_decode($IMGs,true);
+//                                var_dump($IMGs);exit();
+                                if(!empty($IMGs)){
+                                    echo '<img src="'.$IMGs[0]['img'].'" width="50" height="50" />';
+                                }
+                            }
+
+                        ?>
+
+                        </td>
                         <td>{{$bd->created_at}}</td>
                         <td>{{$bd->first_name.' '.$bd->last_name}}</td>
                         <td>
@@ -74,11 +83,11 @@
                             @elseif($bd->status == 'DE') <button type="button" class="btn btn-danger btnOwn">Delete</button> @endif
                         </td>
                         <td class="text-center">
-                            <a href="{{ route('newsadmin.edit', $bd->id) }}" class="btn btn-primary btn-circle edit" title="Edit"
+                            <a href="{{ route('dictadmin.edit', $bd->id) }}" class="btn btn-primary btn-circle edit" title="Edit"
                                     data-toggle="tooltip" data-placement="top">
                                 <i class="glyphicon glyphicon-edit"></i>
                             </a>
-                            <a href="{{ route('newsadmin.delete', $bd->id) }}" class="btn btn-danger btn-circle" title="Delete"
+                            <a href="{{ route('dictadmin.delete', $bd->id) }}" class="btn btn-danger btn-circle" title="Delete"
                                     data-toggle="tooltip"
                                     data-placement="top"
                                     data-method="DELETE"
