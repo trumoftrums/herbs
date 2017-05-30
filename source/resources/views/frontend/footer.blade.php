@@ -2,7 +2,7 @@
     <div class="cover-title">
         <h3 class="title-herbs">VIDEO NỔI BẬT</h3>
     </div>
-    {{--<div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel2">
+    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel2">
         <div class="carousel-inner">
             <div class="item active item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
@@ -73,7 +73,7 @@
         </div>
         <a class="left carousel-control" href="#fruitscarousel2" data-slide="prev"><img src="{{ url('assets/frontend/images/arrow-left.png')}}"/></a>
         <a class="right carousel-control" href="#fruitscarousel2" data-slide="next"><img src="{{ url('assets/frontend/images/arrow-right.png')}}"/></a>
-    </div>--}}
+    </div>
     <div class="div-bt-view-more">
         <a href="#"><img src="{{ url('assets/frontend/images/bt-more-vid.png')}}"/></a>
     </div>
@@ -135,7 +135,7 @@
                 <a class="icon03" href="#"><img src="{{ url('assets/frontend/images/footer-icon03.png')}}"/></a>
                 <a class="icon04" href="#"><img src="{{ url('assets/frontend/images/footer-icon04.png')}}"/></a>
             </div>
-            <p class="hotline-footer">HOTLINE: 00000000000</p>
+            <p class="hotline-footer">HOTLINE: 19009220</p>
         </ul>
     </div>
 </div>
@@ -143,9 +143,9 @@
     <div class="footer-bt">
         <a class="logo-footer" href="#"><img src="{{ url('assets/frontend/images/logo.png')}}"/></a>
         <div class="cover-address-footer">
-            <p class="p-right">HERBS.COM Bản quyền @2013 HoangSangGroup</p>
-            <p>Địa chỉ: 02, Phạm Văn Đồng, P. Linh Đông, Q. Thủ Đức, Tp.HCM</p>
-            <p>Hotline: 098 815 5444 - Email: cskh@herbsjsc.com</p>
+            <p class="p-right">GREENHERBSJSC.COM Bản quyền @2013 Greenherbsjsc</p>
+            <p>Địa chỉ: 05, Einstein, P. Bình Thọ, Q. Thủ Đức, Tp.HCM</p>
+            <p>Hotline: 19009220 - Email: cskh@greenherbsjsc.com</p>
         </div>
     </div>
 </div>

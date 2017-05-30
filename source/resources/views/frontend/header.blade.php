@@ -6,7 +6,7 @@
         </a>
         <div class="social-search">
             <div class="social">
-                <p class="p-hotline">HOTLINE: 0000000000</p>
+                <p class="p-hotline">HOTLINE: 19009220</p>
                 <div class="cover-social">
                     <p class="p-follow">follow us</p>
                     <div class="cover-icon-social">
