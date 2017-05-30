@@ -24,6 +24,7 @@ class EloquentTuDien implements TuDienRepository
         $bd->thanhPhanHoaHoc = $data['thanhPhanHoaHoc'];
         $bd->tacDung = $data['tacDung'];
         $bd->thumb = $data['thumb'];
+        $bd->thumb_detail = $data['thumb_detail'];
         $bd->baiThuoc = $data['baiThuoc'];
         $bd->slideIMGs = json_encode($data['slideIMGs'],true);
         $bd->created_at = $now;
@@ -52,6 +53,12 @@ class EloquentTuDien implements TuDienRepository
         $bd->baiThuoc = $data['baiThuoc'];
         $bd->updated_at = $now;
         $bd->updated_by = $data['updated_by'];
+        if(!empty($data['thumb'])){
+            $bd->thumb = $data['thumb'];
+        }
+        if(!empty($data['thumb_detail'])){
+            $bd->thumb_detail = $data['thumb_detail'];
+        }
         if(!empty($data['slideIMGs'])){
             $bd->slideIMGs = json_encode($data['slideIMGs'],true);
         }
@@ -74,8 +81,13 @@ class EloquentTuDien implements TuDienRepository
         $query = TuDien::join('users', 'users.id', '=', 'duoc_lieu.created_by')
             ->select("duoc_lieu.*","users.username","users.first_name","users.last_name");
 
-        if ($status && $status != "All") {
+        if ($status && strtolower($status) != "all") {
             $query->where('duoc_lieu.status', $status);
+        }
+        if (!empty($search) && strtolower($search) != "all") {
+            $query->whereRaw("duoc_lieu.tenDuocLieu like '%$search%' 
+            or duoc_lieu.tenKhoaHoc like '%$search%' or duoc_lieu.tenDongNghia like '%$search%' 
+            or duoc_lieu.tenKhac like '%$search%'");
         }
         $result = $query->orderBy('duoc_lieu.created_at', 'desc')
             ->paginate($perPage);

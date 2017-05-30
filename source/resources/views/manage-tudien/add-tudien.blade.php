@@ -27,8 +27,13 @@ if($edit){
             min-height: 50px;
         }
         .admin-dict-slide-Item input{
-            width: 48%;
+            width: 33%;
             float: left;
+            margin-top: 80px;
+        }
+        .admin-dict-slide-Item img{
+            margin-left: 20px;
+            margin-top: 20px;
         }
 
     </style>
@@ -67,11 +72,21 @@ if($edit){
                     </div>
                     <div class="form-group">
                         <label for="display_name">Hình đại diện</label>
-                        <input type="file" id="file" name="thumb">
+                        <input type="file" id="fileThumb" name="thumb" value="">
+
+                        <img src="{{$edit  && !empty($dict['thumb']) ? url($dict['thumb']) : ''}}" id="thumb" width="150" height="150"/>
+
                     </div>
                     <div class="form-group">
-                        <label for="name">Bộ phận sinh thái</label>
-                        <input type="text" class="form-control" name="phanBoSinhThai" placeholder="Bộ phận sinh thái" value="{{ $edit ? $dict['phanBoSinhThai'] : '' }}">
+                        <label for="display_name">Hình đại diện (trang chi tiết)</label>
+                        <input type="file" id="fileThumbDetail" name="thumb_detail" value="">
+
+                        <img src="{{$edit && !empty($dict['thumb_detail']) ? url($dict['thumb_detail']) : ''}}" id="thumb_detail" width="420" height="120"/>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Phân bố sinh thái</label>
+                        <input type="text" class="form-control" name="phanBoSinhThai" placeholder="Phân bố sinh thái" value="{{ $edit ? $dict['phanBoSinhThai'] : '' }}">
                     </div>
                     <div class="form-group">
                         <label for="name">Bộ phận sử dụng</label>
@@ -89,32 +104,46 @@ if($edit){
                         <label for="description">Bài thuốc</label>
                         <textarea name="baiThuoc" class="form-control ckeditor">{{ $edit ? $dict['baiThuoc'] : '' }}</textarea>
                     </div>
+                    <?php
+                    if(!empty($dict['slideIMGs'])){
+                        $IMGs = json_decode($dict['slideIMGs'],true);
+                        //$IMGs = json_decode($IMGs,true);
+
+                    }
+                    ?>
                     <div class="form-group">
                         <label for="display_name">Slide hình ảnh</label>
                         <div class="admin-dict-slide-Item">
 
-                            <input type="text" class="form-control" name="slideIMG[1][name]" placeholder="Tên hình ảnh 1" value="">
-                            <input type="file" class="form-control" id="slideIMG_1" name="slideIMG1">
+                            <input type="text" class="form-control" name="slideIMG[1][name]" placeholder="Tên hình ảnh 1" value="<?php if(!empty($IMGs[0]['name'])) echo $IMGs[0]['name'];?>">
+                            <input type="file" class="form-control fileIMG" id="slideIMG_1" name="slideIMG1">
+
+                            <img alt="Preview hình ảnh 1" src="<?php if($edit && !empty($IMGs[0]['img'])) echo  url($IMGs[0]['img']); ?>" id="slideIMG1" width="150" height="150"/>
+
                         </div>
                         <div class="admin-dict-slide-Item">
 
-                            <input type="text" class="form-control" name="slideIMG[2][name]" placeholder="Tên hình ảnh 2" value="">
-                            <input type="file" class="form-control"  id="slideIMG_2" name="slideIMG2">
+                            <input type="text" class="form-control" name="slideIMG[2][name]" placeholder="Tên hình ảnh 2" value="<?php if(!empty($IMGs[1]['name'])) echo $IMGs[1]['name'];?>">
+                            <input type="file" class="form-control fileIMG"  id="slideIMG_2" name="slideIMG2">
+                            <img  alt="Preview hình ảnh 2" src="<?php if($edit && !empty($IMGs[1]['img'])) echo  url($IMGs[1]['img']); ?>" id="slideIMG2" width="150" height="150"/>
                         </div>
                         <div class="admin-dict-slide-Item">
 
-                            <input type="text" class="form-control" name="slideIMG[3][name]" placeholder="Tên hình ảnh 3" value="">
-                            <input type="file" class="form-control"  id="slideIMG_3" name="slideIMG3">
+                            <input type="text" class="form-control" name="slideIMG[3][name]" placeholder="Tên hình ảnh 3" value="<?php if(!empty($IMGs[2]['name'])) echo $IMGs[2]['name'];?>">
+                            <input type="file" class="form-control fileIMG"  id="slideIMG_3" name="slideIMG3">
+                            <img  alt="Preview hình ảnh 3" src="<?php if($edit && !empty($IMGs[2]['img'])) echo  url($IMGs[2]['img']); ?>" id="slideIMG3" width="150" height="150"/>
                         </div>
                         <div class="admin-dict-slide-Item">
 
-                            <input type="text" class="form-control" name="slideIMG[4][name]" placeholder="Tên hình ảnh 4" value="">
-                            <input type="file" class="form-control"  id="slideIMG_4" name="slideIMG4">
+                            <input type="text" class="form-control" name="slideIMG[4][name]" placeholder="Tên hình ảnh 4" value="<?php if(!empty($IMGs[3]['name'])) echo $IMGs[3]['name'];?>">
+                            <input type="file" class="form-control fileIMG"  id="slideIMG_4" name="slideIMG4">
+                            <img  alt="Preview hình ảnh 4" src="<?php if($edit && !empty($IMGs[3]['img'])) echo  url($IMGs[3]['img']); ?>" id="slideIMG4" width="150" height="150"/>
                         </div>
                         <div class="admin-dict-slide-Item">
 
-                            <input type="text" class="form-control" name="slideIMG[5][name]" placeholder="Tên hình ảnh 5" value="">
-                            <input type="file" class="form-control"  id="slideIMG_5" name="slideIMG5">
+                            <input type="text" class="form-control" name="slideIMG[5][name]" placeholder="Tên hình ảnh 5" value="<?php if(!empty($IMGs[4]['name'])) echo $IMGs[4]['name'];?>">
+                            <input type="file" class="form-control fileIMG"  id="slideIMG_5" name="slideIMG5">
+                            <img  alt="Preview hình ảnh 5" src="<?php if($edit && !empty($IMGs[4]['img'])) echo  url($IMGs[4]['img']); ?>" id="slideIMG5" width="150" height="150"/>
                         </div>
                     </div>
                 </div>
@@ -132,6 +161,32 @@ if($edit){
     </div>
     {{--</form>--}}
     {!! Form::close() !!}
+    <script type="application/javascript" >
+
+        function readURL(input,idIMG) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#'+idIMG).attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#fileThumb").change(function(){
+            readURL(this,"thumb");
+        });
+        $("#fileThumbDetail").change(function(){
+            readURL(this,"thumb_detail");
+        });
+        $(".fileIMG").change(function(){
+            var id = $(this).attr("name");
+            readURL(this,id);
+        });
+    </script>
 @stop
 
 @section('styles')

@@ -1,84 +1,40 @@
 @extends('layouts.frontend')
 
-@section('page-title', 'HSG')
+@section('page-title', 'HERBS')
 
 @section('content')
     <img class="banner-page" src="{{ url('assets/frontend/images/banner-tddl.jpg')}}"/>
     <div class="news-herbs">
         <div class="herbs-left">
             <div class="search">
-                <input class="inp-search" type="text" placeholder="TÌM CÂY THUỐC"/>
+                <form action="{{ route('frontend.tudienduoclieu')}}" id="searchDict" method="get" >
+                <input class="inp-search" type="text" value="<?php if(!empty($search) && $search!='all') echo $search; ?>" name="search" placeholder="TÌM CÂY THUỐC"/>
                 <input class="inp-bt" type="submit" value=" "/>
+                </form>
             </div>
             <div class="cov-line">
                 <img class="img-line-tddl" src="{{ url('assets/frontend/images/line-tddl.png')}}"/>
             </div>
+            <?php
+                if(!empty($datas)){
+                    foreach ($datas as $dt){
+
+
+            ?>
             <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
+                <img class="img-it-tddl" src="{{ url($dt->thumb)}}"/>
+                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', str_slug($dt->tenDuocLieu,'-').'-'.$dt->id) }}">{{$dt->tenDuocLieu}}</a>
                 <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
+                <p class="p-tddl">Tên khác: {{$dt->tenKhac}}</p>
+                <p class="p-tddl name-t">Tên khoa học: {{$dt->tenKhoaHoc}}</p>
+                <p class="p-tddl">Tên đồng danh: {{$dt->tenDongNghia}}</p>
             </div>
-            <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
-                <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
-            </div>
-            <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
-                <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
-            </div>
-            <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
-                <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
-            </div>
-            <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
-                <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
-            </div>
-            <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
-                <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
-            </div>
-            <div class="item-tddl">
-                <img class="img-it-tddl" src="{{ url('assets/frontend/images/icon-tddl.png')}}"/>
-                <a class="name-it-tddl" href="{{ route('frontend.tudienduoclieu.detail', [1,'abc']) }}">TRƯỜNG SINH</a>
-                <hr class="tddl-line">
-                <p class="p-tddl">Tên khác: Sống đời, Thuốc bỏng, Diệp sinh căn, Thổ tam thất, Lạc địa sinh căn.</p>
-                <p class="p-tddl name-t">Tên khoa học: Kalanchoe pinnata (Lamk.) Pers., họ Thuốc bỏng (Crassulaceae).</p>
-                <p class="p-tddl">Tên đồng danh: Bryophyllum calycinum</p>
-            </div>
+            <?php   }}else{?>
+            <p>Không tìm thấy dược liệu...</p>
+            <?php }?>
             <div class="cover-page">
                 <div class="pagination">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a href="#" class="active">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
+                    <?php if(!empty($datas)) echo $datas->links() ?>
                 </div>
             </div>
         </div>

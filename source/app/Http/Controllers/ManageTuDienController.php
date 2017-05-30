@@ -44,7 +44,7 @@ class ManageTuDienController extends Controller
     {
         $params = Input::all();
 //        var_dump($params);exit();
-        if(!empty($params['tenDuocLieu']) && !empty($params['thumb'])){
+        if(!empty($params['tenDuocLieu']) && !empty($params['thumb']) && !empty($params['thumb_detail'])){
 
 
             $user = Auth::user();
@@ -54,19 +54,23 @@ class ManageTuDienController extends Controller
                 $thumb = $this->uploadDoc($_FILES['thumb']);
                 $params['thumb'] = $thumb;
             }
+            if(!empty($params['thumb_detail'])){
+                $thumb = $this->uploadDoc($_FILES['thumb_detail']);
+                $params['thumb_detail'] = $thumb;
+            }
             $IMGs =array();
             if(!empty($params['slideIMG'])){
                 for($i =1;$i<=5;$i++){
                     if(!empty($params['slideIMG'][$i]) && !empty($params['slideIMG'.$i])){
                         $img = $this->uploadDoc($_FILES['slideIMG'.$i]);
                         $IMGs[] = array(
-                            'name' =>$params['slideIMG'][$i],
+                            'name' =>$params['slideIMG'][$i]['name'],
                             'img' =>$img
                         );
 
                     }
                 }
-                $params['slideIMGs'] = json_encode($IMGs);
+                $params['slideIMGs'] = $IMGs;
 
             }
             $this->dict->create($params);
@@ -87,28 +91,60 @@ class ManageTuDienController extends Controller
         if(!empty($dict)){
             $dict = $dict[0];
         }
+//        var_dump($dict);exit();
         return view('manage-tudien.add-tudien', compact('edit', 'dict'));
     }
     public function updateDict($id)
     {
         $params = Input::all();
-        $thumb = $this->uploadDoc($_FILES['fileimg']);
-        $params['thumb'] = $thumb;
-        $user = Auth::user();
-        $params['updated_by'] = $user->id;
+        if(!empty($id) && !empty($params['tenDuocLieu'])){
 
-//        var_dump($params);exit();
-        $this->dict->update($params, $id);
 
-        return redirect()->route('newsadmin.edit',$id)
-            ->withSuccess(trans('Cập nhật dược liệu thành công!'));
+            $user = Auth::user();
+            $params['updated_by'] = $user->id;
+            if(!empty($params['thumb'])){
+                $thumb = $this->uploadDoc($_FILES['thumb']);
+                $params['thumb'] = $thumb;
+            }
+            if(!empty($params['thumb_detail'])){
+                $thumb = $this->uploadDoc($_FILES['thumb_detail']);
+                $params['thumb_detail'] = $thumb;
+            }
+
+            $IMGs =array();
+            if(!empty($params['slideIMG'])){
+                for($i =1;$i<=5;$i++){
+                    if(!empty($params['slideIMG'][$i]) && !empty($params['slideIMG'.$i])){
+                        $img = $this->uploadDoc($_FILES['slideIMG'.$i]);
+                        $IMGs[] = array(
+                            'name' =>$params['slideIMG'][$i]['name'],
+                            'img' =>$img
+                        );
+
+                    }
+                }
+                if(!empty($IMGs)){
+                    $params['slideIMGs'] = $IMGs;
+                }
+
+
+            }
+            $this->dict->update($params,$id);
+        }else{
+            return redirect()->route(['dictadmin.edit',$id])
+                ->withErrors('Vui lòng nhập tên dược liệu');
+        }
+
+
+        return redirect()->route('dictadmin.list')
+            ->withSuccess(trans('Sửa thông tin dược liệu thành công!'));
     }
 
     public function deleteDict($id)
     {
         $this->dict->delete($id);
 
-        return redirect()->route('newsadmin.list')
+        return redirect()->route('dictadmin.list')
             ->withSuccess('Xóa dược liệu thành công!');
     }
 

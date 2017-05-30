@@ -65,7 +65,7 @@
                         <?php
                             if(!empty($bd->slideIMGs)){
                                 $IMGs = json_decode($bd->slideIMGs,true);
-                                $IMGs = json_decode($IMGs,true);
+                                //$IMGs = json_decode($IMGs,true);
 //                                var_dump($IMGs);exit();
                                 if(!empty($IMGs)){
                                     echo '<img src="'.$IMGs[0]['img'].'" width="50" height="50" />';

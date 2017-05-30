@@ -40,7 +40,7 @@ Route::get('/tu-dien-duoc-lieu', [
     'as' => 'frontend.tudienduoclieu',
     'uses' => 'FrontEndController@tudienduoclieu'
 ]);
-Route::get('/tu-dien-duoc-lieu/{id}/{name_url}', [
+Route::get('/tu-dien-duoc-lieu/{idSlug}', [
     'as' => 'frontend.tudienduoclieu.detail',
     'uses' => 'FrontEndController@tudienduoclieudetail'
 ]);

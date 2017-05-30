@@ -6,11 +6,13 @@ use Intervention\Image\Gd\Commands\InvertCommand;
 use Vanguard\Branch;
 use Vanguard\Invest;
 use Vanguard\Models\CategoryNews;
+use Vanguard\Models\TuDien;
 use Vanguard\News;
 use Vanguard\Project;
 use Vanguard\QA;
 use Vanguard\Repositories\Activity\ActivityRepository;
 use Vanguard\Repositories\News\NewsRepository;
+use Vanguard\Repositories\TuDien\TuDienRepository;
 use Vanguard\Repositories\User\UserRepository;
 use Vanguard\Support\Enum\UserStatus;
 use Auth;
@@ -78,13 +80,33 @@ class FrontEndController extends Controller
 
         return view('frontend.home', array('listSlideShow'=>$listSlideShow,'listTintuc'=>$listTintuc));
     }
-    public function tudienduoclieu()
+    public function tudienduoclieu(TuDienRepository $tudien)
     {
-        return view('frontend.tu-dien-duoc-lieu', []);
+        $params = Request::all();
+        $urlParams = '?search=all';
+        $search = "all";
+        if(!empty($params['search']) && strtolower($params['search']) != 'all'){
+            $search = $params['search'];
+            $search = str_replace("'","",$search);
+            $search = str_replace('"',"",$search);
+            $search = strip_tags($search);
+        }
+        $datas = $tudien->paginate(7,$search,TuDien::STATUS_ACTIVED)->setPath($urlParams);
+//        var_dump($datas);
+        return view('frontend.tu-dien-duoc-lieu', ['datas'=>$datas,'search'=>$search]);
     }
-    public function tudienduoclieuDetail($id)
+    public function tudienduoclieuDetail($idSlug)
     {
-        return view('frontend.tu-dien-duoc-lieu-detail', []);
+        $dict =array();
+        if(!empty($idSlug)){
+            $arr = explode("-",$idSlug);
+            if(count($arr)>1){
+                $id = $arr[count($arr)-1];
+                $dict = TuDien::where("id",$id)->where("status",TuDien::STATUS_ACTIVED)->get()->toArray();
+                if(!empty($dict)) $dict = $dict[0];
+            }
+        }
+        return view('frontend.tu-dien-duoc-lieu-detail', ['dict'=>$dict]);
     }
     public function sanpham()
     {
