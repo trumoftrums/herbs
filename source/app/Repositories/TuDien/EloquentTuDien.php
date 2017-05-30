@@ -23,13 +23,14 @@ class EloquentTuDien implements TuDienRepository
         $bd->boPhanSuDung = $data['boPhanSuDung'];
         $bd->thanhPhanHoaHoc = $data['thanhPhanHoaHoc'];
         $bd->tacDung = $data['tacDung'];
+        $bd->thumb = $data['thumb'];
         $bd->baiThuoc = $data['baiThuoc'];
         $bd->slideIMGs = json_encode($data['slideIMGs'],true);
         $bd->created_at = $now;
         $bd->created_by = $data['created_by'];
         $bd->updated_at = $now;
         $bd->updated_by = $data['updated_by'];
-        $bd->status = News::STATUS_ACTIVED;
+        $bd->status = TuDien::STATUS_ACTIVED;
 
         $bd->save();
     }

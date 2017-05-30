@@ -1,8 +1,8 @@
 @extends('layouts.app')
 <?php
-$title = "Thêm tin tức";
+$title = "THÊM DƯỢC LIỆU";
 if($edit){
-    $title = "Sửa tin tức";
+    $title = "SỬA DƯỢC LIỆU";
 }
 ?>
 @section('page-title',$title)
@@ -14,121 +14,114 @@ if($edit){
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            QUẢN LÝ TIN TỨC
+            QUẢN LÝ TỪ ĐIỂN DƯỢC LIỆU
             <img class="icon-bread" src="{{ url('assets/img/icon-next.png') }}"/>
-            <span class="sp-bread">THÊM TIN TỨC MỚI</span>
+            <span class="sp-bread">{{$title}}</span>
         </h1>
     </div>
 </div>
+    <style>
+        .admin-dict-slide-Item{
+            width: 100%;
+            text-align: left;
+            min-height: 50px;
+        }
+        .admin-dict-slide-Item input{
+            width: 48%;
+            float: left;
+        }
+
+    </style>
 
     @include('partials.messages')
     @if ($edit)
-        {!! Form::open(['route' => ['newsadmin.update', $news->id], 'method' => 'PUT', 'id' => 'news-form','enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(['route' => ['dictadmin.update', $dict['id']], 'method' => 'PUT', 'id' => 'news-form','enctype' => 'multipart/form-data']) !!}
     @else
-        {!! Form::open(['route' => 'newsadmin.add', 'id' => 'news-form', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(['route' => 'dictadmin.add','method' => 'POST', 'id' => 'news-form', 'enctype' => 'multipart/form-data']) !!}
     @endif
+    {{--<form enctype="multipart/form-data" method="post" action="{{ route('dictadmin.add') }}" >--}}
+    {{--<input type="hidden" value="{{csrf_token()}}" name="_token">--}}
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="name">Tiêu đề</label>
-                        <input type="text" class="form-control" name="title" placeholder="Tiêu đề" value="{{ $edit ? $news->title : '' }}">
+                        <label for="name">Tên Dược Liệu</label>
+                        <input type="text" class="form-control" name="tenDuocLieu" placeholder="Tên Dược Liệu" value="{{ $edit ? $dict['tenDuocLieu'] : '' }}">
                     </div>
                     <div class="form-group">
-                        <label for="name">Loại tin đăng</label>
-                        <select class="form-control" name="typeNews" id="typeNews">
-                            <option value="" >Click chọn loại tin</option>
-                            @foreach($listTypeNews as $item)
-                                <option value="{{$item->idType}}" @if($edit) @if($news->idType == $item->idType)  selected @endif @endif>{{$item->nameType}}</option>
-                            @endforeach
-                        </select>
+                        <label for="description">Mô tả</label>
+                        <textarea name="moTa" rows="5"  class="form-control">{{ $edit ? $dict['moTa'] : '' }}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="name">Category</label>
-                        <select class="form-control" name="category" id ="category">
-                            <option value="" >Click chọn category</option>
-                        </select>
+                        <label for="name">Tên Khoa Học</label>
+                        <input type="text" class="form-control" name="tenKhoaHoc" placeholder="Tên Khoa Học" value="{{ $edit ? $dict['tenKhoaHoc'] : '' }}">
                     </div>
                     <div class="form-group">
-                        <label for="display_name">Hình ảnh</label>
-                        <input type="file" id="file" name="fileimg">
+                        <label for="name">Tên Đồng Nghĩa</label>
+                        <input type="text" class="form-control" name="tenDongNghia" placeholder="Tên Đồng Nghĩa" value="{{ $edit ? $dict['tenDongNghia'] : '' }}">
                     </div>
                     <div class="form-group">
-                        <label for="description">Tóm tắt</label>
-                        <textarea name="summary" rows="5" class="form-control">{{ $edit ? $news->summary : '' }}</textarea>
+                        <label for="name">Tên Khác</label>
+                        <input type="text" class="form-control" name="tenKhac" placeholder="Tên Khác" value="{{ $edit ? $dict['tenKhac'] : '' }}">
                     </div>
                     <div class="form-group">
-                        <label for="description">Nội dung</label>
-                        <textarea name="description" class="form-control ckeditor">{{ $edit ? $news->description : '' }}</textarea>
+                        <label for="display_name">Hình đại diện</label>
+                        <input type="file" id="file" name="thumb">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Bộ phận sinh thái</label>
+                        <input type="text" class="form-control" name="phanBoSinhThai" placeholder="Bộ phận sinh thái" value="{{ $edit ? $dict['phanBoSinhThai'] : '' }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Bộ phận sử dụng</label>
+                        <input type="text" class="form-control" name="boPhanSuDung" placeholder="Bộ phận sử dụng" value="{{ $edit ? $dict['boPhanSuDung'] : '' }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Thành phần hóa học</label>
+                        <input type="text" class="form-control" name="thanhPhanHoaHoc" placeholder="Thành phần hóa học" value="{{ $edit ? $dict['thanhPhanHoaHoc'] : '' }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Tác dụng</label>
+                        <textarea type="text" class="form-control ckeditor" name="tacDung">{{ $edit ? $dict['tacDung'] : '' }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Bài thuốc</label>
+                        <textarea name="baiThuoc" class="form-control ckeditor">{{ $edit ? $dict['baiThuoc'] : '' }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="display_name">Slide hình ảnh</label>
+                        <div class="admin-dict-slide-Item">
+
+                            <input type="text" class="form-control" name="slideIMG[1][name]" placeholder="Tên hình ảnh 1" value="">
+                            <input type="file" class="form-control" id="slideIMG_1" name="slideIMG1">
+                        </div>
+                        <div class="admin-dict-slide-Item">
+
+                            <input type="text" class="form-control" name="slideIMG[2][name]" placeholder="Tên hình ảnh 2" value="">
+                            <input type="file" class="form-control"  id="slideIMG_2" name="slideIMG2">
+                        </div>
+                        <div class="admin-dict-slide-Item">
+
+                            <input type="text" class="form-control" name="slideIMG[3][name]" placeholder="Tên hình ảnh 3" value="">
+                            <input type="file" class="form-control"  id="slideIMG_3" name="slideIMG3">
+                        </div>
+                        <div class="admin-dict-slide-Item">
+
+                            <input type="text" class="form-control" name="slideIMG[4][name]" placeholder="Tên hình ảnh 4" value="">
+                            <input type="file" class="form-control"  id="slideIMG_4" name="slideIMG4">
+                        </div>
+                        <div class="admin-dict-slide-Item">
+
+                            <input type="text" class="form-control" name="slideIMG[5][name]" placeholder="Tên hình ảnh 5" value="">
+                            <input type="file" class="form-control"  id="slideIMG_5" name="slideIMG5">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="application/javascript" >
 
-        $( document ).ready(function() {
-            getCategory(true);
-        });
-        $("#typeNews").change(function () {
-            getCategory(false);
-
-        });
-        function  getCategory(isFirst) {
-            var type = $("#typeNews").val();
-            if(type!= ""){
-                $.ajax({
-                    url: '/quan-ly-tin-tuc/getNewCategory',
-                    dataType: "json",
-                    cache: false,
-                    type: 'post',
-                    data: {
-                        type: type
-                    },
-                    beforeSend: function(xhr){
-
-//                        xhr.setRequestHeader('X-CSRF-TOKEN', token);
-                    },
-                    success: function (data) {
-                        $('#category').html("");
-                        $('#category').append($('<option>', {
-                            value: "",
-                            text: "Click chọn category"
-                        }));
-                        if(data.result){
-
-
-                            for(var i=0;i<data.data.length;i++){
-
-                                $('#category').append($('<option>', {
-                                    value: data.data[i].id,
-                                    text: data.data[i].nameCategory
-                                }));
-                            }
-                            <?php if(isset($news['category']) && !empty($news['category'])){?>
-                            if(isFirst){
-                                $("#category").val("{{$news['category']}}");
-                            }
-                            <?php }?>
-
-
-                        }
-
-                    },
-                    error: function () {
-
-                    }
-                });
-            }else{
-
-            }
-
-
-        }
-
-
-    </script>
     <div class="row">
         <div class="col-md-2">
             <button type="submit" class="btn btn-primary btn-block bt-hsg">
@@ -137,6 +130,7 @@ if($edit){
             </button>
         </div>
     </div>
+    {{--</form>--}}
     {!! Form::close() !!}
 @stop
 

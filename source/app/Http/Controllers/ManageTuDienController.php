@@ -3,12 +3,9 @@
 namespace Vanguard\Http\Controllers;
 use Illuminate\Support\Facades\Input;
 use Vanguard\Http\Requests\User\UpdateUserRequest;
-use Vanguard\Models\CategoryNews;
-use Vanguard\News;
-use Vanguard\Repositories\CatNews\CatNewsRepository;
-use Vanguard\Repositories\News\NewsRepository;
 use Auth;
 use Request;
+use Vanguard\Models\TuDien;
 use Vanguard\Repositories\TuDien\TuDienRepository;
 use Vanguard\TypeNews;
 
@@ -20,19 +17,19 @@ use Vanguard\TypeNews;
 class ManageTuDienController extends Controller
 {
 
-    private $news;
+    private $dict;
     private  $perPage = 10;
     public function __construct(TuDienRepository $news)
     {
         $this->middleware('auth');
         $this->middleware('permission:dictadmin.manage');
-        $this->news = $news;
+        $this->dict = $news;
     }
     public function listDict()
     {
 
         $statusCurr = Input::get('status');
-        $listNews = $this->news->paginate($this->perPage, '', Input::get('status'));
+        $listNews = $this->dict->paginate($this->perPage, '', Input::get('status'));
 
         return view('manage-tudien.list-tudien', compact('listNews', 'statusCurr'));
     }
@@ -46,30 +43,51 @@ class ManageTuDienController extends Controller
     public function addDict()
     {
         $params = Input::all();
-        $thumb = $this->uploadDoc($_FILES['fileimg']);
-        $params['thumb'] = $thumb;
-        $user = Auth::user();
-        $params['created_by'] = $user->id;
-        $this->news->create($params);
+//        var_dump($params);exit();
+        if(!empty($params['tenDuocLieu']) && !empty($params['thumb'])){
 
-        return redirect()->route('newsadmin.create')
+
+            $user = Auth::user();
+            $params['created_by'] = $user->id;
+            $params['updated_by'] = $user->id;
+            if(!empty($params['thumb'])){
+                $thumb = $this->uploadDoc($_FILES['thumb']);
+                $params['thumb'] = $thumb;
+            }
+            $IMGs =array();
+            if(!empty($params['slideIMG'])){
+                for($i =1;$i<=5;$i++){
+                    if(!empty($params['slideIMG'][$i]) && !empty($params['slideIMG'.$i])){
+                        $img = $this->uploadDoc($_FILES['slideIMG'.$i]);
+                        $IMGs[] = array(
+                            'name' =>$params['slideIMG'][$i],
+                            'img' =>$img
+                        );
+
+                    }
+                }
+                $params['slideIMGs'] = json_encode($IMGs);
+
+            }
+            $this->dict->create($params);
+        }else{
+            return redirect()->route('dictadmin.create',['dict'=>$params])
+                ->withErrors('Vui lòng nhập đầy đủ thông tin');
+        }
+
+
+        return redirect()->route('dictadmin.list')
             ->withSuccess(trans('Thêm dược liệu mới thành công!'));
     }
 
     public function editDict($id)
     {
         $edit = true;
-        $news = News::join('category_new', 'category_new.id', '=', 'news.category')
-            ->join('type_news', 'type_news.idType', '=', 'category_new.type')
-            ->select("news.*","category_new.id as idCategory","type_news.idType")->where('news.id',$id)->get();
-//        var_dump($news);exit();
-        if(!empty($news)){
-            $news = $news[0];
+        $dict = TuDien::where("id",$id)->get()->toArray();
+        if(!empty($dict)){
+            $dict = $dict[0];
         }
-
-        $listTypeNews = TypeNews::where('status', TypeNews::STATUS_ACTIVED)->get();
-
-        return view('manage-news.add-news', compact('edit', 'news', 'listTypeNews'));
+        return view('manage-tudien.add-tudien', compact('edit', 'dict'));
     }
     public function updateDict($id)
     {
@@ -78,8 +96,9 @@ class ManageTuDienController extends Controller
         $params['thumb'] = $thumb;
         $user = Auth::user();
         $params['updated_by'] = $user->id;
+
 //        var_dump($params);exit();
-        $this->news->update($params, $id);
+        $this->dict->update($params, $id);
 
         return redirect()->route('newsadmin.edit',$id)
             ->withSuccess(trans('Cập nhật dược liệu thành công!'));
@@ -87,7 +106,7 @@ class ManageTuDienController extends Controller
 
     public function deleteDict($id)
     {
-        $this->news->delete($id);
+        $this->dict->delete($id);
 
         return redirect()->route('newsadmin.list')
             ->withSuccess('Xóa dược liệu thành công!');
@@ -96,7 +115,7 @@ class ManageTuDienController extends Controller
     private function uploadDoc($fileName)
     {
         if (!empty($fileName['name'])) {
-            $uploads_dir = 'upload/news';
+            $uploads_dir = 'upload/duoclieu';
             if (!file_exists($uploads_dir)) {
                 mkdir($uploads_dir, 0777);
             }

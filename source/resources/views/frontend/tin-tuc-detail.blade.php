@@ -34,7 +34,7 @@
                 <div class="item-news-tab">
                     <img src="{{ url($n['thumb'])}}"/>
                     <div class="cover-co-item">
-                        <a href="#">{{$n['title']}}</a>
+                        <a href="{{route('frontend.detailNews', str_slug($n['title'],'-').'-'.$n['id'])}}">{{$n['title']}}</a>
                         <span class="date-sp">{{$n['created_at']}}</span>
                     </div>
                 </div>
