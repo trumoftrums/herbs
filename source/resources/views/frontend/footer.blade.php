@@ -7,7 +7,12 @@
             <div class="item active item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>
+                        {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>--}}
+                        <video width="100%" height="220"  controls>
+                            <source src="{{url('upload/videos/cay-thuoc-chua-ung-thu.mp4')}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -18,7 +23,11 @@
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/Mbq0aYXMMH0" frameborder="0" allowfullscreen></iframe>
+                        {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/Mbq0aYXMMH0" frameborder="0" allowfullscreen></iframe>--}}
+                        <video width="100%" height="220"  controls>
+                            <source src="{{url('upload/videos/cay-thuoc-chua-gan.mp4')}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -29,7 +38,11 @@
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/xk-nyoiFdng" frameborder="0" allowfullscreen></iframe>
+                        {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/xk-nyoiFdng" frameborder="0" allowfullscreen></iframe>--}}
+                        <video width="100%" height="220"  controls>
+                            <source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -40,7 +53,11 @@
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/AxIUG5QJR2Q" frameborder="0" allowfullscreen></iframe>
+                        {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/AxIUG5QJR2Q" frameborder="0" allowfullscreen></iframe>--}}
+                        <video width="100%" height="220"  controls>
+                            <source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -51,7 +68,10 @@
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/oee6bRBl2_Q" frameborder="0" allowfullscreen></iframe>
+                        <video width="100%" height="220"  controls>
+                            <source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -62,7 +82,10 @@
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
-                        <iframe width="100%" height="220" src="https://www.youtube.com/embed/FMIa8pCf9Vc" frameborder="0" allowfullscreen></iframe>
+                        <video width="100%" height="220"  controls>
+                            <source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <a class="title-slide" href="#">mantra herbal từ herbs</a>
                     <span>30/04/2017</span>
@@ -147,5 +170,11 @@
             <p>Địa chỉ: 05, Einstein, P. Bình Thọ, Q. Thủ Đức, Tp.HCM</p>
             <p>Hotline: 19009220 - Email: cskh@greenherbsjsc.com</p>
         </div>
+        <div id="google_translate_element" style="float:right; margin-right: 20px"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+            }
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 </div>
