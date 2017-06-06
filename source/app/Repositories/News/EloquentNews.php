@@ -19,7 +19,7 @@ class EloquentNews implements NewsRepository
         $bd->thumb = $data['thumb'];
         $bd->category = $data['typeNews'];
         $bd->status = News::STATUS_ACTIVED;
-
+        $bd->created_by = $data['created_by'];
         $bd->save();
     }
 
@@ -31,6 +31,7 @@ class EloquentNews implements NewsRepository
         $bd->summary = $data['summary'];
         $bd->description = $data['description'];
         $bd->category = $data['category'];
+        $bd->updated_by = $data['updated_by'];
         if($data['thumb'] != null){
             $bd->thumb = $data['thumb'];
         }else{
