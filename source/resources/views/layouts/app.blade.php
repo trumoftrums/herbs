@@ -90,11 +90,11 @@
             @yield('content')
             <div class="footer">
                 <div class="left">
-                    <p>Địa chỉ: 02, Phạm Văn Đồng, P. Linh Đông, Q. Thủ Đức, Tp.HCM</p>
-                    <p>Hotline: 097 7777 929 - Email: cskh@herbsjsc.com</p>
+                    <p><b>GREENHERBSJSC.COM Bản quyền @2013 Greenherbsjsc </b></p>
+                    <p>Địa chỉ: 05, Einstein, P. Bình Thọ, Q. Thủ Đức, Tp.HCM</p>
+                    <p>Hotline: 19009220 - Email: cskh@greenherbsjsc.com</p>
                 </div>
-                <p class="p-right">Số lượng thành viên: 1000</p>
-                <p class="p-copyright">Bản quyền @ 2017 Herbsjsc.com</p>
+
             </div>
         </div>
     </div>
