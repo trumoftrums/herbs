@@ -256,38 +256,16 @@
         <div class="herbs-right">
             <div class="unit-herbs-right">
                 <h4 class="h4-title-right">HOẠT ĐỘNG XÃ HỘI</h4>
+                <?php if(!empty($listHoatDong)){foreach ($listHoatDong as $hd){?>
                 <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
+                    <img src="{{ url($hd['thumb'])}}"/>
                     <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
+                        <a class="p-name-bs" href="{{route('frontend.detailNews', str_slug($hd['title'],'-').'-'.$hd['id'])}}">{{$hd['title']}}</a>
+                        <span class="sp-chucvu">{{substr($hd['created_at'],0,10)}}</span>
+                        <p class="sp-lh"><?php echo implode(' ', array_slice(explode(' ', $hd['summary']), 0, 15)) ?>...</p>
                     </div>
                 </div>
-                <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
-                    <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
-                    </div>
-                </div>
-                <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
-                    <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
-                    </div>
-                </div>
-                <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
-                    <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
-                    </div>
-                </div>
+                <?php }}?>
             </div>
             <div class="unit-herbs-right">
                 <h4 class="h4-title-right">FANPAGE</h4>

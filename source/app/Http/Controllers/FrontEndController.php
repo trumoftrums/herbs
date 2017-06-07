@@ -75,12 +75,14 @@ class FrontEndController extends Controller
                 $listTintuc[$type['idType']]['all'] = $all;
             }
         }
+        $listHoatDong = array();
+        $listHoatDong = $newsRepository->getLastest(4,null,10);
 //        var_dump($listTintuc[1]['data']);exit();
 
 
-        return view('frontend.home', array('listSlideShow'=>$listSlideShow,'listTintuc'=>$listTintuc));
+        return view('frontend.home', array('listSlideShow'=>$listSlideShow,'listTintuc'=>$listTintuc,'listHoatDong'=>$listHoatDong));
     }
-    public function tudienduoclieu(TuDienRepository $tudien)
+    public function tudienduoclieu(TuDienRepository $tudien, NewsRepository $newsRepository)
     {
         $params = Request::all();
         $urlParams = '?search=all';
@@ -92,10 +94,12 @@ class FrontEndController extends Controller
             $search = strip_tags($search);
         }
         $datas = $tudien->paginate(7,$search,TuDien::STATUS_ACTIVED)->setPath($urlParams);
+        $listHoatDong = array();
+        $listHoatDong = $newsRepository->getLastest(4,null,10);
 //        var_dump($datas);
-        return view('frontend.tu-dien-duoc-lieu', ['datas'=>$datas,'search'=>$search]);
+        return view('frontend.tu-dien-duoc-lieu', ['datas'=>$datas,'search'=>$search,'listHoatDong'=>$listHoatDong]);
     }
-    public function tudienduoclieuDetail($idSlug)
+    public function tudienduoclieuDetail($idSlug ,NewsRepository $newsRepository)
     {
         $dict =array();
         if(!empty($idSlug)){
@@ -106,7 +110,9 @@ class FrontEndController extends Controller
                 if(!empty($dict)) $dict = $dict[0];
             }
         }
-        return view('frontend.tu-dien-duoc-lieu-detail', ['dict'=>$dict]);
+        $listHoatDong = array();
+        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        return view('frontend.tu-dien-duoc-lieu-detail', ['dict'=>$dict,'listHoatDong'=>$listHoatDong]);
     }
     public function sanpham()
     {
@@ -124,7 +130,7 @@ class FrontEndController extends Controller
     {
         return view('frontend.phan-phoi', []);
     }
-    public function tintuc($id_type)
+    public function tintuc($id_type ,NewsRepository $newsRepository )
     {
         switch ($id_type){
             case 1:
@@ -159,9 +165,11 @@ class FrontEndController extends Controller
             ->limit(3)->orderBy('created_at','desc')->get()->toArray();
         $listPost= $query->paginate(13)->setPath($urlParams);
         if($listPost->total()==0) $listPost =array();
-        return view('frontend.tin-tuc', compact('title','listPost','listCat','id_type'));
+        $listHoatDong = array();
+        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        return view('frontend.tin-tuc', compact('title','listPost','listCat','id_type','listHoatDong'));
     }
-    public function detailNews($idSlug)
+    public function detailNews($idSlug,NewsRepository $newsRepository)
     {
         $news = array();
         $listRelated = array();
@@ -189,8 +197,11 @@ class FrontEndController extends Controller
                     ->orderBy('news.created_at','desc')
                     ->limit(6)->get()->toArray();
             }
+
         }
-        return view('frontend.tin-tuc-detail', ['news'=>$news,'listRelated'=>$listRelated]);
+        $listHoatDong = array();
+        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        return view('frontend.tin-tuc-detail', ['news'=>$news,'listRelated'=>$listRelated,'listHoatDong'=>$listHoatDong]);
     }
 
 }
