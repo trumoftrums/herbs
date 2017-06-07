@@ -65,7 +65,7 @@ class FrontEndController extends Controller
                 foreach ($cats as $v){
                     $listTintuc[$type['idType']]['data'][$v['id']]['info'] = $v;
                     $listTintuc[$type['idType']]['data'][$v['id']]['data'] = array();
-                    $tt = $newsRepository->getLastest(5,null,$v['id']);
+                    $tt = $newsRepository->getLastest(5,null,$v['id'],array(10));
                     if(!empty($tt)){
                         $listTintuc[$type['idType']]['data'][$v['id']]['data'] = $tt;
                     }

@@ -65,7 +65,7 @@ class EloquentNews implements NewsRepository
 
         return $result;
     }
-    public function getLastest($num = 3,$type = null,$cat =null)
+    public function getLastest($num = 3,$type = null,$cat =null,$notInCat =null)
     {
 
         $query = News::join('category_new', 'category_new.id', '=', 'news.category')
@@ -78,6 +78,12 @@ class EloquentNews implements NewsRepository
         }
         if(!empty($cat)){
             $query  = $query->where('news.category', $cat);
+        }
+        if(!empty($notInCat)){
+            foreach ($notInCat as $vl){
+                $query  = $query->where('news.category','<>', $vl);
+            }
+
         }
         $result = $query->orderBy('news.created_at', 'desc')->limit($num)->get()->toArray();
 
