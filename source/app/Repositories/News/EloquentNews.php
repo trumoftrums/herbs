@@ -85,6 +85,7 @@ class EloquentNews implements NewsRepository
             }
 
         }
+//        var_dump($query);exit();
         $result = $query->orderBy('news.created_at', 'desc')->limit($num)->get()->toArray();
 
         return $result;

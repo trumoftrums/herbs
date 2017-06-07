@@ -71,7 +71,7 @@ class FrontEndController extends Controller
                     }
 
                 }
-                $all = $newsRepository->getLastest(5,$type['idType']);
+                $all = $newsRepository->getLastest(5,$type['idType'],null,array(10));
                 $listTintuc[$type['idType']]['all'] = $all;
             }
         }
