@@ -242,8 +242,9 @@ Menu top
     height: 125px;
     border: none;
     padding: 0px 15px 0px 0px;
-    color: #6fa001;
-    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 .slider-list .list-group-item:hover{
     background-color: transparent;
@@ -254,12 +255,14 @@ Menu top
     font-size: 15px;
     color: #000;
     text-transform: initial;
+    font-weight:normal;
 }
 .slider-list .active {
     opacity: 0.6;
     background-color: transparent;
     border-color: #ccc;
-    color: #6fa001;
+    font-weight:bold;
+    color: #000;
 }
 .slider-list .active:hover,
 .slider-list .active:focus {
@@ -297,6 +300,7 @@ hr {
     font-size: 13px;
     text-transform: initial;
     color: #000;
+    font-weight: normal;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -1045,7 +1049,7 @@ hr {
     margin-right: 15px;
 }
 .herbs-left .item-tddl .name-t{
-    color: #6fa001;
+    color: #000;
 }
 .slider-cay{
     float: left;
