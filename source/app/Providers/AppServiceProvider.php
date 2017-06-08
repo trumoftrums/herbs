@@ -5,6 +5,8 @@ namespace Vanguard\Providers;
 use Carbon\Carbon;
 use Vanguard\Repositories\Activity\ActivityRepository;
 use Vanguard\Repositories\Activity\EloquentActivity;
+use Vanguard\Repositories\Ads\AdsRepository;
+use Vanguard\Repositories\Ads\EloquentAds;
 use Vanguard\Repositories\BienDong\BienDongRepository;
 use Vanguard\Repositories\BienDong\EloquentBienDong;
 use Vanguard\Repositories\CatNews\CatNewsRepository;
@@ -59,7 +61,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(CountryRepository::class, EloquentCountry::class);
         $this->app->singleton(CatNewsRepository::class, EloquentCatNews::class);
         $this->app->singleton(TuDienRepository::class, EloquentTuDien::class);
-
+        $this->app->singleton(AdsRepository::class, EloquentAds::class);
         $this->app->singleton(InvestTypeRepository::class, EloquentInvestType::class);
         $this->app->singleton(BienDongRepository::class, EloquentBienDong::class);
         $this->app->singleton(InvestRepository::class, EloquentInvest::class);

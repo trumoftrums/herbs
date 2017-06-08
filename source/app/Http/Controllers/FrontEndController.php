@@ -5,6 +5,7 @@ namespace Vanguard\Http\Controllers;
 use Intervention\Image\Gd\Commands\InvertCommand;
 use Vanguard\Branch;
 use Vanguard\Invest;
+use Vanguard\Models\Ads;
 use Vanguard\Models\CategoryNews;
 use Vanguard\Models\TuDien;
 use Vanguard\News;
@@ -71,16 +72,25 @@ class FrontEndController extends Controller
                     }
 
                 }
-                $all = $newsRepository->getLastest(5,$type['idType']);
+                $all = $newsRepository->getLastest(5,$type['idType'],null,array(10));
                 $listTintuc[$type['idType']]['all'] = $all;
             }
         }
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
 //        var_dump($listTintuc[1]['data']);exit();
 
 
-        return view('frontend.home', array('listSlideShow'=>$listSlideShow,'listTintuc'=>$listTintuc,'listHoatDong'=>$listHoatDong));
+        return view('frontend.home', array(
+            'listSlideShow'=>$listSlideShow,
+            'listTintuc'=>$listTintuc,
+            'listHoatDong'=>$listHoatDong,
+            'listAds'=>$this->getListAds(5)
+        ));
+    }
+    private function getListAds($limit = 10){
+        $listAds = Ads::where('status',Ads::STATUS_ACTIVED)->orderBy('weight','asc')->limit($limit)->get()->toArray();
+        return $listAds;
     }
     public function tudienduoclieu(TuDienRepository $tudien, NewsRepository $newsRepository)
     {
@@ -95,9 +105,14 @@ class FrontEndController extends Controller
         }
         $datas = $tudien->paginate(7,$search,TuDien::STATUS_ACTIVED)->setPath($urlParams);
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
 //        var_dump($datas);
-        return view('frontend.tu-dien-duoc-lieu', ['datas'=>$datas,'search'=>$search,'listHoatDong'=>$listHoatDong]);
+        return view('frontend.tu-dien-duoc-lieu', [
+            'datas'=>$datas,
+            'search'=>$search,
+            'listHoatDong'=>$listHoatDong,
+            'listAds'=>$this->getListAds(5)
+        ]);
     }
     public function tudienduoclieuDetail($idSlug ,NewsRepository $newsRepository)
     {
@@ -111,8 +126,12 @@ class FrontEndController extends Controller
             }
         }
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
-        return view('frontend.tu-dien-duoc-lieu-detail', ['dict'=>$dict,'listHoatDong'=>$listHoatDong]);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
+        return view('frontend.tu-dien-duoc-lieu-detail', [
+            'dict'=>$dict,
+            'listHoatDong'=>$listHoatDong,
+            'listAds'=>$this->getListAds(5)
+        ]);
     }
     public function sanpham()
     {
@@ -154,6 +173,7 @@ class FrontEndController extends Controller
             ->join('users', 'users.id', '=', 'news.created_by')
             ->where('news.status', News::STATUS_ACTIVED)
             ->where('category_new.type',$id_type)
+            ->where('category_new.id','<>',10)
             ->orderBy('news.created_at','desc')
             ->select("news.*","category_new.id as idCategory","category_new.nameCategory",
                 "type_news.nameType","users.username","users.first_name","users.last_name");
@@ -166,8 +186,15 @@ class FrontEndController extends Controller
         $listPost= $query->paginate(13)->setPath($urlParams);
         if($listPost->total()==0) $listPost =array();
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
-        return view('frontend.tin-tuc', compact('title','listPost','listCat','id_type','listHoatDong'));
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
+        return view('frontend.tin-tuc', [
+            'title'=>$title,
+            'listPost'=>$listPost,
+            'listCat'=>$listCat,
+            'id_type'=>$id_type,
+            'listHoatDong'=>$listHoatDong,
+            'listAds'=>$this->getListAds(5)
+        ]);
     }
     public function detailNews($idSlug,NewsRepository $newsRepository)
     {
@@ -200,8 +227,13 @@ class FrontEndController extends Controller
 
         }
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
-        return view('frontend.tin-tuc-detail', ['news'=>$news,'listRelated'=>$listRelated,'listHoatDong'=>$listHoatDong]);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
+        return view('frontend.tin-tuc-detail', [
+            'news'=>$news,
+            'listRelated'=>$listRelated,
+            'listHoatDong'=>$listHoatDong,
+            'listAds'=>$this->getListAds(5)
+        ]);
     }
 
 }

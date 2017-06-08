@@ -58,7 +58,13 @@
                 </a>
             </li>
             @endpermission
-
+            @permission('ads.manage')
+            <li class="{{ Request::is('quan-ly-ads*') ? 'active open' : ''  }}">
+                <a href="{{ route('adsadmin.lists') }}" class="{{ Request::is('quan-ly-ads*') ? 'active' : ''  }}">
+                    <i class="fa fa-newspaper-o fa-fw"></i> Quản lý Ads
+                </a>
+            </li>
+            @endpermission
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

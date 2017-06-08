@@ -14,10 +14,10 @@
                         </video>
 
                     </div>
-                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <a class="title-slide" href="#">Khỏe trẻ đẹp cùng chuối sức khỏe</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                    <p>Cây thuốc chữa bệnh về gan, kể cả ung thư thời kì cuối, Tôi tên là Hòa, sống ở thị trấn Lộc Linh khoảng một năm trước đây sức khỏe của tôi bỗng suy giảm,da bắt đầu vàng, bụng chướng, ăn uống không được ngon…</p>
                 </div>
             </div>
             <div class="item item-herbs">
