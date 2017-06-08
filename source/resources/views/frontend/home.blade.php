@@ -281,12 +281,11 @@
                 <div class="item-qa">
                     <div class="fb-page" data-href="https://www.facebook.com/facebook/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook/">Facebook</a></blockquote></div>
                 </div>
+                <?php if(!empty($listAds)){foreach ($listAds as $ads){?>
                 <div class="item-qa">
-                    <a href="#"><img src="{{ url('assets/frontend/images/qa-item.png')}}"/></a>
+                    <a href="{{ url($ads['url'])}}"><img src="{{ url($ads['img'])}}"/></a>
                 </div>
-                <div class="item-qa">
-                    <a href="#"><img src="{{ url('assets/frontend/images/qa-item2.png')}}"/></a>
-                </div>
+                <?php }}?>
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@
 namespace Vanguard\Http\Controllers;
 use Illuminate\Support\Facades\Input;
 use Vanguard\Http\Requests\User\UpdateUserRequest;
+use Vanguard\Models\Ads;
 use Vanguard\News;
 use Auth;
 use Request;
@@ -48,38 +49,40 @@ class ManageAdsController extends Controller
         $this->ads->create($params);
 
         return redirect()->route('adsadmin.create')
-            ->withSuccess(trans('Thêm tin tức mới thành công!'));
+            ->withSuccess(trans('Thêm quảng cáo mới thành công!'));
     }
 
     public function edit($id)
     {
         $edit = true;
-        $news = News::where('ads.id',$id)->get();
+        $news = Ads::where('ads.id',$id)->get();
         if(!empty($news)){
             $news = $news[0];
         }
-        return view('manage-news.add-news', compact('edit', 'news'));
+        return view('manage-ads.add-ads', compact('edit', 'news'));
     }
     public function update($id)
     {
         $params = Input::all();
-        $thumb = $this->uploadDoc($_FILES['fileimg']);
-        $params['thumb'] = $thumb;
+        if(!empty($_FILES['fileimg'])){
+            $thumb = $this->uploadDoc($_FILES['fileimg']);
+            $params['img'] = $thumb;
+        }
+
         $user = Auth::user();
         $params['updated_by'] = $user->id;
-//        var_dump($params);exit();
-        $this->news->update($params, $id);
+        $this->ads->update($params, $id);
 
-        return redirect()->route('newsadmin.edit',$id)
-            ->withSuccess(trans('Cập nhật tin tức thành công!'));
+        return redirect()->route('adsadmin.edit',$id)
+            ->withSuccess(trans('Cập nhật quảng cáo thành công!'));
     }
 
     public function delete($id)
     {
-        $this->news->delete($id);
+        $this->ads->delete($id);
 
-        return redirect()->route('newsadmin.list')
-            ->withSuccess('Xóa tin tức thành công!');
+        return redirect()->route('adsadmin.lists')
+            ->withSuccess('Xóa ads thành công!');
     }
 
     private function uploadDoc($fileName)

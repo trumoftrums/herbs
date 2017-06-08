@@ -52,7 +52,7 @@ class EloquentAds implements AdsRepository
         $query = Ads::orderBy('ads.weight', 'asc');
 
         if ($status && $status != "All") {
-            $query->where('news.status', $status);
+            $query->where('ads.status', $status);
         }
         $result = $query->paginate($perPage);
 

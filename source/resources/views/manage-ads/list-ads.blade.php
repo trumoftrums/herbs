@@ -51,9 +51,10 @@
             <th>TIÊU ĐỀ</th>
             <th>HÌNH ẢNH</th>
             <th>URL</th>
-            <th>TRẠNG THÁI</th>
+
             <th>NGÀY TẠO</th>
             <th>SẮP XẾP</th>
+            <th>TRẠNG THÁI</th>
             <th class="text-center">ACTION</th>
         </thead>
         <tbody>

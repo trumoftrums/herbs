@@ -33,7 +33,7 @@ if($edit){
                 <div class="panel-body">
                     <div class="form-group">
                         <label for="name">Tên quảng cáo</label>
-                        <input type="text" class="form-control" name="title" placeholder="Tên quảng cáo" value="{{ $edit ? $news->name : '' }}">
+                        <input type="text" class="form-control" name="name" placeholder="Tên quảng cáo" value="{{ $edit ? $news->name : '' }}">
                     </div>
                     <div class="form-group">
                         <label for="url">URL</label>
@@ -42,15 +42,13 @@ if($edit){
                     <div class="form-group">
                         <label for="display_name">Hình ảnh</label>
                         <input type="file" id="file" name="fileimg">
+                        <img src="{{$edit  && !empty($news->img) ? url($news->img) : ''}}" id="thumb" width="150" height="150"/>
                     </div>
                     <div class="form-group">
-                        <label for="description">Tóm tắt</label>
-                        <textarea name="summary" rows="5" class="form-control">{{ $edit ? $news->summary : '' }}</textarea>
+                        <label for="weight">Sắp xếp</label>
+                        <input type="text" class="form-control" name="weight" placeholder="weight" value="{{ $edit ? $news->weight : '' }}">
                     </div>
-                    <div class="form-group">
-                        <label for="description">Nội dung</label>
-                        <textarea name="description" class="form-control ckeditor">{{ $edit ? $news->description : '' }}</textarea>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -58,64 +56,25 @@ if($edit){
     <script type="application/javascript" >
 
         $( document ).ready(function() {
-            getCategory(true);
+            <?php
+                if($edit) echo 'readURL($("#file"),"thumb");';
+            ?>
         });
-        $("#typeNews").change(function () {
-            getCategory(false);
+        function readURL(input,idIMG) {
 
-        });
-        function  getCategory(isFirst) {
-            var type = $("#typeNews").val();
-            if(type!= ""){
-                $.ajax({
-                    url: '/quan-ly-tin-tuc/getNewCategory',
-                    dataType: "json",
-                    cache: false,
-                    type: 'post',
-                    data: {
-                        type: type
-                    },
-                    beforeSend: function(xhr){
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-//                        xhr.setRequestHeader('X-CSRF-TOKEN', token);
-                    },
-                    success: function (data) {
-                        $('#category').html("");
-                        $('#category').append($('<option>', {
-                            value: "",
-                            text: "Click chọn category"
-                        }));
-                        if(data.result){
+                reader.onload = function (e) {
+                    $('#'+idIMG).attr('src', e.target.result);
+                }
 
-
-                            for(var i=0;i<data.data.length;i++){
-
-                                $('#category').append($('<option>', {
-                                    value: data.data[i].id,
-                                    text: data.data[i].nameCategory
-                                }));
-                            }
-                            <?php if(isset($news['category']) && !empty($news['category'])){?>
-                            if(isFirst){
-                                $("#category").val("{{$news['category']}}");
-                            }
-                            <?php }?>
-
-
-                        }
-
-                    },
-                    error: function () {
-
-                    }
-                });
-            }else{
-
+                reader.readAsDataURL(input.files[0]);
             }
-
-
         }
-
+        $("#file").change(function(){
+            readURL(this,"thumb");
+        });
 
     </script>
     <div class="row">
