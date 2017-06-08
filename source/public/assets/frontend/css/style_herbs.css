@@ -641,10 +641,11 @@ hr {
     padding: 4px 5px 0px 10px;
 }
 .herbs-right .item-bs .cover-right .p-name-bs{
-    color: #da6700;
+    color: #056839;
     font-size: 15px;
     float: left;
     width: 100%;
+    font-weight: bold;
     margin: 0px;
 }
 .herbs-right .item-bs .cover-right .sp-chucvu{

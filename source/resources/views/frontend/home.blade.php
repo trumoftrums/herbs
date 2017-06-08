@@ -74,8 +74,7 @@
                             <a class="title-slide" href="#">Thuần Linh Chi </a>
                             <hr class="hr-line">
                             <p>Bổ sung dinh dưỡng cho mọi đối tượng, đặc biệt là bà bầu, trẻ em, người suy nhược và người già.<br>
-                                Viên tảo biển nhật giúp tăng cường hệ miễn dịch cho cơ thể.<br>
-                                Giúp tái tạo máu, hỗ trợ thải lọc độc tố, ngăn ngừa bệnh tật và làm đẹp da</p>
+                                Viên tảo biển nhật giúp tăng cường...</p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>
@@ -90,7 +89,7 @@
                             <hr class="hr-line">
                             <p>Bổ sung enzym cho cơ thể<br>
                                 Hỗ trợ các vấn đề về tiêu hóa, đào thải độc tố<br>
-                                Tăng cường hệ miễn dịch cho cơ thể</p>
+                                Tăng cường hệ miễn dịch cho...</p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>
@@ -101,12 +100,11 @@
                             <div class="cover-media">
                                 <img src="{{ url('assets/frontend/images/sl03.png')}}"/>
                             </div>
-                            <a class="title-slide" href="#">Hộp viên nang mềm Tâm thống </a>
+                            <a class="title-slide" href="#">Hộp viên nang Tâm thống </a>
                             <hr class="hr-line">
                             <p>Hỗ trợ điều trị suy thận, sỏi thận, viêm đường tiết niệu <br>
-                                Bổ thận tráng dương, tăng cường sinh lý nam giới.<br>
-                                Cải thiện các vấn đề về đau lưng, mỏi gối. <br>
-                                Bồi bổ, tăng cường sức khỏe.</p>
+                                Bổ thận tráng dương, tăng cường sinh lý nam giới...<br>
+                            </p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>
@@ -117,24 +115,12 @@
                             <div class="cover-media">
                                 <img src="{{ url('assets/frontend/images/sl04.png')}}"/>
                             </div>
-                            <a class="title-slide" href="#">Thuốc điều trị mất ngủ Siro</a>
+                            <a class="title-slide" href="#">Thuốc trị mất ngủ Siro</a>
                             <hr class="hr-line">
                             <p>Giải độc, thanh nhiệt, nhuận tràng<br>
                                 Hạ đường huyết, hỗ trợ điều trị bệnh tiểu đường, cao huyết áp<br>
-                                Giảm suy nhược, giúp cơ thể khoẻ mạnh, trẻ trung và gia tăng tuổi thọ</p>
-                            <a href="#" class="a-view">Xem</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item item-herbs">
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="cover-in">
-                            <div class="cover-media">
-                                <img src="{{ url('assets/frontend/images/sl01.png')}}"/>
-                            </div>
-                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
-                            <hr class="hr-line">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                                Giảm suy nhược, giúp cơ thể...
+                            </p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>
@@ -145,9 +131,11 @@
                             <div class="cover-media">
                                 <img src="{{ url('assets/frontend/images/sl02.png')}}"/>
                             </div>
-                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <a class="title-slide" href="#">VIÊN UỐNG GIẢM CÂN ĐẸP DA </a>
                             <hr class="hr-line">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <p>Bổ sung enzym cho cơ thể<br>
+                                Hỗ trợ các vấn đề về tiêu hóa, đào thải độc tố<br>
+                                Tăng cường hệ miễn dịch cho...</p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>
@@ -158,9 +146,27 @@
                             <div class="cover-media">
                                 <img src="{{ url('assets/frontend/images/sl03.png')}}"/>
                             </div>
-                            <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                            <a class="title-slide" href="#">Hộp viên nang Tâm thống </a>
                             <hr class="hr-line">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            <p>Hỗ trợ điều trị suy thận, sỏi thận, viêm đường tiết niệu <br>
+                                Bổ thận tráng dương, tăng cường sinh lý nam giới...<br>
+                            </p>
+                            <a href="#" class="a-view">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-herbs">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="cover-in">
+                            <div class="cover-media">
+                                <img src="{{ url('assets/frontend/images/sl04.png')}}"/>
+                            </div>
+                            <a class="title-slide" href="#">Thuốc trị mất ngủ Siro</a>
+                            <hr class="hr-line">
+                            <p>Giải độc, thanh nhiệt, nhuận tràng<br>
+                                Hạ đường huyết, hỗ trợ điều trị bệnh tiểu đường, cao huyết áp<br>
+                                Giảm suy nhược, giúp cơ thể...
+                            </p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>
@@ -269,9 +275,9 @@
                 <div class="item-bs">
                     <img src="{{ url($hd['thumb'])}}"/>
                     <div class="cover-right">
-                        <a class="p-name-bs" href="{{route('frontend.detailNews', str_slug($hd['title'],'-').'-'.$hd['id'])}}">{{$hd['title']}}</a>
+                        <a class="p-name-bs" href="{{route('frontend.detailNews', str_slug($hd['title'],'-').'-'.$hd['id'])}}"><?php echo implode(' ', array_slice(explode(' ', $hd['title']), 0, 9)) ?>...</a>
                         <span class="sp-chucvu">{{substr($hd['created_at'],0,10)}}</span>
-                        <p class="sp-lh"><?php echo implode(' ', array_slice(explode(' ', $hd['summary']), 0, 15)) ?>...</p>
+                        <p class="sp-lh"><?php echo implode(' ', array_slice(explode(' ', $hd['summary']), 0, 10)) ?>...</p>
                     </div>
                 </div>
                 <?php }}?>
