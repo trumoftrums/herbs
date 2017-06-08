@@ -77,7 +77,7 @@ class FrontEndController extends Controller
             }
         }
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
 //        var_dump($listTintuc[1]['data']);exit();
 
 
@@ -105,7 +105,7 @@ class FrontEndController extends Controller
         }
         $datas = $tudien->paginate(7,$search,TuDien::STATUS_ACTIVED)->setPath($urlParams);
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
 //        var_dump($datas);
         return view('frontend.tu-dien-duoc-lieu', [
             'datas'=>$datas,
@@ -126,7 +126,7 @@ class FrontEndController extends Controller
             }
         }
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
         return view('frontend.tu-dien-duoc-lieu-detail', [
             'dict'=>$dict,
             'listHoatDong'=>$listHoatDong,
@@ -186,7 +186,7 @@ class FrontEndController extends Controller
         $listPost= $query->paginate(13)->setPath($urlParams);
         if($listPost->total()==0) $listPost =array();
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
         return view('frontend.tin-tuc', [
             'title'=>$title,
             'listPost'=>$listPost,
@@ -227,7 +227,7 @@ class FrontEndController extends Controller
 
         }
         $listHoatDong = array();
-        $listHoatDong = $newsRepository->getLastest(4,null,10);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
         return view('frontend.tin-tuc-detail', [
             'news'=>$news,
             'listRelated'=>$listRelated,
