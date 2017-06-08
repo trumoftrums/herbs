@@ -584,3 +584,31 @@ Route::get('docsview/detail-du-an/{idProject}/', [
     'as' => 'docsview.detail-du-an',
     'uses' => 'DocsviewController@detailProject'
 ]);
+
+/**
+ * Manage ads
+ */
+Route::get('quan-ly-ads', [
+    'as' => 'adsadmin.lists',
+    'uses' => 'ManageAdsController@lists'
+]);
+Route::get('quan-ly-ads/create', [
+    'as' => 'adsadmin.create',
+    'uses' => 'ManageAdsController@create'
+]);
+Route::post('quan-ly-ads/add', [
+    'as' => 'adsadmin.add',
+    'uses' => 'ManageAdsController@add'
+]);
+Route::get('quan-ly-ads/{idNews}/edit', [
+    'as' => 'adsadmin.edit',
+    'uses' => 'ManageAdsController@edit'
+]);
+Route::put('quan-ly-ads/{idNews}/update', [
+    'as' => 'adsadmin.update',
+    'uses' => 'ManageAdsController@update'
+]);
+Route::delete('quan-ly-ads/{idNews}/delete', [
+    'as' => 'adsadmin.delete',
+    'uses' => 'ManageAdsController@delete'
+]);

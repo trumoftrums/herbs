@@ -7,15 +7,9 @@ use Vanguard\Models\CategoryNews;
 use Vanguard\News;
 use Vanguard\Repositories\CatNews\CatNewsRepository;
 use Vanguard\Repositories\News\NewsRepository;
-use Vanguard\Repositories\User\UserRepository;
 use Auth;
-use Vanguard\Repositories\BienDong\BienDongRepository;
 use Request;
-use Vanguard\BienDong;
-use Vanguard\Http\Requests\Invest\BienDongRequest;
-use Vanguard\Support\Enum\UserStatus;
 use Vanguard\TypeNews;
-use Vanguard\User;
 
 
 /**
