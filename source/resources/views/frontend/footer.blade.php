@@ -29,10 +29,10 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <a class="title-slide" href="#">Khỏe trẻ đẹp cùng chuối sức khỏe</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <p>Cây thuốc chữa bệnh về gan, kể cả ung thư thời kì cuối, Tôi tên là Hòa, sống ở thị trấn Lộc Linh khoảng một năm trước đây sức khỏe của tôi bỗng suy giảm,da bắt đầu vàng, bụng chướng, ăn uống không được ngon…</p>
                 </div>
             </div>
             <div class="item item-herbs">
@@ -44,10 +44,10 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <a class="title-slide" href="#">Cây Bách Bệnh - Tăng cường sinh lý phái mạnh</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <p>Theo y học cổ truyền, cây bách bệnh vị đắng, tính mát, có tác dung thanh nhiệt, tiêu viêm, thường dùng cho tiểu tiện ra máu, ăn không tiêu, đầy hơi, chướng bụng...</p>
                 </div>
             </div>
             <div class="item item-herbs">
@@ -59,38 +59,40 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <a class="title-slide" href="#">Những bài thuốc dân gian từ cây cỏ</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <p>Xưa có câu, nam dược trị nam nhân để chỉ ra nguồn dược liệu từ ngay chính cây cỏ xung quanh là rất lớn và hiệu quả trong việc điều trị các chứng bệnh. Nay có rất nhiều cây cỏ mọc hoang ở nhiều nơi như cỏ Mực (cỏ nhọ nồi) cũng có thể trị được rất nhiều chứng bệnh bổ ích</p>
                 </div>
             </div>
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
+                        {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/xk-nyoiFdng" frameborder="0" allowfullscreen></iframe>--}}
                         <video width="100%" height="220"  controls>
                             <source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <a class="title-slide" href="#">Cây Bách Bệnh - Tăng cường sinh lý phái mạnh</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <p>Theo y học cổ truyền, cây bách bệnh vị đắng, tính mát, có tác dung thanh nhiệt, tiêu viêm, thường dùng cho tiểu tiện ra máu, ăn không tiêu, đầy hơi, chướng bụng...</p>
                 </div>
             </div>
             <div class="item item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
+                        {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/AxIUG5QJR2Q" frameborder="0" allowfullscreen></iframe>--}}
                         <video width="100%" height="220"  controls>
                             <source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <a class="title-slide" href="#">mantra herbal từ herbs</a>
+                    <a class="title-slide" href="#">Những bài thuốc dân gian từ cây cỏ</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <p>Xưa có câu, nam dược trị nam nhân để chỉ ra nguồn dược liệu từ ngay chính cây cỏ xung quanh là rất lớn và hiệu quả trong việc điều trị các chứng bệnh. Nay có rất nhiều cây cỏ mọc hoang ở nhiều nơi như cỏ Mực (cỏ nhọ nồi) cũng có thể trị được rất nhiều chứng bệnh bổ ích</p>
                 </div>
             </div>
         </div>
@@ -118,38 +120,38 @@
         </ul>
         <ul class="item-footer">
             <p class="p-title-ul">SẢN PHẨM</p>
-            <li><a href="#"> > Lịch sử hình thành</a> </li>
-            <li><a href="#"> > Đội ngũ nhân viên</a> </li>
-            <li><a href="#"> > Cơ sở vật chất</a> </li>
-            <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
+            <li><a href="#"> > Viên nan tâm thống</a> </li>
+            <li><a href="#"> > Siro trị mất ngủ</a> </li>
+            <li><a href="#"> > Viên uống giảm cân, đẹp dat</a> </li>
+            <li><a href="#"> > Siro Thuần linh chi</a> </li>
         </ul>
         <ul class="item-footer">
             <p class="p-title-ul">PHÂN PHỐI</p>
-            <li><a href="#"> > Lịch sử hình thành</a> </li>
-            <li><a href="#"> > Đội ngũ nhân viên</a> </li>
-            <li><a href="#"> > Cơ sở vật chất</a> </li>
-            <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
+            <li><a href="#"> > Miền Bắc</a> </li>
+            <li><a href="#"> > Miền Trung</a> </li>
+            <li><a href="#"> > Miền Nam</a> </li>
+            <li><a href="#"> > Cả nước</a> </li>
         </ul>
         <ul class="item-footer">
             <p class="p-title-ul">TIN TỨC</p>
-            <li><a href="#"> > Lịch sử hình thành</a> </li>
-            <li><a href="#"> > Đội ngũ nhân viên</a> </li>
-            <li><a href="#"> > Cơ sở vật chất</a> </li>
-            <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
+            <li><a href="#"> > Sản phẩm mới nhất</a> </li>
+            <li><a href="{{ route('frontend.tintuc', [1]) }}"> > Tin của Herbs</a> </li>
+            <li><a href="{{ route('frontend.tintuc', [2]) }}"> > Tin thị trường</a> </li>
+            <li><a href="{{ route('frontend.tintuc', [3]) }}"> > Tin bài thuốc</a> </li>
         </ul>
         <ul class="item-footer">
             <p class="p-title-ul">HỎI ĐÁP</p>
-            <li><a href="#"> > Lịch sử hình thành</a> </li>
-            <li><a href="#"> > Đội ngũ nhân viên</a> </li>
-            <li><a href="#"> > Cơ sở vật chất</a> </li>
-            <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
+            <li><a href="#"> > Vị thuốc</a> </li>
+            <li><a href="#"> > Bài thuốc</a> </li>
+            <li><a href="#"> > Bác sĩ</a> </li>
+            <li><a href="#"> > Địa điểm</a> </li>
         </ul>
         <ul class="item-footer">
             <p class="p-title-ul">TUYỂN DỤNG</p>
-            <li><a href="#"> > Lịch sử hình thành</a> </li>
-            <li><a href="#"> > Đội ngũ nhân viên</a> </li>
-            <li><a href="#"> > Cơ sở vật chất</a> </li>
-            <li><a href="#"> > Đội ngũ bác sĩ</a> </li>
+            <li><a href="#"> > Herbs tuyển dung</a> </li>
+            <li><a href="#"> > Quy trình tuyển dung</a> </li>
+            <li><a href="#"> > Hồ sơ cần có</a> </li>
+            <li><a href="#"> > Phúc lợi tại Herbs</a> </li>
         </ul>
         <ul class="item-footer last-item-footer">
             <div class="cover-social-footer">

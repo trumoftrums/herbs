@@ -20,7 +20,7 @@ use Auth;
 use Carbon\Carbon;
 use Vanguard\TypeNews;
 use Request;
-
+use Vanguard\Models\Options;
 class FrontEndController extends Controller
 {
     /**
@@ -141,13 +141,28 @@ class FrontEndController extends Controller
     {
         return view('frontend.du-an', []);
     }
-    public function gioithieu()
+    public function gioithieu(NewsRepository $newsRepository)
     {
-        return view('frontend.gioi-thieu', []);
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
+        $data = Options::get()->toArray();
+        $final =array();
+        if(!empty($data)){
+            foreach($data as $vl){
+                $final[$vl['name']] = $vl;
+            }
+        }
+
+        return view('frontend.gioi-thieu', [
+            'listHoatDong'=>$listHoatDong,
+            'datas'=>$final
+        ]);
     }
-    public function phanphoi()
+    public function phanphoi(NewsRepository $newsRepository)
     {
-        return view('frontend.phan-phoi', []);
+
+        return view('frontend.phan-phoi', [
+
+        ]);
     }
     public function tintuc($id_type ,NewsRepository $newsRepository )
     {
@@ -185,7 +200,7 @@ class FrontEndController extends Controller
             ->limit(3)->orderBy('created_at','desc')->get()->toArray();
         $listPost= $query->paginate(13)->setPath($urlParams);
         if($listPost->total()==0) $listPost =array();
-        $listHoatDong = array();
+
         $listHoatDong = $newsRepository->getLastest(3,null,10);
         return view('frontend.tin-tuc', [
             'title'=>$title,

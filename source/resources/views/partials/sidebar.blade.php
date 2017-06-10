@@ -65,6 +65,13 @@
                 </a>
             </li>
             @endpermission
+            @permission('options.manage')
+            <li class="{{ Request::is('quan-ly-options*') ? 'active open' : ''  }}">
+                <a href="{{ route('options.all') }}" class="{{ Request::is('quan-ly-options*') ? 'active' : ''  }}">
+                    <i class="fa fa-newspaper-o fa-fw"></i> Quản lý thông tin
+                </a>
+            </li>
+            @endpermission
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

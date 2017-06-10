@@ -9,11 +9,7 @@
             <h3 class="title-herbs">GIỚI THIỆU</h3>
         </div>
         <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
-            <P>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum."
+            <P>{{json_decode($datas['gioi-thieu']['value'],true)}}
             </P>
         </div>
     </div>
@@ -23,24 +19,14 @@
                 <h3 class="title-herbs">LỊCH SỬ HÌNH THÀNH</h3>
             </div>
             <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
-                <P>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."
+                <P>{{json_decode($datas['lich-su-hinh-thanh']['value'],true)}}
                 </P>
             </div>
             <div class="cover-title">
                 <h3 class="title-herbs">THÔNG TIN CÔNG TY</h3>
             </div>
             <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
-                <p>Tên công ty: <br>
-                    Địa chỉ: <br>
-                    Mã số thuế: <br>
-                    Email: <br>
-                    Điện thoại: <br>
-                    Fax: <br>
-
+                <p>{{json_decode($datas['thong-tin-cong-ty']['value'],true)}}
                 </p>
             </div>
             <div class="cover-title">
@@ -89,30 +75,16 @@
         <div class="herbs-right">
             <div class="unit-herbs-right">
                 <h4 class="h4-title-right">HOẠT ĐỘNG XÃ HỘI</h4>
+                <?php if(!empty($listHoatDong)){foreach ($listHoatDong as $hd){?>
                 <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
+                    <img src="{{ url($hd['thumb'])}}"/>
                     <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
+                        <a class="p-name-bs" href="{{route('frontend.detailNews', str_slug($hd['title'],'-').'-'.$hd['id'])}}"><?php echo implode(' ', array_slice(explode(' ', $hd['title']), 0, 9)) ?>...</a>
+                        <span class="sp-chucvu">{{substr($hd['created_at'],0,10)}}</span>
+                        <p class="sp-lh"><?php echo implode(' ', array_slice(explode(' ', $hd['summary']), 0, 10)) ?>...</p>
                     </div>
                 </div>
-                <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
-                    <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
-                    </div>
-                </div>
-                <div class="item-bs">
-                    <img src="{{ url('assets/frontend/images/img-bs-item.png')}}"/>
-                    <div class="cover-right">
-                        <a class="p-name-bs">Khai trương chi nhánh HERBS tại Huế</a>
-                        <span class="sp-chucvu">30/04/2017</span>
-                        <p class="sp-lh">Tưng bừng khai trương chi nhánh...</p>
-                    </div>
-                </div>
+                <?php }}?>
             </div>
             <div class="unit-herbs-right">
                 <h4 class="h4-title-right">FANPAGE</h4>

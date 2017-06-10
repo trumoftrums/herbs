@@ -20,7 +20,7 @@ Route::get('/tin-thi-truong/{id_type}', [
     'as' => 'frontend.tintuc',
     'uses' => 'FrontEndController@tintuc'
 ]);
-Route::get('/tin-bai-thuoc/{id_type}', [
+Route::get('/tin-tuc/{id_type}', [
     'as' => 'frontend.tintuc',
     'uses' => 'FrontEndController@tintuc'
 ]);
@@ -611,4 +611,31 @@ Route::put('quan-ly-ads/{idNews}/update', [
 Route::delete('quan-ly-ads/{idNews}/delete', [
     'as' => 'adsadmin.delete',
     'uses' => 'ManageAdsController@delete'
+]);
+
+
+/**
+ * Manage options
+ */
+Route::get('quan-ly-options', [
+    'as' => 'options.all',
+    'uses' => 'ManageOptionsController@index'
+]);
+Route::put('quan-ly-options/update', [
+    'as' => 'options.update',
+    'uses' => 'ManageOptionsController@update'
+]);
+
+
+
+/**
+ * Manage options
+ */
+Route::post('uploadsmng/upload', [
+    'as' => 'uploadsmng.upload',
+    'uses' => 'UploadFilesController@upload'
+]);
+Route::post('uploadsmng/delete', [
+    'as' => 'uploadsmng.delete',
+    'uses' => 'UploadFilesController@delete'
 ]);
