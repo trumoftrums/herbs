@@ -9,7 +9,7 @@
             <h3 class="title-herbs">GIỚI THIỆU</h3>
         </div>
         <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
-            <P>{{json_decode($datas['gioi-thieu']['value'],true)}}
+            <P><?php echo json_decode($datas['gioi-thieu']['value'],true) ?>
             </P>
         </div>
     </div>
@@ -19,14 +19,14 @@
                 <h3 class="title-herbs">LỊCH SỬ HÌNH THÀNH</h3>
             </div>
             <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
-                <P>{{json_decode($datas['lich-su-hinh-thanh']['value'],true)}}
+                <P><?php echo json_decode($datas['lich-su-hinh-thanh']['value'],true)?>
                 </P>
             </div>
             <div class="cover-title">
                 <h3 class="title-herbs">THÔNG TIN CÔNG TY</h3>
             </div>
             <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
-                <p>{{json_decode($datas['thong-tin-cong-ty']['value'],true)}}
+                <p><?php echo json_decode($datas['thong-tin-cong-ty']['value'],true)?>
                 </p>
             </div>
             <div class="cover-title">

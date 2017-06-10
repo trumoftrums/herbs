@@ -30,7 +30,7 @@ class ManageOptionsController extends Controller
                 $final[$vl['name']] = $vl;
             }
         }
-        return view('Manage-options.index', [
+        return view('manage-options.index', [
             'data' =>$final
         ]);
     }
