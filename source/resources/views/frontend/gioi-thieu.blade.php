@@ -32,40 +32,33 @@
             <div class="cover-title">
                 <h3 class="title-herbs">HÌNH ẢNH HOẠT ĐỘNG</h3>
             </div>
+            <?php
+                $str_images = "";
+                $str_thumbs = "";
+                if(!empty($datas['hinh-anh-hoat-dong']['value'])){
+                    $arr = json_decode($datas['hinh-anh-hoat-dong']['value'],true);
+                    if(!empty($arr)){
+                        $i = 1;
+                        foreach ($arr as $vl){
+                            $str_images .= '<img src="'.url($vl).'" alt=""/>';
+                            $actived = "";
+                            if($i==1){
+                                $actived = " class='active' ";
+                            }
+                            $str_thumbs .= '<li '.$actived.' rel="'.$i.'"><img src="'.url($vl).'" alt=""/>';
+                            $i++;
+                        }
+                    }
+
+                }
+            ?>
             <div class="gioithieu-content" data-ride="carousel" data-type="multi" data-interval="40000">
                 <div id='body'>
                     <div id="bigPic">
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/1.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/2.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/3.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/4.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/5.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/6.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/7.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/8.jpg')}}" alt=""/>
-                        <img src="{{ url('assets/frontend/images/gioithieu/imgs/9.jpg')}}" alt=""/>
+                       <?php echo $str_images;?>
                     </div>
                     <ul id="thumbs">
-                        <li class='active' rel='1'><img
-                                    src="{{ url('assets/frontend/images/gioithieu/imgs/1_thumb.jpg')}}" alt=""/></li>
-                        <li rel='2'><img src="{{ url('assets/frontend/images/gioithieu/imgs/2_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='3'><img src="{{ url('assets/frontend/images/gioithieu/imgs/3_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='4'><img src="{{ url('assets/frontend/images/gioithieu/imgs/4_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='5'><img src="{{ url('assets/frontend/images/gioithieu/imgs/5_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='6'><img src="{{ url('assets/frontend/images/gioithieu/imgs/6_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='7'><img src="{{ url('assets/frontend/images/gioithieu/imgs/7_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='8'><img src="{{ url('assets/frontend/images/gioithieu/imgs/8_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='9'><img src="{{ url('assets/frontend/images/gioithieu/imgs/9_thumb.jpg')}}" alt=""/>
-                        </li>
-                        <li rel='10'><img src="{{ url('assets/frontend/images/gioithieu/imgs/10_thumb.jpg')}}" alt=""/>
-                        </li>
+                        <?php echo $str_thumbs;?>
                     </ul>
                 </div>
                 <div class='clearfix'></div>

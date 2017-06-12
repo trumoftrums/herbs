@@ -45,12 +45,17 @@ class ManageOptionsController extends Controller
             $y =date("Y");
             $m = date("m");
             $d = date("d");
+//            var_dump($this->UP_DIR.$y."/".$m."/".$d);
+            if(!file_exists($this->UP_DIR.$y."/".$m."/".$d)){
+                mkdir($this->UP_DIR.$y."/".$m."/".$d,0777,true);
+            }
             foreach ($output as $img){
                 $img = str_replace('["','',$img);
                 $img = str_replace('"]','',$img);
                 if(file_exists($this->UP_DIR.$this->TMP_DIR.$img)){
                     $nf = $this->UP_DIR.$y."/".$m."/".$d."/".$img;
-                    move_uploaded_file($this->UP_DIR.$this->TMP_DIR.$img,$nf);
+                    $r = rename($this->UP_DIR.$this->TMP_DIR.$img,$nf);
+                    if($r) chmod($nf, 0777);
                 }
                 $arrIMG[] = $nf;
             }

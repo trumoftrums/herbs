@@ -46,7 +46,10 @@ class UploadFilesController extends Controller
             {
                 $fileName = $_FILES["myfile"]["name"];
                 if(file_exists($output_dir.$fileName)) unlink($output_dir.$fileName);
-                move_uploaded_file($_FILES["myfile"]["tmp_name"],$output_dir.$fileName);
+                $r  = move_uploaded_file($_FILES["myfile"]["tmp_name"],$output_dir.$fileName);
+
+                if($r) chmod($output_dir.$fileName, 0777);
+//                var_dump($r);exit();
                 $ret[]= $fileName;
             }
             else  //Multiple files, file[]

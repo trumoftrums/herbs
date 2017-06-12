@@ -87,7 +87,7 @@ $title = "QUản lý thông tin";
         <div class="col-md-2">
             <button type="submit" class="btn btn-primary btn-block bt-hsg">
                 <i class="fa fa-save"></i>
-                Tạo Mới
+                Lưu
             </button>
         </div>
     </div>
