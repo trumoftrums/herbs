@@ -124,7 +124,8 @@ class FrontEndController extends Controller
             'datas'=>$datas,
             'search'=>$search,
             'listHoatDong'=>$listHoatDong,
-            'listAds'=>$this->getListAds(5)
+            'listAds'=>$this->getListAds(5),
+            'listVideos'=>$this->getListVideo()
         ]);
     }
     public function tudienduoclieuDetail($idSlug ,NewsRepository $newsRepository)
@@ -143,7 +144,8 @@ class FrontEndController extends Controller
         return view('frontend.tu-dien-duoc-lieu-detail', [
             'dict'=>$dict,
             'listHoatDong'=>$listHoatDong,
-            'listAds'=>$this->getListAds(5)
+            'listAds'=>$this->getListAds(5),
+            'listVideos'=>$this->getListVideo()
         ]);
     }
     public function sanpham()
@@ -167,14 +169,15 @@ class FrontEndController extends Controller
 
         return view('frontend.gioi-thieu', [
             'listHoatDong'=>$listHoatDong,
-            'datas'=>$final
+            'datas'=>$final,
+            'listVideos'=>$this->getListVideo()
         ]);
     }
     public function phanphoi(NewsRepository $newsRepository)
     {
 
         return view('frontend.phan-phoi', [
-
+            'listVideos'=>$this->getListVideo()
         ]);
     }
     public function tintuc($id_type ,NewsRepository $newsRepository )
@@ -221,7 +224,8 @@ class FrontEndController extends Controller
             'listCat'=>$listCat,
             'id_type'=>$id_type,
             'listHoatDong'=>$listHoatDong,
-            'listAds'=>$this->getListAds(5)
+            'listAds'=>$this->getListAds(5),
+            'listVideos'=>$this->getListVideo()
         ]);
     }
     public function detailNews($idSlug,NewsRepository $newsRepository)
@@ -260,7 +264,8 @@ class FrontEndController extends Controller
             'news'=>$news,
             'listRelated'=>$listRelated,
             'listHoatDong'=>$listHoatDong,
-            'listAds'=>$this->getListAds(5)
+            'listAds'=>$this->getListAds(5),
+            'listVideos'=>$this->getListVideo()
         ]);
     }
 
