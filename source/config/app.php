@@ -62,7 +62,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://private.hoangsanggroup.com'),
+    'url' => env('APP_URL', 'https://greenherbsjsc.com'),
 
     /*
     |--------------------------------------------------------------------------

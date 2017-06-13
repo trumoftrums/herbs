@@ -32,6 +32,8 @@ use Vanguard\Repositories\TuDien\TuDienRepository;
 use Vanguard\Repositories\User\EloquentUser;
 use Vanguard\Repositories\User\UserRepository;
 use Illuminate\Support\ServiceProvider;
+use Vanguard\Repositories\Video\VideoRepository;
+use Vanguard\Repositories\Video\EloquentVideo;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -62,6 +64,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(CatNewsRepository::class, EloquentCatNews::class);
         $this->app->singleton(TuDienRepository::class, EloquentTuDien::class);
         $this->app->singleton(AdsRepository::class, EloquentAds::class);
+        $this->app->singleton(VideoRepository::class, EloquentVideo::class);
+
         $this->app->singleton(InvestTypeRepository::class, EloquentInvestType::class);
         $this->app->singleton(BienDongRepository::class, EloquentBienDong::class);
         $this->app->singleton(InvestRepository::class, EloquentInvest::class);

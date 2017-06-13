@@ -13,6 +13,8 @@
     {!! HTML::style('assets/frontend/css/media_screen.css') !!}
     {!! HTML::style('assets/frontend/css/slideshow.css') !!}
     {!! HTML::style('assets/frontend/css/phanphoi.css') !!}
+    {!! HTML::script('assets/js/fancybox-3.0/dist/jquery.fancybox.js') !!}
+    {!! HTML::style('assets/js/fancybox-3.0/dist/jquery.fancybox.css') !!}
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;

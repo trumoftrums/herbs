@@ -4,97 +4,103 @@
     </div>
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="40000" id="fruitscarousel2">
         <div class="carousel-inner">
+            <?php if(!empty($listVideos)){
+                foreach ($listVideos as $vd){
+
+              ?>
             <div class="item active item-herbs">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="cover-media">
                         {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/ZhNsnqmnKBQ" frameborder="0" allowfullscreen></iframe>--}}
-                        <video width="100%" height="220"  controls>
-                            <source src="{{url('upload/videos/cay-thuoc-chua-ung-thu.mp4')}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        {{--<video width="100%" height="220"  controls>--}}
+                            {{--<source src="{{url('upload/videos/cay-thuoc-chua-ung-thu.mp4')}}" type="video/mp4">--}}
+                            {{--Your browser does not support the video tag.--}}
+                        {{--</video>--}}
+                        <a href="{{route("frontend.viewVideo",[$vd->id])}}" class="fancybox" ><img src="{{$vd->thumbnail}}" height="220" width="100%"/> </a>
 
                     </div>
-                    <a class="title-slide" href="#">Khỏe trẻ đẹp cùng chuối sức khỏe</a>
+                    <a class="title-slide fancybox" href="{{route("frontend.viewVideo",[$vd->id])}}">{{$vd->title}}</a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p>Cây thuốc chữa bệnh về gan, kể cả ung thư thời kì cuối, Tôi tên là Hòa, sống ở thị trấn Lộc Linh khoảng một năm trước đây sức khỏe của tôi bỗng suy giảm,da bắt đầu vàng, bụng chướng, ăn uống không được ngon…</p>
+                    <p><?php echo $vd->summary ?></p>
                 </div>
             </div>
-            <div class="item item-herbs">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="cover-media">
+            <?php }}?>
+            {{--<div class="item item-herbs">--}}
+                {{--<div class="col-md-3 col-sm-4 col-xs-12">--}}
+                    {{--<div class="cover-media">--}}
                         {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/Mbq0aYXMMH0" frameborder="0" allowfullscreen></iframe>--}}
-                        <video width="100%" height="220"  controls>
-                            <source src="{{url('upload/videos/cay-thuoc-chua-gan.mp4')}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <a class="title-slide" href="#">Khỏe trẻ đẹp cùng chuối sức khỏe</a>
-                    <span>30/04/2017</span>
-                    <hr class="hr-line">
-                    <p>Cây thuốc chữa bệnh về gan, kể cả ung thư thời kì cuối, Tôi tên là Hòa, sống ở thị trấn Lộc Linh khoảng một năm trước đây sức khỏe của tôi bỗng suy giảm,da bắt đầu vàng, bụng chướng, ăn uống không được ngon…</p>
-                </div>
-            </div>
-            <div class="item item-herbs">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="cover-media">
+                        {{--<video width="100%" height="220"  controls>--}}
+                            {{--<source src="{{url('upload/videos/cay-thuoc-chua-gan.mp4')}}" type="video/mp4">--}}
+                            {{--Your browser does not support the video tag.--}}
+                        {{--</video>--}}
+                    {{--</div>--}}
+                    {{--<a class="title-slide" href="#">Khỏe trẻ đẹp cùng chuối sức khỏe</a>--}}
+                    {{--<span>30/04/2017</span>--}}
+                    {{--<hr class="hr-line">--}}
+                    {{--<p>Cây thuốc chữa bệnh về gan, kể cả ung thư thời kì cuối, Tôi tên là Hòa, sống ở thị trấn Lộc Linh khoảng một năm trước đây sức khỏe của tôi bỗng suy giảm,da bắt đầu vàng, bụng chướng, ăn uống không được ngon…</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="item item-herbs">--}}
+                {{--<div class="col-md-3 col-sm-4 col-xs-12">--}}
+                    {{--<div class="cover-media">--}}
                         {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/xk-nyoiFdng" frameborder="0" allowfullscreen></iframe>--}}
-                        <video width="100%" height="220"  controls>
-                            <source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <a class="title-slide" href="#">Cây Bách Bệnh - Tăng cường sinh lý phái mạnh</a>
-                    <span>30/04/2017</span>
-                    <hr class="hr-line">
-                    <p>Theo y học cổ truyền, cây bách bệnh vị đắng, tính mát, có tác dung thanh nhiệt, tiêu viêm, thường dùng cho tiểu tiện ra máu, ăn không tiêu, đầy hơi, chướng bụng...</p>
-                </div>
-            </div>
-            <div class="item item-herbs">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="cover-media">
+                        {{--<video width="100%" height="220"  controls>--}}
+                            {{--<source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">--}}
+                            {{--Your browser does not support the video tag.--}}
+                        {{--</video>--}}
+                    {{--</div>--}}
+                    {{--<a class="title-slide" href="#">Cây Bách Bệnh - Tăng cường sinh lý phái mạnh</a>--}}
+                    {{--<span>30/04/2017</span>--}}
+                    {{--<hr class="hr-line">--}}
+                    {{--<p>Theo y học cổ truyền, cây bách bệnh vị đắng, tính mát, có tác dung thanh nhiệt, tiêu viêm, thường dùng cho tiểu tiện ra máu, ăn không tiêu, đầy hơi, chướng bụng...</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="item item-herbs">--}}
+                {{--<div class="col-md-3 col-sm-4 col-xs-12">--}}
+                    {{--<div class="cover-media">--}}
                         {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/AxIUG5QJR2Q" frameborder="0" allowfullscreen></iframe>--}}
-                        <video width="100%" height="220"  controls>
-                            <source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <a class="title-slide" href="#">Những bài thuốc dân gian từ cây cỏ</a>
-                    <span>30/04/2017</span>
-                    <hr class="hr-line">
-                    <p>Xưa có câu, nam dược trị nam nhân để chỉ ra nguồn dược liệu từ ngay chính cây cỏ xung quanh là rất lớn và hiệu quả trong việc điều trị các chứng bệnh. Nay có rất nhiều cây cỏ mọc hoang ở nhiều nơi như cỏ Mực (cỏ nhọ nồi) cũng có thể trị được rất nhiều chứng bệnh bổ ích</p>
-                </div>
-            </div>
-            <div class="item item-herbs">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="cover-media">
+                        {{--<video width="100%" height="220"  controls>--}}
+                            {{--<source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">--}}
+                            {{--Your browser does not support the video tag.--}}
+                        {{--</video>--}}
+                    {{--</div>--}}
+                    {{--<a class="title-slide" href="#">Những bài thuốc dân gian từ cây cỏ</a>--}}
+                    {{--<span>30/04/2017</span>--}}
+                    {{--<hr class="hr-line">--}}
+                    {{--<p>Xưa có câu, nam dược trị nam nhân để chỉ ra nguồn dược liệu từ ngay chính cây cỏ xung quanh là rất lớn và hiệu quả trong việc điều trị các chứng bệnh. Nay có rất nhiều cây cỏ mọc hoang ở nhiều nơi như cỏ Mực (cỏ nhọ nồi) cũng có thể trị được rất nhiều chứng bệnh bổ ích</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="item item-herbs">--}}
+                {{--<div class="col-md-3 col-sm-4 col-xs-12">--}}
+                    {{--<div class="cover-media">--}}
                         {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/xk-nyoiFdng" frameborder="0" allowfullscreen></iframe>--}}
-                        <video width="100%" height="220"  controls>
-                            <source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <a class="title-slide" href="#">Cây Bách Bệnh - Tăng cường sinh lý phái mạnh</a>
-                    <span>30/04/2017</span>
-                    <hr class="hr-line">
-                    <p>Theo y học cổ truyền, cây bách bệnh vị đắng, tính mát, có tác dung thanh nhiệt, tiêu viêm, thường dùng cho tiểu tiện ra máu, ăn không tiêu, đầy hơi, chướng bụng...</p>
-                </div>
-            </div>
-            <div class="item item-herbs">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="cover-media">
+                        {{--<video width="100%" height="220"  controls>--}}
+                            {{--<source src="{{url('upload/videos/cay-thuoc-tang-cuong-sinh-ly-phai-manh.mp4')}}" type="video/mp4">--}}
+                            {{--Your browser does not support the video tag.--}}
+                        {{--</video>--}}
+                    {{--</div>--}}
+                    {{--<a class="title-slide" href="#">Cây Bách Bệnh - Tăng cường sinh lý phái mạnh</a>--}}
+                    {{--<span>30/04/2017</span>--}}
+                    {{--<hr class="hr-line">--}}
+                    {{--<p>Theo y học cổ truyền, cây bách bệnh vị đắng, tính mát, có tác dung thanh nhiệt, tiêu viêm, thường dùng cho tiểu tiện ra máu, ăn không tiêu, đầy hơi, chướng bụng...</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="item item-herbs">--}}
+                {{--<div class="col-md-3 col-sm-4 col-xs-12">--}}
+                    {{--<div class="cover-media">--}}
                         {{--<iframe width="100%" height="220" src="https://www.youtube.com/embed/AxIUG5QJR2Q" frameborder="0" allowfullscreen></iframe>--}}
-                        <video width="100%" height="220"  controls>
-                            <source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <a class="title-slide" href="#">Những bài thuốc dân gian từ cây cỏ</a>
-                    <span>30/04/2017</span>
-                    <hr class="hr-line">
-                    <p>Xưa có câu, nam dược trị nam nhân để chỉ ra nguồn dược liệu từ ngay chính cây cỏ xung quanh là rất lớn và hiệu quả trong việc điều trị các chứng bệnh. Nay có rất nhiều cây cỏ mọc hoang ở nhiều nơi như cỏ Mực (cỏ nhọ nồi) cũng có thể trị được rất nhiều chứng bệnh bổ ích</p>
-                </div>
-            </div>
+                        {{--<video width="100%" height="220"  controls>--}}
+                            {{--<source src="{{url('upload/videos/co-muc.mp4')}}" type="video/mp4">--}}
+                            {{--Your browser does not support the video tag.--}}
+                        {{--</video>--}}
+                    {{--</div>--}}
+                    {{--<a class="title-slide" href="#">Những bài thuốc dân gian từ cây cỏ</a>--}}
+                    {{--<span>30/04/2017</span>--}}
+                    {{--<hr class="hr-line">--}}
+                    {{--<p>Xưa có câu, nam dược trị nam nhân để chỉ ra nguồn dược liệu từ ngay chính cây cỏ xung quanh là rất lớn và hiệu quả trong việc điều trị các chứng bệnh. Nay có rất nhiều cây cỏ mọc hoang ở nhiều nơi như cỏ Mực (cỏ nhọ nồi) cũng có thể trị được rất nhiều chứng bệnh bổ ích</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
         <a class="left carousel-control" href="#fruitscarousel2" data-slide="prev"><img src="{{ url('assets/frontend/images/arrow-left.png')}}"/></a>
         <a class="right carousel-control" href="#fruitscarousel2" data-slide="next"><img src="{{ url('assets/frontend/images/arrow-right.png')}}"/></a>
@@ -180,3 +186,19 @@
         </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 </div>
+<script type="application/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox({
+            maxWidth    : 800,
+            maxHeight   : 600,
+            fitToView   : false,
+            width       : '70%',
+            height      : '70%',
+            autoSize    : false,
+            closeClick  : false,
+            openEffect  : 'none',
+            closeEffect : 'none'
+        });
+    });
+
+</script>

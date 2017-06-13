@@ -9,7 +9,7 @@
                 <ul id="nav-mobile">
                     <li class="parent"><a href="{{ route('frontend.home') }}">Trang Chủ</a></li>
                     <li class="parent"><a href="{{ route('frontend.gioithieu') }}">Giới Thiệu</a></li>
-                    <li class="parent"><a href="{{ route('frontend.sanpham') }}">Sản Phẩm</a></li>
+                    <li class="parent"><a href="#">Sản Phẩm</a></li>
                     <li class="parent has-child"><a href="#">Dự Án</a></li>
                     <li>
                         <ul>

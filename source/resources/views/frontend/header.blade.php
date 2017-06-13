@@ -30,7 +30,7 @@
     <div class="menu-top">
         <a href="{{ route('frontend.home') }}">TRANG CHỦ</a>
         <a href="{{ route('frontend.gioithieu') }}">GIỚI THIỆU </a>
-        <a href="{{ route('frontend.sanpham') }}">SẢN PHẨM</a>
+        <a href="#">SẢN PHẨM</a>
         <div class="dropdown">
             <button class="dropbtn">DỰ ÁN</button>
             <div class="dropdown-content">

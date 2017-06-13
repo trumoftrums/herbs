@@ -8,6 +8,7 @@ use Vanguard\Invest;
 use Vanguard\Models\Ads;
 use Vanguard\Models\CategoryNews;
 use Vanguard\Models\TuDien;
+use Vanguard\Models\Video;
 use Vanguard\News;
 use Vanguard\Project;
 use Vanguard\QA;
@@ -85,8 +86,20 @@ class FrontEndController extends Controller
             'listSlideShow'=>$listSlideShow,
             'listTintuc'=>$listTintuc,
             'listHoatDong'=>$listHoatDong,
-            'listAds'=>$this->getListAds(5)
+            'listAds'=>$this->getListAds(5),
+            'listVideos'=>$this->getListVideo()
         ));
+    }
+    private function  getListVideo($num = 4){
+        $data = Video::where('status',Video::STATUS_ACTIVED)->orderBy("id","desc")->limit($num)->get();
+        return $data;
+    }
+    public function viewVideo($idSLug){
+        $data = Video::where("status",Video::STATUS_ACTIVED)->where("id",$idSLug)->get();
+        if(!empty($data)) $data = $data[0];
+        return view('frontend.view-video', [
+            'data'=>$data,
+        ]);
     }
     private function getListAds($limit = 10){
         $listAds = Ads::where('status',Ads::STATUS_ACTIVED)->orderBy('weight','asc')->limit($limit)->get()->toArray();
