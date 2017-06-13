@@ -72,6 +72,13 @@
                 </a>
             </li>
             @endpermission
+            @permission('videos.manage')
+            <li class="{{ Request::is('quan-ly-videos*') ? 'active open' : ''  }}">
+                <a href="{{ route('videoadmin.lists') }}" class="{{ Request::is('quan-ly-videos*') ? 'active' : ''  }}">
+                    <i class="fa fa-newspaper-o fa-fw"></i> Quản lý Videos
+                </a>
+            </li>
+            @endpermission
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

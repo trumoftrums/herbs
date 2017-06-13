@@ -639,3 +639,38 @@ Route::post('uploadsmng/delete', [
     'as' => 'uploadsmng.delete',
     'uses' => 'UploadFilesController@delete'
 ]);
+
+
+/**
+ * Manage video
+ */
+Route::get('quan-ly-videos', [
+    'as' => 'videoadmin.lists',
+    'uses' => 'ManageVideosController@lists'
+]);
+Route::get('quan-ly-videos/create', [
+    'as' => 'videoadmin.create',
+    'uses' => 'ManageVideosController@create'
+]);
+Route::post('quan-ly-videos/add', [
+    'as' => 'videoadmin.add',
+    'uses' => 'ManageVideosController@add'
+]);
+Route::get('quan-ly-videos/{idNews}/edit', [
+    'as' => 'videoadmin.edit',
+    'uses' => 'ManageVideosController@edit'
+]);
+Route::put('quan-ly-videos/{idNews}/update', [
+    'as' => 'videoadmin.update',
+    'uses' => 'ManageVideosController@update'
+]);
+Route::delete('quan-ly-videos/{idNews}/delete', [
+    'as' => 'videoadmin.delete',
+    'uses' => 'ManageVideosController@delete'
+]);
+
+
+Route::get('/xem-video/{idSlug}', [
+    'as' => 'frontend.viewVideo',
+    'uses' => 'FrontEndController@viewVideo'
+]);
