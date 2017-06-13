@@ -44,7 +44,7 @@ Route::get('/tu-dien-duoc-lieu/{idSlug}', [
     'as' => 'frontend.tudienduoclieu.detail',
     'uses' => 'FrontEndController@tudienduoclieudetail'
 ]);
-Route::get('du-an', [
+Route::get('/du-an/{id_type}/{name_url}', [
     'as' => 'frontend.duan',
     'uses' => 'FrontEndController@duan'
 ]);

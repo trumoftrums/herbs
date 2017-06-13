@@ -17,6 +17,38 @@ input:focus {
     float: left;
     width: 22%;
 }
+.project-di{
+    border-bottom: none !important;
+}
+.cv-ab{
+    float: left;
+    width:100%;
+    margin-bottom: 20px;
+}
+.project-di .h4-project{
+    float: left;
+    width: 100%;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.project-di .p-name{
+    float: left;
+    width: 100%;
+    font-size: 15px;
+}
+.project-di .ppp{
+    float: left;
+    width: 100%;
+    font-size: 15px;
+    text-align: justify;
+}
+.slider-pro{
+    float: left;
+    width: 100%;
+    padding: 0% !important;
+    margin-top: 0px !important;
+}
 .header .header-top .logo img{
     width: 100%;
 }

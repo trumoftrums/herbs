@@ -3,6 +3,7 @@
 namespace Vanguard\Providers;
 
 use Carbon\Carbon;
+use Vanguard\Project;
 use Vanguard\Repositories\Activity\ActivityRepository;
 use Vanguard\Repositories\Activity\EloquentActivity;
 use Vanguard\Repositories\Ads\AdsRepository;
@@ -42,6 +43,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        view()->composer('layouts.frontend', function ($view)
+        {
+            $this->listProjects = Project::getList();
+
+            $view->with([
+                'listProjects'=>$this->listProjects
+            ]);
+        });
         Carbon::setLocale(config('app.locale'));
         config(['app.name' => settings('app_name')]);
     }

@@ -137,9 +137,16 @@ class FrontEndController extends Controller
     {
         return view('frontend.san-pham', []);
     }
-    public function duan()
+    public function duan($id_type ,NewsRepository $newsRepository)
     {
-        return view('frontend.du-an', []);
+        $projects = Project::where('id', $id_type)->first();
+        $listHoatDong = $newsRepository->getLastest(3,null,10);
+
+        return view('frontend.du-an', [
+            'listHoatDong'=>$listHoatDong,
+            'listAds'=>$this->getListAds(5),
+            'datas'=>$projects
+        ]);
     }
     public function gioithieu(NewsRepository $newsRepository)
     {

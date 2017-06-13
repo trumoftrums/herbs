@@ -34,10 +34,9 @@
         <div class="dropdown">
             <button class="dropbtn">DỰ ÁN</button>
             <div class="dropdown-content">
-                <a href="#">GREEN HEABS</a>
-                <a href="#">BUB HEABS</a>
-                <a href="#">TREVAL HEABS</a>
-                <a href="#">GROU HEABS</a>
+                @foreach($listProjects as $it)
+                    <a href="{{ route('frontend.duan', [$it->id, str_slug($it->tenDuAn, '-')]) }}">{{$it->tenDuAn}}</a>
+                @endforeach
             </div>
         </div>
         <a href="{{ route('frontend.phanphoi') }}">PHÂN PHỐI</a>
