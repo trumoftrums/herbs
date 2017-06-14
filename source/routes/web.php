@@ -670,6 +670,36 @@ Route::delete('quan-ly-videos/{idNews}/delete', [
 ]);
 
 
+
+/**
+ * Manage projects
+ */
+Route::get('quan-ly-projects', [
+    'as' => 'duanadmin.lists',
+    'uses' => 'ManageDuAnController@lists'
+]);
+Route::get('quan-ly-projects/create', [
+    'as' => 'duanadmin.create',
+    'uses' => 'ManageDuAnController@create'
+]);
+Route::post('quan-ly-projects/add', [
+    'as' => 'duanadmin.add',
+    'uses' => 'ManageDuAnController@add'
+]);
+Route::get('quan-ly-projects/{idNews}/edit', [
+    'as' => 'duanadmin.edit',
+    'uses' => 'ManageDuAnController@edit'
+]);
+Route::put('quan-ly-projects/{idNews}/update', [
+    'as' => 'duanadmin.update',
+    'uses' => 'ManageDuAnController@update'
+]);
+Route::delete('quan-ly-projects/{idNews}/delete', [
+    'as' => 'duanadmin.delete',
+    'uses' => 'ManageDuAnController@delete'
+]);
+
+
 Route::get('/xem-video/{idSlug}', [
     'as' => 'frontend.viewVideo',
     'uses' => 'FrontEndController@viewVideo'

@@ -79,6 +79,13 @@
                 </a>
             </li>
             @endpermission
+            @permission('duan.manage')
+            <li class="{{ Request::is('quan-ly-projects*') ? 'active open' : ''  }}">
+                <a href="{{ route('duanadmin.lists') }}" class="{{ Request::is('quan-ly-projects*') ? 'active' : ''  }}">
+                    <i class="fa fa-newspaper-o fa-fw"></i> Quản lý Dự Án
+                </a>
+            </li>
+            @endpermission
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

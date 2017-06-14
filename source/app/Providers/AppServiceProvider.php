@@ -14,6 +14,8 @@ use Vanguard\Repositories\CatNews\CatNewsRepository;
 use Vanguard\Repositories\CatNews\EloquentCatNews;
 use Vanguard\Repositories\Country\CountryRepository;
 use Vanguard\Repositories\Country\EloquentCountry;
+use Vanguard\Repositories\DuAn\DuAnRepository;
+use Vanguard\Repositories\DuAn\EloquentDuAn;
 use Vanguard\Repositories\InvestType\EloquentInvestType;
 use Vanguard\Repositories\InvestType\InvestTypeRepository;
 use Vanguard\Repositories\Invest\InvestRepository;
@@ -74,7 +76,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(TuDienRepository::class, EloquentTuDien::class);
         $this->app->singleton(AdsRepository::class, EloquentAds::class);
         $this->app->singleton(VideoRepository::class, EloquentVideo::class);
-
+        $this->app->singleton(DuAnRepository::class, EloquentDuAn::class);
         $this->app->singleton(InvestTypeRepository::class, EloquentInvestType::class);
         $this->app->singleton(BienDongRepository::class, EloquentBienDong::class);
         $this->app->singleton(InvestRepository::class, EloquentInvest::class);
