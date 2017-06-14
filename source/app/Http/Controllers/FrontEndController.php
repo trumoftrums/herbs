@@ -162,7 +162,8 @@ class FrontEndController extends Controller
             'listHoatDong'=>$listHoatDong,
             'listProjects' => $listProjects,
             'listAds'=>$this->getListAds(5),
-            'datas'=>$projects
+            'datas'=>$projects,
+            'listVideos'=>$this->getListVideo()
         ]);
     }
     public function gioithieu(NewsRepository $newsRepository)
