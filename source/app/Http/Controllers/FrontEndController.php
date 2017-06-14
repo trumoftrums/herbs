@@ -155,10 +155,12 @@ class FrontEndController extends Controller
     public function duan($id_type ,NewsRepository $newsRepository)
     {
         $projects = Project::where('id', $id_type)->first();
+        $listProjects = Project::getList();
         $listHoatDong = $newsRepository->getLastest(3,null,10);
 
         return view('frontend.du-an', [
             'listHoatDong'=>$listHoatDong,
+            'listProjects' => $listProjects,
             'listAds'=>$this->getListAds(5),
             'datas'=>$projects
         ]);

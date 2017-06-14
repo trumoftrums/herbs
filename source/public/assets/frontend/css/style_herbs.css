@@ -1224,3 +1224,22 @@ hr {
 .listabc{
     width: 52%;
 }
+.it-project{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+.it-project img{
+    width: 100%;
+}
+.it-project a{
+    float: left;
+    position: absolute;
+    top: 3vw;
+    background: url(../images/bg-it-pro.png);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 10px;
+}

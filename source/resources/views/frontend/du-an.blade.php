@@ -192,15 +192,14 @@
                 <?php }}?>
             </div>
             <div class="unit-herbs-right">
-                <h4 class="h4-title-right">FANPAGE</h4>
-                <div class="item-qa">
-                    <div class="fb-page" data-href="https://www.facebook.com/facebook/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook/">Facebook</a></blockquote></div>
+                <h4 class="h4-title-right">DANH MỤC DỰ ÁN</h4>
+                @foreach($listProjects as $item)
+                    <?php $thumb = json_decode($item->slideIMGs, true) ?>
+                <div class="it-project">
+                    <img src="{{ url($thumb[0])}}"/>
+                    <a href="#">{{$item->tenDuAn}}</a>
                 </div>
-                <?php if(!empty($listAds)){foreach ($listAds as $ads){?>
-                <div class="item-qa">
-                    <a href="{{ url($ads['url'])}}"><img src="{{ url($ads['img'])}}"/></a>
-                </div>
-                <?php }}?>
+                @endforeach
             </div>
         </div>
     </div>
