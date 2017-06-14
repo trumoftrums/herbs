@@ -97,22 +97,15 @@ class ManageDuAnController extends Controller
 
 
             $IMGs =array();
-            if(!empty($params['slideIMG'])){
-                for($i =1;$i<=5;$i++){
-                    if(!empty($params['slideIMG'][$i]) && !empty($params['slideIMG'.$i])){
-                        $img = $this->uploadDoc($_FILES['slideIMG'.$i]);
-                        $IMGs[] = array(
-                            'name' =>$params['slideIMG'][$i]['name'],
-                            'img' =>$img
-                        );
+            for($i =1;$i<=5;$i++){
+                if(isset($params['slideIMG'.$i]) && !empty($params['slideIMG'.$i])){
+                    $img = $this->uploadDoc($_FILES['slideIMG'.$i]);
+                    $IMGs[] = $img;
 
-                    }
                 }
-                if(!empty($IMGs)){
-                    $params['slideIMGs'] = $IMGs;
-                }
-
-
+            }
+            if(!empty($IMGs)){
+                $params['slideIMGs'] = $IMGs;
             }
             $this->dict->update($params,$id);
         }else{
