@@ -18,7 +18,7 @@
                             {{--<source src="{{url('upload/videos/cay-thuoc-chua-ung-thu.mp4')}}" type="video/mp4">--}}
                             {{--Your browser does not support the video tag.--}}
                         {{--</video>--}}
-                        <a href="{{route("frontend.viewVideo",[$vd->id])}}" class="fancybox fancybox.iframe" ><img src="{{$vd->thumbnail}}" height="220" width="100%"/> </a>
+                        <a href="{{route("frontend.viewVideo",[$vd->id])}}" class="fancybox fancybox.iframe" ><img src="{{url($vd->thumbnail)}}" height="220" width="100%"/> </a>
 
                     </div>
                     <a class="title-slide fancybox fancybox.iframe" href="{{route("frontend.viewVideo",[$vd->id])}}">{{$vd->title}}</a>
