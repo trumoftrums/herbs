@@ -74,7 +74,7 @@
                             <a class="title-slide" href="#">Thuần Linh Chi </a>
                             <hr class="hr-line">
                             <p>Bổ sung dinh dưỡng cho mọi đối tượng, đặc biệt là bà bầu, trẻ em, người suy nhược và người già.<br>
-                                Viên tảo biển nhật giúp tăng cường...</p>
+                                Viên tảo biển nhật giúp...</p>
                             <a href="#" class="a-view">Xem</a>
                         </div>
                     </div>

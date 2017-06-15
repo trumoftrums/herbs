@@ -9,7 +9,7 @@
     {!! HTML::script('assets/frontend/js/jquery.min.js') !!}
     {!! HTML::script('assets/frontend/js/bootstrap.min.js') !!}
     {!! HTML::style('assets/frontend/css/bootstrap.min.css') !!}
-    {!! HTML::style('assets/frontend/css/style_herbs.css?version=1.0') !!}
+    {!! HTML::style('assets/frontend/css/style_herbs.css?version=1.2') !!}
     {!! HTML::style('assets/frontend/css/media_screen.css') !!}
     {!! HTML::style('assets/frontend/css/slideshow.css') !!}
     {!! HTML::style('assets/frontend/css/phanphoi.css') !!}

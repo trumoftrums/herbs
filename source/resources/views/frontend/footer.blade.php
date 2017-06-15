@@ -21,10 +21,12 @@
                         <a href="{{route("frontend.viewVideo",[$vd->id])}}" class="fancybox fancybox.iframe" ><img src="{{url($vd->thumbnail)}}" height="220" width="100%"/> </a>
 
                     </div>
-                    <a class="title-slide fancybox fancybox.iframe" href="{{route("frontend.viewVideo",[$vd->id])}}">{{$vd->title}}</a>
+                    <a title="{{$vd->title}}" class="title-slide fancybox fancybox.iframe" href="{{route("frontend.viewVideo",[$vd->id])}}">
+                        <?php echo implode(' ', array_slice(explode(' ', $vd->title), 0, 5)) ?>...
+                    </a>
                     <span>30/04/2017</span>
                     <hr class="hr-line">
-                    <p><?php echo $vd->summary ?></p>
+                    <?php echo implode(' ', array_slice(explode(' ', $vd->summary), 0, 28)) ?>...
                 </div>
             </div>
             <?php $no++;}}?>
@@ -55,7 +57,7 @@
             <p class="p-title-ul">SẢN PHẨM</p>
             <li><a href="#"> > Viên nan tâm thống</a> </li>
             <li><a href="#"> > Siro trị mất ngủ</a> </li>
-            <li><a href="#"> > Viên uống giảm cân, đẹp dat</a> </li>
+            <li><a href="#"> > Viên uống giảm cân</a> </li>
             <li><a href="#"> > Siro Thuần linh chi</a> </li>
         </ul>
         <ul class="item-footer">
@@ -105,12 +107,12 @@
             <p>Địa chỉ: 05, Einstein, P. Bình Thọ, Q. Thủ Đức, Tp.HCM</p>
             <p>Hotline: 19009220 - Email: cskh@greenherbsjsc.com</p>
         </div>
-        <div id="google_translate_element" style="float:right; margin-right: 20px"></div>
+        {{--<div id="google_translate_element" style="float:right; margin-right: 20px"></div>
         <script type="text/javascript">
             function googleTranslateElementInit() {
                 new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
             }
-        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>--}}
     </div>
 </div>
 <script type="application/javascript">

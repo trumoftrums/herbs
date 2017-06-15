@@ -10,14 +10,18 @@
                 <div class="cover-social">
                     <p class="p-follow">follow us</p>
                     <div class="cover-icon-social">
-                        <img class="img-line line-left" src="{{ url('assets/frontend/images/line.png')}}"/>
+                        {{--<img class="img-line line-left" src="{{ url('assets/frontend/images/line.png')}}"/>--}}
                         <div class="social-a">
                             <a href="#"><img src="{{ url('assets/frontend/images/icon-fb.png')}}"/></a>
                             <a href="#"><img src="{{ url('assets/frontend/images/icon-twitter.png')}}"/></a>
                             <a href="#"><img src="{{ url('assets/frontend/images/icon-p.png')}}"/></a>
-                            <a href="#"><img src="{{ url('assets/frontend/images/icon-in.png')}}"/></a>
+                            <a style="border-right: none;" href="#"><img src="{{ url('assets/frontend/images/icon-in.png')}}"/></a>
                         </div>
-                        <img class="img-line line-right" src="{{ url('assets/frontend/images/line.png')}}"/>
+                        {{--<img class="img-line line-right" src="{{ url('assets/frontend/images/line.png')}}"/>--}}
+                        <div class="cover-lang">
+                            <a href="#"><img src="{{ url('assets/frontend/images/en_flag.png')}}"/></a>
+                            <a href="#"><img src="{{ url('assets/frontend/images/vi_flag.png')}}"/></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,9 +47,9 @@
         <div class="dropdown">
             <button class="dropbtn">TIN TỨC</button>
             <div class="dropdown-content">
-                <a href="{{ route('frontend.tintuc', [1]) }}">TIN DOANH NGHIỆP</a>
-                <a href="{{ route('frontend.tintuc', [2]) }}">TIN THỊ TRƯỜNG</a>
-                <a href="{{ route('frontend.tintuc', [3]) }}">TIN BÀI THUỐC</a>
+                <a href="/tin-doanh-nghiep/1">TIN DOANH NGHIỆP</a>
+                <a href="/tin-thi-truong/2">TIN THỊ TRƯỜNG</a>
+                <a href="/tin-thi-truong/3">TIN BÀI THUỐC</a>
             </div>
         </div>
         <a href="{{ route('frontend.tudienduoclieu') }}">TỪ ĐIỂN DƯỢC LIỆU</a>
