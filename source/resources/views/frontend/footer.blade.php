@@ -70,9 +70,9 @@
         <ul class="item-footer">
             <p class="p-title-ul">TIN TỨC</p>
             <li><a href="#"> > Sản phẩm mới nhất</a> </li>
-            <li><a href="{{ route('frontend.tintuc', [1]) }}"> > Tin của Herbs</a> </li>
-            <li><a href="{{ route('frontend.tintuc', [2]) }}"> > Tin thị trường</a> </li>
-            <li><a href="{{ route('frontend.tintuc', [3]) }}"> > Tin bài thuốc</a> </li>
+            <li><a href="{{ route('frontend.tintuc', [1]) }}?lang={{$lang}}"> > Tin của Herbs</a> </li>
+            <li><a href="{{ route('frontend.tintuc', [2]) }}?lang={{$lang}}"> > Tin thị trường</a> </li>
+            <li><a href="{{ route('frontend.tintuc', [3]) }}?lang={{$lang}}"> > Tin bài thuốc</a> </li>
         </ul>
         <ul class="item-footer">
             <p class="p-title-ul">HỎI ĐÁP</p>

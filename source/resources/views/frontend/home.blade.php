@@ -27,7 +27,7 @@
                                     <p>{{$vl['nameType']}}</p>
                                     <hr>
                                     <h4>{{$vl['title']}}</h4>
-                                    <a href="{{route('frontend.detailNews', str_slug($vl['title'],'-').'-'.$vl['id'])}}"><img src="{{ url('assets/frontend/images/see-more.png')}}"/></a>
+                                    <a href="{{route('frontend.detailNews', str_slug($vl['title'],'-').'-'.$vl['id'])}}?lang={{$lang}}"><img src="{{ url('assets/frontend/images/see-more.png')}}"/></a>
                                 </div>
                             </div>
                             <?php }}?>

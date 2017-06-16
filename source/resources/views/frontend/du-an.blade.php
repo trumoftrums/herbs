@@ -184,7 +184,7 @@
                 <div class="item-bs">
                     <img src="{{ url($hd['thumb'])}}"/>
                     <div class="cover-right">
-                        <a class="p-name-bs" href="{{route('frontend.detailNews', str_slug($hd['title'],'-').'-'.$hd['id'])}}"><?php echo implode(' ', array_slice(explode(' ', $hd['title']), 0, 9)) ?>...</a>
+                        <a class="p-name-bs" href="{{route('frontend.detailNews', str_slug($hd['title'],'-').'-'.$hd['id'])}}?lang={{$lang}}"><?php echo implode(' ', array_slice(explode(' ', $hd['title']), 0, 9)) ?>...</a>
                         <span class="sp-chucvu">{{substr($hd['created_at'],0,10)}}</span>
                         <p class="sp-lh"><?php echo implode(' ', array_slice(explode(' ', $hd['summary']), 0, 10)) ?>...</p>
                     </div>

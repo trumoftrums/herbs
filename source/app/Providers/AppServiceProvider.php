@@ -37,6 +37,7 @@ use Vanguard\Repositories\User\UserRepository;
 use Illuminate\Support\ServiceProvider;
 use Vanguard\Repositories\Video\VideoRepository;
 use Vanguard\Repositories\Video\EloquentVideo;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -47,6 +48,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $lang = \Input::get('lang');
+        if (empty($lang)) {
+            $lang = 'vi';
+        } else {
+            $lang = \Input::get('lang');
+        }
+        View::share('lang', $lang);
         view()->composer('layouts.frontend', function ($view)
         {
             $this->listProjects = Project::getList();
@@ -57,6 +65,15 @@ class AppServiceProvider extends ServiceProvider
         });
         Carbon::setLocale(config('app.locale'));
         config(['app.name' => settings('app_name')]);
+    }
+
+    public static function trans($key){
+        $lang = \Input::get('lang');
+        if($lang =='vi'){
+            return "key_vi";
+        }else{
+            return "key_en";
+        }
     }
 
     /**
