@@ -650,6 +650,7 @@ hr {
 }
 .tab-content .list-item-news .item-news-tab .cover-co-item span.sum-av{
     display: block;
+    font-size: 13.5px;
 }
 .tab-content .list-item-news .item-final{
     border-bottom: transparent;
