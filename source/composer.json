@@ -22,7 +22,9 @@
         "zizaco/entrust": "^1.5",
         "anlutro/l4-settings": "^0.4.6",
         "anhskohbo/no-captcha": "2.*",
-        "phpoffice/phpexcel": "^1.8"
+        "phpoffice/phpexcel": "^1.8",
+        "willvincent/feeds": "1.1.*",
+        "ixudra/curl": "6.*"
 
     },
     "require-dev": {

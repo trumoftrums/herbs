@@ -194,6 +194,8 @@ return [
         Vanguard\Providers\EventServiceProvider::class,
         Vanguard\Providers\RouteServiceProvider::class,
         Vanguard\Services\Auth\TwoFactor\AuthyServiceProvider::class,
+        willvincent\Feeds\FeedsServiceProvider::class,
+        Ixudra\Curl\CurlServiceProvider::class,
 
     ],
 
@@ -254,7 +256,8 @@ return [
         'Entrust' => Zizaco\Entrust\EntrustFacade::class,
         'Settings' => anlutro\LaravelSettings\Facade::class,
         'Authy' => Vanguard\Services\Auth\TwoFactor\Facade::class,
-
+        'Feeds'    => willvincent\Feeds\Facades\FeedsFacade::class,
+        'Curl'          => Ixudra\Curl\Facades\Curl::class,
 
     ],
 
