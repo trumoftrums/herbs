@@ -24,10 +24,11 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
+
     protected function schedule(Schedule $schedule)
     {
-//        $schedule->command('inspire')
-//                 ->hourly();
+        $schedule->command('rss:yhocsuckhoe')->everyTenMinutes();
+        $schedule->command('rss:FeedDetail')->everyTenMinutes();
     }
 
 

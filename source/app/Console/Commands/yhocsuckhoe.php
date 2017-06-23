@@ -44,7 +44,7 @@ class yhocsuckhoe extends Command
     {
         $now = time();
 
-        $listRSS = Rss::getList(Rss::STATUS_ACTIVED,1,$now."- lastRunning > `interval`");
+        $listRSS = Rss::getList(Rss::STATUS_ACTIVED,5,$now."- lastRunning > `interval`");
         if(!empty($listRSS)){
             $this->setRunning($listRSS);
             try{
@@ -68,7 +68,7 @@ class yhocsuckhoe extends Command
                                     $itemDetail->url = $item->get_permalink();
                                     $itemDetail->status = RssExecDetail::STATUS_NEW;
                                     $itemDetail->title = $item->get_title();
-                                    $itemDetail->description = $item->get_description();
+                                    $itemDetail->description = strip_tags($item->get_description());
                                     $itemDetail->pubDate = $item->get_date('j F Y | g:i a');
                                     $itemDetail->save();
                                     $count++;

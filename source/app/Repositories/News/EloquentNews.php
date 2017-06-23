@@ -32,6 +32,7 @@ class EloquentNews implements NewsRepository
         $bd->description = $data['description'];
         $bd->category = $data['category'];
         $bd->updated_by = $data['updated_by'];
+        $bd->status = News::STATUS_ACTIVED;
         if($data['thumb'] != null){
             $bd->thumb = $data['thumb'];
         }else{

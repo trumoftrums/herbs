@@ -37,7 +37,7 @@
             <select id="status" class="form-control" name="status">
                 <option value="All" @if($statusCurr == 'All') selected @endif>Tất cả</option>
                 <option value="AC" @if($statusCurr == 'AC') selected @endif >Active</option>
-                {{--<option value="IA" @if($statusCurr == 'IA') selected @endif>Inactive</option>--}}
+                <option value="IA" @if($statusCurr == 'IA') selected @endif>Inactive</option>
                 <option value="DE" @if($statusCurr == 'DE') selected @endif>Deleted</option>
             </select>
         </div>
